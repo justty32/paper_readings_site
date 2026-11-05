@@ -32,11 +32,18 @@ function beliefs(el){
 }
 function formulas(el){
  mount(el,buttons([['linear','直線 2x+1'],['cubic','再加一個三次項']])+'<div class="viz"></div>',m=>{let cubic=false;function draw(){
- const sx=x=>50+x*105,sy=y=>205-y*11;let d='';for(let x=0;x<=4.4;x+=.04){let y=2*x+1+(cubic?(x-1)*(x-2)*(x-3):0);d+=(d?' L':'M')+sx(x).toFixed(1)+' '+Math.max(10,Math.min(220,sy(y))).toFixed(1);}
- let b=path('M50 10 V205 H530','#9caeaa',1)+path(d,color.green);
- for(let x=1;x<=4;x++){b+=txt(sx(x),227,''+x,13);if(x<4)b+=circ(sx(x),sy(2*x+1),6,color.orange);else b+=circ(sx(x),sy(cubic?15:9),7,color.blue);}
- $('.viz',m).innerHTML=sv(b,'橘點是三個訓練點，藍點是在x等於4的候選預測');setout(m,cubic?'三個橘色觀測點仍完全吻合，但 x=4 預測 15。相同訓練誤差，外推不同。':'三個橘色觀測點完全吻合，x=4 預測 9。這只是候選公式，不是已知真理。');$$('button',m).forEach(b=>b.setAttribute('aria-pressed',(b.dataset.action==='cubic')===cubic?'true':'false'));}$$('button',m).forEach(b=>b.addEventListener('click',()=>{cubic=b.dataset.action==='cubic';draw();}));draw();});
+ const sx=x=>50+x*105,sy=y=>205-y*10;
+ const curve=isCubic=>{let d='';for(let x=.5;x<=4.2;x+=.04){let y=2*x+1+(isCubic?(x-1)*(x-2)*(x-3):0);d+=(d?' L':'M')+sx(x).toFixed(1)+' '+sy(y).toFixed(1);}return d;};
+ let b=path('M50 10 V205 H530','#9caeaa',1)+`<path d="${curve(!cubic)}" stroke="#a8b1a7" stroke-width="2" stroke-dasharray="7 5" fill="none"/>`+path(curve(cubic),color.green);
+ for(const y of [0,5,10,15])b+=txt(27,sy(y)+5,''+y,15);
+ b+=txt(52,16,'y',17)+txt(530,227,'x',17);
+ for(let x=1;x<=4;x++){b+=txt(sx(x),227,''+x,16);if(x<4)b+=circ(sx(x),sy(2*x+1),6,color.orange);}
+ const value=cubic?15:9,other=cubic?9:15;
+ b+=path(`M${sx(4)} ${sy(value)} H50`,color.blue,1)+circ(sx(4),sy(other),6,'#a8b1a7')+circ(sx(4),sy(value),7,color.blue)+txt(508,sy(value)-12,'y='+value,21,color.blue);
+ $('.viz',m).innerHTML='<p class="small muted">橫軸 x：輸入；縱軸 y：公式預測。實線為所選公式，灰色虛線為另一候選。</p>'+sv(b,`公式預測比較：三個橘點是訓練觀測，所選曲線在x等於4預測y等於${value}，另一曲線預測${other}`);
+ setout(m,cubic?'三個橘色觀測點仍完全吻合，但 x=4 預測 15。相同訓練誤差，外推不同。':'三個橘色觀測點完全吻合，x=4 預測 9。這只是候選公式，不是已知真理。');$$('button',m).forEach(b=>b.setAttribute('aria-pressed',(b.dataset.action==='cubic')===cubic?'true':'false'));}$$('button',m).forEach(b=>b.addEventListener('click',()=>{cubic=b.dataset.action==='cubic';draw();}));draw();});
 }
+
 function equiv(el){mount(el,buttons([['add','x+x 與 2x'],['log','log(2x) 與 log2+logx']])+`<div class="demo-controls">${range('domain','測試 x',-3,3,1,.5)}</div><div class="viz"></div>`,m=>{let type='add';const draw=()=>{const x=+$('#domain',m).value;let valid=type==='add'||x>0;$('.viz',m).innerHTML=sv(box(15,40,240,65,type==='add'?'x + x':'log(2x)')+box(305,40,240,65,type==='add'?'2x':'log(2) + log(x)')+txt(280,145,valid?'同一等價類（指定語意下）':'目前輸入不在實數 log 定義域',17)+txt(280,185,'先問語意和定義域，再合併',14),'兩種公式寫法是否可在指定語意和定義域下合併');setout(m,valid?(type==='add'?`x=${x}，兩側皆為 ${2*x}。此例在實數算術下恆等。`:`x=${x}>0，兩式都定義且符合對數改寫。不是少數測試點證明了它，而是使用了帶條件的恆等式。`):`x=${x}：實數 log(x) 與 log(2x) 不定義，不能把這裡當普通有限數值比較。`);};$$('button',m).forEach(b=>b.addEventListener('click',()=>{type=b.dataset.action;draw();}));bindRanges(m,draw);});}
 function reasoning(el){mount(el,buttons([['forward','已知：小安搭校車'],['reverse','只知：小安有乘車證']])+'<div class="trace"></div>',m=>{function draw(reverse){$('.trace',m).innerHTML='<span>搭校車 → 需要乘車證</span><span>＋</span><span class="current">'+(reverse?'有乘車證':'搭校車')+'</span><span>→</span><span>'+(reverse?'是否搭校車：未知':'需要乘車證')+'</span>';setout(m,reverse?'規則只允許從搭校車推出需要證，不能反過來從有證推出搭校車。':'前提符合規則左側，可以推出小安需要乘車證。這是手寫規則，沒有呼叫 LLM。');}$$('button',m).forEach(b=>b.addEventListener('click',()=>draw(b.dataset.action==='reverse')));draw(false);});}
 function grounding(el){mount(el,buttons([['both','任務：兩盒都搬'],['one','任務：只搬車子盒']])+`<div class="demo-controls"><label><input type="checkbox" id="swap" checked>模型把盒名對調</label></div><div class="viz"></div>`,m=>{let one=false;const draw=()=>{let swap=$('#swap',m).checked;$('.viz',m).innerHTML=sv(box(35,35,200,65,'真實：車子盒',one&&!swap?color.lime:color.pale)+box(325,35,200,65,'真實：積木盒',one&&swap?color.orange:color.pale)+txt(135,132,'模型叫它：'+(swap?'積木':'車子'),16)+txt(425,132,'模型叫它：'+(swap?'車子':'積木'),16)+txt(280,190,one?'只搬「模型叫車子」的盒':'兩盒一起搬，無法分辨名字是否對調',16),'下游任務是否能辨識被對調的中間概念');setout(m,one?(swap?'現在暴露錯誤：模型搬了真實積木盒。':'現在能選中車子盒；這個任務提供了區分名稱的證據。'):'兩盒都要搬時，名稱對調仍可能得到正確的搬運結果。任務答對不充分識別中間概念。');};$$('button',m).forEach(b=>b.addEventListener('click',()=>{one=b.dataset.action==='one';draw();}));$('#swap',m).addEventListener('change',draw);draw();});}

@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-05T06:47:08.267Z",
+  "date": "2026-11-05T06:53:09.229Z",
   "checks": 110,
   "pages": 41,
   "widths": [
@@ -13,7 +13,9 @@
     "reading state",
     "clear state",
     "quiz",
-    "no-JS fallback"
+    "no-JS fallback",
+    "320px spot check",
+    "keyboard details"
   ],
   "results": [
     {

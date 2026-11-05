@@ -1,0 +1,383 @@
+{
+  "source_repo": "https://github.com/justty32/paper_readings",
+  "source_commit": "1f91be9b96e04d7f0b6b074a90173a4375eb2214",
+  "verification": "Git object existence and note bytes; not a claim of full original-PDF rereading",
+  "papers": [
+    {
+      "id": "2305.16291",
+      "path": "translate/2305.16291_Voyager.zh-TW/02_方法.md",
+      "lessons": [
+        "skill-library"
+      ],
+      "note_sha256": "9d876195c19be564b11101ee83fb7df44962e3ff80e464f95f3f895695bc6438"
+    },
+    {
+      "id": "2401.12869",
+      "path": "summarize/2401.12869_TroVE.摘要.md",
+      "lessons": [
+        "skill-library"
+      ],
+      "note_sha256": "c90b022d1b3cfe372ffd3444775f40a102a91da402e0a58b9cdd433dac5f9cec"
+    },
+    {
+      "id": "2605.13716",
+      "path": "translate/2605.13716_SkillOps.zh-TW/01_摘要.md",
+      "lessons": [
+        "skill-governance"
+      ],
+      "note_sha256": "4b5fad262d3e5794d03eddf65a56240217c6d22e23689f42b6f7e716a1cdc8e2"
+    },
+    {
+      "id": "2605.22148",
+      "path": "translate/2605.22148_Ratchet.zh-TW/02_方法.md",
+      "lessons": [
+        "skill-governance"
+      ],
+      "note_sha256": "6d2062a690ddef76c9f18e48ce580bc1eccda1c2f4c5472aa6df5e4d991e5ec4"
+    },
+    {
+      "id": "2406.18665",
+      "path": "translate/2406.18665_RouteLLM.zh-TW/02_方法.md",
+      "lessons": [
+        "cost-routing"
+      ],
+      "note_sha256": "146bd6ee3781973c5dd0b4ab7e15b464332e3720765a9d86fcf6d97a30b85fee"
+    },
+    {
+      "id": "2305.05176",
+      "path": "summarize/2305.05176_FrugalGPT.摘要.md",
+      "lessons": [
+        "cost-routing"
+      ],
+      "note_sha256": "d652a08e557d471158a9614b1aa9a884da15c697cce7947f9ebc1ea139cd4e50"
+    },
+    {
+      "id": "2307.09702",
+      "path": "translate/2307.09702_Outlines_Guided_Generation.zh-TW/01_摘要.md",
+      "lessons": [
+        "constrained-decoding"
+      ],
+      "note_sha256": "325854ce6fe34a7b50cfcd4de1584ca0ac983b2c403219978dc279a9be9b6233"
+    },
+    {
+      "id": "2109.05093",
+      "path": "summarize/2109.05093_PICARD.摘要.md",
+      "lessons": [
+        "constrained-decoding"
+      ],
+      "note_sha256": "9942a0698ce3103cfa75b1cdd3e2e105c678528f24558442156bd075b930637a"
+    },
+    {
+      "id": "2310.01798",
+      "path": "summarize/2310.01798_CannotSelfCorrect.摘要.md",
+      "lessons": [
+        "self-correction"
+      ],
+      "note_sha256": "0bed4b23315524368e7b529b1a50a07c8ec467d7c9a9eee5d8b0e16075737e30"
+    },
+    {
+      "id": "2305.11738",
+      "path": "translate/2305.11738_CRITIC.zh-TW/01_摘要.md",
+      "lessons": [
+        "self-correction"
+      ],
+      "note_sha256": "d7f3011abddf062480b2a172b9c6e98b00528938080c808a2596bc77bf34de52"
+    },
+    {
+      "id": "2310.03714",
+      "path": "translate/2310.03714_DSPy.zh-TW/02_DSPy_程式設計模型.md",
+      "lessons": [
+        "workflow-optimization"
+      ],
+      "note_sha256": "5a34878cacc605e0c9877b1adef1b131bb5f6f28236e8f5a93365b818f0197d9"
+    },
+    {
+      "id": "2402.16823",
+      "path": "summarize/2402.16823_GPTSwarm.摘要.md",
+      "lessons": [
+        "workflow-optimization"
+      ],
+      "note_sha256": "b5724dff0ac198c93c9ce5051584f5ae6333f14edfc3c5e2b7ce7a2187234975"
+    },
+    {
+      "id": "1705.08500",
+      "path": "translate/1705.08500_SelectiveClassification.zh-TW/01_摘要.md",
+      "lessons": [
+        "uncertainty"
+      ],
+      "note_sha256": "94866af31f0d21326e2f1cccccf0eb22286b77508857c18a0384c351d44a8214"
+    },
+    {
+      "id": "1711.06664",
+      "path": "translate/1711.06664_LearningToDefer.zh-TW/01_摘要.md",
+      "lessons": [
+        "uncertainty"
+      ],
+      "note_sha256": "7805ffda590d6b02a3b5ab68208c186521adad50e00412c22d4f30c02010faf1"
+    },
+    {
+      "id": "2502.01680",
+      "path": "translate/2502.01680_Travel_Demand_NeSy.zh-TW/01_摘要.md",
+      "lessons": [
+        "interpretability"
+      ],
+      "note_sha256": "3e0d997bc35006cab2219b55953689e2bba66252df1db6a0d339f6cd98f32548"
+    },
+    {
+      "id": "2509.07025",
+      "path": "summarize/2509.07025_Binary_Normalized_NN.摘要.md",
+      "lessons": [
+        "interpretability"
+      ],
+      "note_sha256": "f907a13b871ec157bd90745c797a5c37ca94fc02029a766a083a31052aeb1f79"
+    },
+    {
+      "id": "2302.04761",
+      "path": "translate/2302.04761_Toolformer.zh-TW/01_摘要.md",
+      "lessons": [
+        "tool-use"
+      ],
+      "note_sha256": "ee5a04606d91029ffd08f52ef8d9cc0ab20924d25e0e1a319268a11b6316b35f"
+    },
+    {
+      "id": "2210.03629",
+      "path": "summarize/2210.03629_ReAct.摘要.md",
+      "lessons": [
+        "tool-use"
+      ],
+      "note_sha256": "97e5f52d90a3e80619e22e6b8c077e31d17fe12f3bd66713f052fcc46c730a5f"
+    },
+    {
+      "id": "2606.19847",
+      "path": "translate/2606.19847_AtomMem_AtomicFacts_Memory.zh-TW/01_摘要.md",
+      "lessons": [
+        "agent-memory"
+      ],
+      "note_sha256": "c75d9560c0892293182b396b214ba1a195ccd59aced954d20496c70b272b7f97"
+    },
+    {
+      "id": "2606.25115",
+      "path": "summarize/2606.25115_CURATOR_BudgetCurated_Memory.摘要.md",
+      "lessons": [
+        "agent-memory"
+      ],
+      "note_sha256": "61eb7006c34a5b9a88f5066ea73950011e996ac58c1246ec089e46d203c2b6df"
+    },
+    {
+      "id": "2502.04728",
+      "path": "translate/2502.04728_SymbolicWMTestTimeScaling.zh-TW.md",
+      "lessons": [
+        "world-models"
+      ],
+      "note_sha256": "7be63e099f1c7b878d098df9aac3b9dc80330b1ac6929748796badec7f7a835a"
+    },
+    {
+      "id": "2506.01622",
+      "path": "translate/2506.01622_GeneralAgentsWorldModels.zh-TW.md",
+      "lessons": [
+        "world-models"
+      ],
+      "note_sha256": "7be94633e2986ac9d7b4330f69acfa4215594d2ae0a6124215d0be6d6fd148c9"
+    },
+    {
+      "id": "2407.10162",
+      "path": "translate/2407.10162_ChatLogic.zh-TW/01_摘要.md",
+      "lessons": [
+        "reasoning",
+        "grounding"
+      ],
+      "note_sha256": "d3097602456c52add416481689c57ec2867319df802832f9198144c0494578a0"
+    },
+    {
+      "id": "2507.09751",
+      "path": "summarize/2507.09751_Sound_Complete_NeSy_LLM.摘要.md",
+      "lessons": [
+        "reasoning"
+      ],
+      "note_sha256": "73390fe1ee6908df1410ae57fe078d6ce7d1a958836291d319d05880517e0e61"
+    },
+    {
+      "id": "2510.14538",
+      "path": "summarize/2510.14538_Reasoning_Shortcuts.摘要/01_一句話概括.md",
+      "lessons": [
+        "grounding"
+      ],
+      "note_sha256": "d722a3b3c758ac4f1bd580c9e0767f620e29ae8f0d5693d90f0d9591dd1e1307"
+    },
+    {
+      "id": "2101.03958",
+      "path": "translate/2101.03958_Evolving_RL_Algorithms.zh-TW/02_學習強化學習演算法.md",
+      "lessons": [
+        "meta-learning",
+        "evolution"
+      ],
+      "note_sha256": "b1517e0173cbba94f94bbb3ac317742d95290548c04a4707248a4dee7fa3e7e0"
+    },
+    {
+      "id": "2507.17668",
+      "path": "summarize/2507.17668_meta_learn_rl_algorithms.摘要.md",
+      "lessons": [
+        "meta-learning",
+        "evolution"
+      ],
+      "note_sha256": "18480f4259e11970447d5248c63378c78386a1163ce66e6810816c09ecfc506f"
+    },
+    {
+      "id": "2505.22954",
+      "path": "summarize/2505.22954_DarwinGodelMachine.摘要.md",
+      "lessons": [
+        "evolution"
+      ],
+      "note_sha256": "a0b6c2430155e509457556bd0f17dae00ba983314e9e6f0c3aa7c28ad8116981"
+    },
+    {
+      "id": "1911.01547",
+      "path": "summarize/1911.01547_Measure_of_Intelligence.摘要.md",
+      "lessons": [
+        "arc",
+        "adaptation"
+      ],
+      "note_sha256": "666f87aebebc20590babd34291509b8fc44f0c5807c94b142dcc7ccafbae33e3"
+    },
+    {
+      "id": "2411.02272",
+      "path": "summarize/2411.02272_Induction_Transduction.摘要.md",
+      "lessons": [
+        "arc",
+        "adaptation"
+      ],
+      "note_sha256": "a93dad95c450a3e4390f06e541f47b4cd37d7e6dc5c7a48b17104ac4dcfbcd0e"
+    },
+    {
+      "id": "2411.07279",
+      "path": "translate/2411.07279_Test_Time_Training.zh-TW/01_摘要.md",
+      "lessons": [
+        "adaptation"
+      ],
+      "note_sha256": "bf7d89c044975d7714985cae856f4b4a0eb28abb1f4dd6e852fafabe47270f78"
+    },
+    {
+      "id": "2505.11694",
+      "path": "summarize/2505.11694_NN_as_Universal_FSM.摘要.md",
+      "lessons": [
+        "automata",
+        "computation"
+      ],
+      "note_sha256": "05e8031431674f6a2d1adaf4785f1e20c86fadc5f53b8aaccf8d48c52ed9ab2b"
+    },
+    {
+      "id": "2408.11042",
+      "path": "translate/2408.11042_GraphFSA.zh-TW/01_摘要.md",
+      "lessons": [
+        "automata",
+        "computation"
+      ],
+      "note_sha256": "a8b74cfa1e015333c17d0a86d97626d6e0637122cdf3f0c3c6aa9dfde308c6a5"
+    },
+    {
+      "id": "2505.13058",
+      "path": "summarize/2505.13058_Universal_NCA.摘要.md",
+      "lessons": [
+        "computation"
+      ],
+      "note_sha256": "3d5e39389c85c1ba4ad00cb01dcfca62f4a5b7b4cc3119db11164ccf8bf3ad63"
+    },
+    {
+      "id": "2411.05820",
+      "path": "summarize/2411.05820_EvoNUDGE_GNN_Guided_GP.摘要.md",
+      "lessons": [
+        "program-search",
+        "library-learning"
+      ],
+      "note_sha256": "e6760b34171e1e83d387a98085fe5bb6f8383a49aa6a3407265183ca472667b1"
+    },
+    {
+      "id": "2006.08381",
+      "path": "summarize/2006.08381_DreamCoder.摘要/01_一句話概括.md",
+      "lessons": [
+        "program-search",
+        "library-learning"
+      ],
+      "note_sha256": "3531dab080ac6566cebea7b2b05226ddc306a0389635ebe7b54092aab7704801"
+    },
+    {
+      "id": "2211.16605",
+      "path": "translate/2211.16605_Stitch.zh-TW/02_語料庫引導的自頂向下搜尋.md",
+      "lessons": [
+        "program-search",
+        "library-learning"
+      ],
+      "note_sha256": "7ab7778af8ced5a72bf55d97b95d5595e852b953064c07d9c35b8ae837ad4991"
+    },
+    {
+      "id": "2507.11127",
+      "path": "translate/2507.11127_Defining_Neurosymbolic_AI.zh-TW.md",
+      "lessons": [
+        "neurosymbolic",
+        "logic-belief"
+      ],
+      "note_sha256": "76e333d1b2fdc3361ade30a38a0861757e0d93bb54417e04596f54e71bccf150"
+    },
+    {
+      "id": "2507.08216",
+      "path": "translate/2507.08216_Grounding_Methods_NeSy.zh-TW.md",
+      "lessons": [
+        "neurosymbolic",
+        "logic-belief"
+      ],
+      "note_sha256": "0ce166e22551bbe1dc90cc785a8aa6e2b51de052dc04f805b3318a342834df7f"
+    },
+    {
+      "id": "2512.01682",
+      "path": "translate/2512.01682_SR_Current_Challenges_Thesis.zh-TW/01_摘要.md",
+      "lessons": [
+        "symbolic-regression",
+        "equivalence"
+      ],
+      "note_sha256": "0e82a3776c23e6abc1f4c4d1efa97c860438dca0a7d88bceabf8389906a812ae"
+    },
+    {
+      "id": "2511.05849",
+      "path": "translate/2511.05849_EGG_SR.zh-TW/01_摘要.md",
+      "lessons": [
+        "symbolic-regression",
+        "equivalence"
+      ],
+      "note_sha256": "5658c03c95e6d018bf98f786c1e36fff32ddddd2b017b823c6b381951404a67d"
+    },
+    {
+      "id": "2501.17896",
+      "path": "translate/2501.17896_KAN_Airfoil_Lift.zh-TW/01_摘要.md",
+      "lessons": [
+        "kan"
+      ],
+      "note_sha256": "f97e9c677415158f332fba391a6b0f02540569d26d73c2e177d105662bf3c684"
+    },
+    {
+      "id": "2610.21480",
+      "path": "summarize/2610.21480_KANCurseStructuralBias.摘要.md",
+      "lessons": [
+        "kan"
+      ],
+      "note_sha256": "c713ae8136eb07c3550d7ea3ad9ca3e42a4dfc01eb4415ef04841cc181878aee"
+    },
+    {
+      "id": "1606.03657",
+      "path": "translate/1606.03657_InfoGAN.zh-TW.md",
+      "lessons": [
+        "gan",
+        "symmetry"
+      ],
+      "note_sha256": "e06a657b9e478a17215e4a6f24350a92ca98a065015ed7f00cb7d282603810c6"
+    },
+    {
+      "id": "2302.00236",
+      "path": "translate/2302.00236_LieGAN_Symmetry_Discovery.zh-TW/01_摘要.md",
+      "lessons": [
+        "gan",
+        "symmetry"
+      ],
+      "note_sha256": "333165aef73a9545ff84d60744d10667df1e9a3e828eef827db99aecdca2163e"
+    }
+  ]
+}

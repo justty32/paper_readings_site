@@ -10,6 +10,8 @@
 - [完整閱讀地圖](map.html)
 - [關於本站與來源政策](about.html)
 
+正式網站：**https://justty32.github.io/paper_readings_site/**
+
 直接開啟 HTML 即可閱讀。要在本機使用一致的瀏覽器儲存與網址：
 
 ```sh
@@ -32,7 +34,7 @@ python3 tools/package_static.py
 - `tools/build.py`、`tools/illustrations.py`：靜態頁面與語意 SVG。
 - `assets/`：本地 CSS、JavaScript，無外部字型或程式依賴。
 - `dist/`：可發布檔案，從原始頁面複製產生，不進版本控制。
-- `.openai/hosting.json`：本網站的 private Sites 身分與靜態發布目錄。
+- `.github/workflows/pages.yml`：main 推送後以 GitHub Actions 重建、檢查與發布純靜態 dist。
 - `docs/qa/`：桌面／手機截圖與瀏覽器驗證紀錄。
 
 `check.py` 檢查全部本地連結、錨點、引用、課程 schema 和來源快照路徑；相鄰論文庫不存在時會明示略過來源物件檢查。瀏覽器驗證另確認 1440／390px 版面、28課互動、搜尋、閱讀勾選、清除、問答與無 JavaScript 回退。
@@ -45,4 +47,6 @@ python3 tools/package_static.py
 
 ## 發布與存取
 
-GitHub repo 維持 private；網站透過預設 owner-private 的 Sites 發布。存取權不可因內容更新而自動放寬。精確版本與結果見 [發布紀錄](docs/DEPLOYMENT.md)。
+依使用者指定，正式網站只走此 repo 的 GitHub Pages。帳戶方案不支援私有 repo 的 Pages，因此新建的本站 repo 改為 public；原 paper_readings 論文庫仍保持 private，筆記連結需要存取權，arXiv 原文可公開閱讀。
+
+每次 push main 觸發 Actions：重建、檢查、封裝 `dist/`，再透過 Pages 部署。發布檔案只有 HTML、CSS、JavaScript 與 SVG，不包含 docs、QA、來源 JSON 或任何託管設定。精確版本與結果見 [發布紀錄](docs/DEPLOYMENT.md)。舊私有預覽已停止更新，見[遷移註記](docs/LEGACY-PREVIEW.md)。
