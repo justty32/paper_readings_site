@@ -25,6 +25,16 @@ await go('index.html',390);assert(await ev(`(()=>{let i=document.querySelector('
 await go('lessons/arc.html',390);await ev(`document.querySelector('[data-complete]').click()`);await go('map.html',390);assert(await ev(`document.querySelector('[data-lesson="arc"]').classList.contains('is-read')`),'reading state');await go('about.html',390);await ev(`document.querySelector('#clear-progress').click()`);assert(await ev(`!localStorage.getItem('paper-playground-read-v1')`),'clear progress');
 await go('lessons/reasoning.html',390);await ev(`document.querySelector('.quiz button').click()`);assert(await ev(`document.querySelector('.quiz-result').textContent.includes('答對了')`),'quiz');
 
+await go('lessons/neurosymbolic.html',390);
+await ev(`document.querySelector('#omit-three').click()`);assert(await ev(`document.querySelector('.demo-output').textContent.includes('無法憑空')`),'missing true candidate must not force an answer');
+await ev(`document.querySelector('[data-action="ten"]').click()`);assert(await ev(`document.querySelector('.demo svg').textContent.includes('第二張是 8')`),'known sum ten must retain eight');
+await go('lessons/constrained-decoding.html',390);
+await ev(`document.querySelector('[data-action="valid"]').click()`);assert(await ev(`JSON.parse(document.querySelector('.demo-code').textContent).quantity===20`),'syntactically valid but semantically wrong JSON');
+await ev(`document.querySelector('[data-action="correct"]').click()`);assert(await ev(`JSON.parse(document.querySelector('.demo-code').textContent).quantity===2`),'correct JSON quantity');
+await go('lessons/program-search.html',390);assert(await ev(`Number(document.querySelector('#test-x').min)>3`),'heldout range excludes training inputs');
+await go('lessons/workflow-optimization.html',390);assert(!(await ev(`document.querySelector('.trace').textContent.includes('→')`)),'parallel repetitions must not imply sequential dependencies');
+await ev(`document.querySelector('[data-action="pipeline"]').click()`);assert(await ev(`document.querySelector('.trace').textContent.includes('→')`),'pipeline shows actual handoffs');
+
 await go('lessons/agent-memory.html',1440);await ev(`document.querySelector('#deeper details').open=true;document.querySelector('#deeper').scrollIntoView();`);
 let shot=await c('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});fs.writeFileSync(output+'/agent-memory-details-1440.png',Buffer.from(shot.data,'base64'));
 await go('lessons/symbolic-regression.html',1440);await ev(`document.querySelector('#try').scrollIntoView();document.querySelector('[data-action="cubic"]').click();`);
@@ -34,5 +44,5 @@ shot=await c('Page.captureScreenshot',{format:'png',captureBeyondViewport:false}
 await go('lessons/kan.html',320);assert(!(await ev(`document.documentElement.scrollWidth>innerWidth+1`)),'320px KAN overflow');
 await ev(`document.querySelector('#deeper summary').focus()`);await c('Input.dispatchKeyEvent',{type:'keyDown',key:' ',code:'Space',windowsVirtualKeyCode:32});await c('Input.dispatchKeyEvent',{type:'keyUp',key:' ',code:'Space',windowsVirtualKeyCode:32});assert(await ev(`document.querySelector('#deeper details').open`),'keyboard details');
 await c('Emulation.setScriptExecutionDisabled',{value:true});await go('lessons/symbolic-regression.html',390);assert(await ev(`getComputedStyle(document.querySelector('.no-js')).display!=='none' && document.querySelectorAll('details').length===4`),'no-JS fallback');await c('Emulation.setScriptExecutionDisabled',{value:false});
-fs.writeFileSync(output+'/browser-report.json',JSON.stringify({date:new Date().toISOString(),base_url:origin,checks:report.length,pages:pages.length,widths:[1440,390],extra:['all demo controls','search','empty state','reading state','clear state','quiz','no-JS fallback','320px spot check','keyboard details'],results:report},null,2));
+fs.writeFileSync(output+'/browser-report.json',JSON.stringify({date:new Date().toISOString(),base_url:origin,checks:report.length,pages:pages.length,widths:[1440,390],extra:['all demo controls','search','empty state','reading state','clear state','quiz','no-JS fallback','320px spot check','keyboard details','known constraint vs query','JSON syntax vs semantics','heldout inputs exclude training','parallel vs sequential workflow'],results:report},null,2));
 console.log('PASS',pages.length,'pages x 2 widths;',data.length,'interactive lessons; search/progress/quiz/no-JS.');await c('Page.close');ws.close();
