@@ -1,0 +1,316 @@
+{
+  "reviewer": "agent_topics：獨立交叉審核；只以指定提交內自讀之摘要與實際譯文章為證據，未查外部原文",
+  "source_commit": "1f91be9b96e04d7f0b6b074a90173a4375eb2214",
+  "lessons": [
+    {
+      "id": "reasoning",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2407.10162_ChatLogic.zh-TW/01_摘要.md",
+          "lines": "32-45",
+          "note": "事實／規則／查詢、反向翻譯語意修正、依執行錯誤修語法與本機求解均直接支持 story[0]、steps 與 ChatLogic 來源卡。"
+        },
+        {
+          "path": "translate/2407.10162_ChatLogic.zh-TW/01_摘要.md",
+          "lines": "42-64",
+          "note": "演算法與資料集明示封閉世界假設，並補充缺失 meta 屬性；課程保留未知與 CWA 的適用範圍，沒有把本機可執行寫成語意忠實保證。"
+        },
+        {
+          "path": "translate/2507.09751_Sound_Complete_NeSy_LLM.zh-TW/01_摘要.md",
+          "lines": "23-49",
+          "note": "支持／反駁雙邊賦值、首次計算後快取穩定性與健全完整定理，支持 story[1]、details[1] 與來源卡。定理相對 AC 語意，課程正確排除對前提世界真實性的背書。"
+        },
+        {
+          "path": "translate/2507.09751_Sound_Complete_NeSy_LLM.zh-TW/01_摘要.md",
+          "lines": "72-73",
+          "note": "原子評估與推理成本可能很高，支持來源卡成本界限；課程未將概念驗證擴寫成已完成通用端到端推理器。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "grounding",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2510.14538_Reasoning_Shortcuts.zh-TW/02_推理捷徑的溫和介紹.md",
+          "lines": "5-17",
+          "note": "正式非正式 RS 定義、行人與紅燈互換、即使窮舉資料也無法靠標籤分辨，以及遷移與解釋失效，都直接支持兩段 story。"
+        },
+        {
+          "path": "translate/2510.14538_Reasoning_Shortcuts.zh-TW/02_推理捷徑的溫和介紹.md",
+          "lines": "23-47",
+          "note": "可識別性、概念重映射與多對一知識結構支持來源卡的理論概括；課程未把帶假設的定理擴大為所有模型必然失敗。"
+        },
+        {
+          "path": "translate/2510.14538_Reasoning_Shortcuts.zh-TW/03_處理推理捷徑.md",
+          "lines": "11-27",
+          "note": "概念監督、多任務、原型與架構限制的表列及無萬靈丹結論，支持 story[1]、details[0]；特別是多任務組合不一定消除 RS。"
+        },
+        {
+          "path": "translate/2407.10162_ChatLogic.zh-TW/01_摘要.md",
+          "lines": "38-45",
+          "note": "反向翻譯只是語意修正流程，支持 details[1] 將其定位為工程方法；玩具盒示例明示自製而非研究數據。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "meta-learning",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2101.03958_Evolving_RL_Algorithms.zh-TW/02_學習強化學習演算法.md",
+          "lines": "5-17",
+          "note": "內圈實際訓練策略、外圈選損失與型別 DAG 搜尋語言，支持內外圈白話、圖表示與所提供運算子限制。"
+        },
+        {
+          "path": "translate/2101.03958_Evolving_RL_Algorithms.zh-TW/02_學習強化學習演算法.md",
+          "lines": "30-50",
+          "note": "訓練／留出環境、單環境與雙環境選到不同損失，以及 Atari 遷移，支持換場考試與不能只看單一簡單環境的說明。"
+        },
+        {
+          "path": "translate/2507.17668_meta_learn_rl_algorithms.zh-TW/01_摘要.md",
+          "lines": "29-44",
+          "note": "比較涵蓋黑箱元學習、蒸餾、符號蒸餾與 LLM 提案；直接符號發現未納入實測，課程未把它寫成受測方法的普遍排名。"
+        },
+        {
+          "path": "translate/2507.17668_meta_learn_rl_algorithms.zh-TW/02_評估.md",
+          "lines": "5-19",
+          "note": "評分維度、外圈單 seed、遞迴多輸入符號化困難與條件性結果，支持 pitfalls、story[1] 與來源卡。"
+        },
+        {
+          "path": "translate/2507.17668_meta_learn_rl_algorithms.zh-TW/02_評估.md",
+          "lines": "30-37",
+          "note": "LLM 優勢依賴輸入易懂、良好暖啟動與可調超參，支持課程有條件的提案結論；課程未宣稱 LLM 永遠勝黑箱。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "evolution",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2505.22954_DarwinGodelMachine.zh-TW/01_摘要.md",
+          "lines": "11-15",
+          "note": "經驗評測取代形式有益證明，凍結 FM、改代理程式與 archive 踏腳石，都直接支持課程精髓與凍結模型界限。"
+        },
+        {
+          "path": "translate/2505.22954_DarwinGodelMachine.zh-TW/01_摘要.md",
+          "lines": "25-29",
+          "note": "選親代兼顧表現與探索不足、可編譯且保留改碼能力才入庫、外部探索流程固定，支持 steps 與來源卡。"
+        },
+        {
+          "path": "translate/2101.03958_Evolving_RL_Algorithms.zh-TW/02_學習強化學習演算法.md",
+          "lines": "18-26",
+          "note": "等價檢查、CartPole 早期關卡、可微與輸出型別檢查，支持 story[1] 與 details[1] 的成本說明。"
+        },
+        {
+          "path": "summarize/2505.22954_DarwinGodelMachine.摘要.md",
+          "lines": "31-34",
+          "note": "僅 coding、固定開放式流程與基準未量度失準，支持 details[0] 與來源卡的限制，不構成無限進步或形式驗證宣稱。"
+        },
+        {
+          "path": "translate/2507.17668_meta_learn_rl_algorithms.zh-TW/02_評估.md",
+          "lines": "5-19",
+          "note": "泛化與成本比較、有限外圈重複及各法條件性支持第三來源卡；書包甲乙丙明示教學示意，沒有冒充研究結果。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "arc",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/1911.01547_Measure_of_Intelligence.zh-TW/02_II_新視角.md",
+          "lines": "5-24",
+          "note": "技能不等於廣泛智力、先驗／經驗／泛化難度與技能習得效率，支持 story[0]、pitfalls 與原始測量提案來源卡。"
+        },
+        {
+          "path": "translate/1911.01547_Measure_of_Intelligence.zh-TW/03_III_基準提案：ARC_資料集.md",
+          "lines": "5-24",
+          "note": "少量示範、新輸出網格、核心知識先驗、精確全對與候選一致不保證泛化，支持 steps、示例後的邊界說明。"
+        },
+        {
+          "path": "translate/1911.01547_Measure_of_Intelligence.zh-TW/03_III_基準提案：ARC_資料集.md",
+          "lines": "27-30",
+          "note": "原提案明列高度推測性、泛化未量化與效度待驗，課程沒有以 ARC 分數認證全面通用智力。"
+        },
+        {
+          "path": "translate/2411.02272_Induction_Transduction.zh-TW/01_摘要.md",
+          "lines": "11-28",
+          "note": "歸納先找顯式函式、傳導直接預測及範例通過後優先歸納／失敗兜底，支持 story[1]、details[0] 與 BARC 卡。"
+        },
+        {
+          "path": "translate/2411.02272_Induction_Transduction.zh-TW/01_摘要.md",
+          "lines": "43-56",
+          "note": "受測設定內互補、範例過濾假陽性與搜尋預算效應，支持課程不把互補性寫成無條件優劣定理。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "adaptation",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2411.07279_Test_Time_Training.zh-TW/01_摘要.md",
+          "lines": "15-31",
+          "note": "ICL 不更新參數、TTT 暫時梯度更新、留一法、可逆增廣、All Outputs 與每題 LoRA 直接支持兩段 story 與來源卡。"
+        },
+        {
+          "path": "translate/2411.07279_Test_Time_Training.zh-TW/01_摘要.md",
+          "lines": "35-47",
+          "note": "合成初始微調、增廣推論與階層投票及公開／半私有差異，支持步驟與成本、分數適用範圍；課程未宣稱僅靠示範從零學成系統。"
+        },
+        {
+          "path": "translate/2411.07279_Test_Time_Training.zh-TW/01_摘要.md",
+          "lines": "49-62",
+          "note": "BBH 不適用可逆變換、共用適配器反而提升，以及資料洩漏警告，支持不同基準無通吃配方與評估邊界。"
+        },
+        {
+          "path": "translate/2411.02272_Induction_Transduction.zh-TW/01_摘要.md",
+          "lines": "50-56",
+          "note": "BARC 將程式合成、傳導 TTT 與 reranking 組合，支持 details[0] 的互補而非同一操作。"
+        },
+        {
+          "path": "translate/1911.01547_Measure_of_Intelligence.zh-TW/02_II_新視角.md",
+          "lines": "6-24",
+          "note": "評估需控制先驗與經驗，支持附帶測量來源卡；A/B/C 練習與 D 隱藏答案的區分清楚且標示示意。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "automata",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2505.11694_NN_as_Universal_FSM.zh-TW/01_摘要.md",
+          "lines": "24-34",
+          "note": "DFA 五元組、任意有限輸入長的逐層展開構造、ReLU 與閾值狀態編碼支持 story[0]，課程正確區分構造存在與訓練可得。"
+        },
+        {
+          "path": "translate/2505.11694_NN_as_Universal_FSM.zh-TW/01_摘要.md",
+          "lines": "42-46",
+          "note": "固定深寬不處理無界記憶語言，支持有限長／深度隨長度增長與不能精確無限計數的邊界。"
+        },
+        {
+          "path": "translate/2408.11042_GraphFSA.zh-TW/01_摘要.md",
+          "lines": "20-38",
+          "note": "同一局部 FSA、同步更新、有限鄰居聚合、計數截斷、表達力與轉移表爆炸支持 story[1] 和兩則 details。"
+        },
+        {
+          "path": "translate/2408.11042_GraphFSA.zh-TW/02_實證評估.md",
+          "lines": "5-30",
+          "note": "機率轉移鬆弛後離散抽取、迭代穩定與部分基準外推結果，以及離散輸入輸出限制，支持課程有限範圍而非全圖全時間保證。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "computation",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2505.13058_Universal_NCA.zh-TW/01_摘要.md",
+          "lines": "11-19",
+          "note": "局部 CA 與連續系統通用性仍難證明，支持核心比喻及不把漂亮圖案等同通用計算的提醒。"
+        },
+        {
+          "path": "translate/2505.13058_Universal_NCA.zh-TW/01_摘要.md",
+          "lines": "29-52",
+          "note": "可變資料、一次模擬內固定硬體、共享規則、模組硬體與梯度訓練直接支持 story[0]、steps、details[0] 與來源卡。"
+        },
+        {
+          "path": "translate/2505.13058_Universal_NCA.zh-TW/02_實驗與結果.md",
+          "lines": "5-13",
+          "note": "矩陣搬移／乘法等原語、分塊模擬線性 MNIST 分類器與誤差傳播，支持 story[1] 的概念驗證限制。固定硬體是單次模擬範圍，不排除複合任務步間重配。"
+        },
+        {
+          "path": "translate/2408.11042_GraphFSA.zh-TW/02_實證評估.md",
+          "lines": "5-8",
+          "note": "離散轉移抽取與步數穩定訓練支持 details[1] 的離散／連續對照；未宣稱任意時間已被證明。"
+        },
+        {
+          "path": "translate/2505.11694_NN_as_Universal_FSM.zh-TW/01_摘要.md",
+          "lines": "27-46",
+          "note": "所列第三來源確為有限長離散轉移構造，來源卡沒有把它擴寫成無界通用計算結果。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "program-search",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2411.05820_EvoNUDGE_GNN_Guided_GP.zh-TW/01_摘要.md",
+          "lines": "19-47",
+          "note": "SR DSL 樹、GNN 導引前置圖搜尋、符號執行等價合併、子程式庫播種與替換變異，支持 story[0]、steps、details[0] 與來源卡。"
+        },
+        {
+          "path": "translate/2411.05820_EvoNUDGE_GNN_Guided_GP.zh-TW/02_相關工作.md",
+          "lines": "17-28",
+          "note": "相同 GP 配置、別題子程式庫 EvoRnd 消融、前置搜尋成本與函數集缺失，直接支持 details[1] 和運算子／成本邊界。"
+        },
+        {
+          "path": "translate/2006.08381_DreamCoder.zh-TW/02_Wake_Sleep_程式學習.md",
+          "lines": "5-18",
+          "note": "神經識別模型引導型別化程式搜尋與庫抽象壓縮，支持 story[1] 的神經指路、符號執行與給定語言的分工。"
+        },
+        {
+          "path": "summarize/2006.08381_DreamCoder.摘要/01_一句話概括.md",
+          "lines": "28-32",
+          "note": "可符號化問題、計算成本與尚未跨領域共用語言支持 DreamCoder 來源卡。"
+        },
+        {
+          "path": "translate/2211.16605_Stitch.zh-TW/02_語料庫引導的自頂向下搜尋.md",
+          "lines": "5-32",
+          "note": "帶洞抽象、匹配位置、效用上界與引數捕獲受約束最優支持 Stitch 卡；正文未將部件庫或範例通過當作全域真實機制證明。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "library-learning",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2006.08381_DreamCoder.zh-TW/02_Wake_Sleep_程式學習.md",
+          "lines": "5-18",
+          "note": "Wake、abstraction、dreaming 及降搜尋深度／廣度的分工直接支持 story[0]；MDL 同時計入庫與重寫後程式長度。"
+        },
+        {
+          "path": "translate/2006.08381_DreamCoder.zh-TW/02_Wake_Sleep_程式學習.md",
+          "lines": "20-28",
+          "note": "重構暴露語意模式、重播與生成問題支持來源卡和壓縮的精髓，不是只找字面重複。"
+        },
+        {
+          "path": "translate/2211.16605_Stitch.zh-TW/02_語料庫引導的自頂向下搜尋.md",
+          "lines": "13-25",
+          "note": "自頂向下展開、分支限界、一次選一抽象與壓縮效用支持 story[1]、steps 和不能等同全世界最優整庫的說明。"
+        },
+        {
+          "path": "translate/2211.16605_Stitch.zh-TW/02_語料庫引導的自頂向下搜尋.md",
+          "lines": "30-41",
+          "note": "引數捕獲剪枝有受約束最優邊角，原生語法匹配需額外重寫才暴露某些語意共性；details[1] 已明確保留這些關鍵條件。"
+        },
+        {
+          "path": "summarize/2006.08381_DreamCoder.摘要/01_一句話概括.md",
+          "lines": "28-32",
+          "note": "DreamCoder 仍受符號化、算力與單領域語言限制，來源卡沒有誤寫跨域普遍成立。"
+        },
+        {
+          "path": "translate/2411.05820_EvoNUDGE_GNN_Guided_GP.zh-TW/01_摘要.md",
+          "lines": "42-47",
+          "note": "EvoNUDGE 是當題前置子程式庫再支援 GP，而非 DreamCoder 式跨任務整庫學習；附帶卡如實定位其方法。"
+        }
+      ],
+      "findings": []
+    }
+  ]
+}

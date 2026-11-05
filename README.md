@@ -49,4 +49,4 @@ python3 tools/package_static.py
 
 依使用者指定，正式網站只走此 repo 的 GitHub Pages。帳戶方案不支援私有 repo 的 Pages，因此新建的本站 repo 改為 public；原 paper_readings 論文庫仍保持 private，筆記連結需要存取權，arXiv 原文可公開閱讀。
 
-每次 push main 觸發 Actions：重建、檢查、封裝 `dist/`，再透過 Pages 部署。發布檔案只有 HTML、CSS、JavaScript 與 SVG，不包含 docs、QA、來源 JSON 或任何託管設定。精確版本與結果見 [發布紀錄](docs/DEPLOYMENT.md)。舊私有預覽已停止更新，見[遷移註記](docs/LEGACY-PREVIEW.md)。
+涉及網站或建置流程的 push main 觸發 Actions（純文件／QA紀錄更新略過）：重建、檢查、封裝 `dist/`，再透過 Pages 部署。發布檔案只有 HTML、CSS、JavaScript 與 SVG，不包含 docs、QA、來源 JSON 或任何託管設定。精確版本與結果見 [發布紀錄](docs/DEPLOYMENT.md)。舊私有預覽已停止更新，見[遷移註記](docs/LEGACY-PREVIEW.md)。

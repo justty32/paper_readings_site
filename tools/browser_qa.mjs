@@ -9,7 +9,7 @@ let seq=0;const pending=new Map(),events=[];ws.onmessage=e=>{const m=JSON.parse(
 const c=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
 const ev=async expression=>{const r=await c('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
 const assert=(v,m)=>{if(!v)throw Error(m);};
-await c('Page.enable');await c('Runtime.enable');await c('Log.enable');
+await c('Page.enable');await c('Runtime.enable');await c('Log.enable');await c('Network.enable');await c('Network.setCacheDisabled',{cacheDisabled:true});
 await c('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const data=['agents','core','foundations'].flatMap(name=>JSON.parse(fs.readFileSync(root+'/content/'+name+'.json')).lessons);
 const pages=['index.html','map.html','about.html',...'abcdefghij'.split('').map(x=>'topics/'+x+'.html'),...data.map(x=>'lessons/'+x.id+'.html')];

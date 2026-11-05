@@ -6,6 +6,8 @@
 
 2026-11-05已實際對private repo建立Pages，API回覆HTTP422「Your current plan does not support GitHub Pages for this repository」。依使用者隨後明確指定GitHub Pages的授權，在稽核無憑證及私人資料後，將新建本站repo改public；來源paper_readings仍為private。本站來源筆記需原庫GitHub權限，arXiv原文入口公開。
 
-目前正在等待此輪Actions發布與正式URL內容驗收。第一次private預覽已停止更新；其限制另記[遷移註記](LEGACY-PREVIEW.md)。
+最終網站內容部署 `c46c0c3b8fdd632bbf3f0b4470bf30b846dafc9c` 已成功：[Actions 41985769569](https://github.com/justty32/paper_readings_site/actions/runs/41985769569) build與deploy皆success。正式URL的44個靜態檔HTTP200且SHA256與本地dist完全相同；content/site.json、docs/qa/browser-report.json與舊hosting設定路徑皆HTTP404。正式站另通過41頁桌面／手機、28課互動、已知約束與查詢分工、JSON語法與語意、保留輸入及並列流程等檢查，見 [QA](qa/README.md)。
+
+純docs、README、AGENTS與瀏覽器QA腳本更動不觸發重新發布；網站內容與建置流程更動仍觸發完整部署。第一次private預覽已停止更新；其限制另記[遷移註記](LEGACY-PREVIEW.md)。
 
 GitHub標準流程參考：[Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。

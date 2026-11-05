@@ -1,0 +1,287 @@
+{
+  "base_url": "https://justty32.github.io/paper_readings_site/",
+  "commit": "c46c0c3b8fdd632bbf3f0b4470bf30b846dafc9c",
+  "actions_run": "https://github.com/justty32/paper_readings_site/actions/runs/41985769569",
+  "method": "Actual Windows headless Chrome same-origin fetch + SHA256; Linux urllib route unavailable",
+  "all_static_files_match": true,
+  "results": [
+    {
+      "path": "about.html",
+      "status": 200,
+      "sha256": "af34df7d734a988eb104c16c8f86a5890c2ecaa6f65a89abf27aa98db0eaad9c",
+      "bytes": 4239
+    },
+    {
+      "path": "assets/app.js",
+      "status": 200,
+      "sha256": "4316fb9a0f6af76a4526b9e4fe064dee23870892f80211a7d82c91eec995bae6",
+      "bytes": 31112
+    },
+    {
+      "path": "assets/favicon.svg",
+      "status": 200,
+      "sha256": "008d5b9143081867da2223accf539203be2c0c55494be4eb13bca6960a46584f",
+      "bytes": 212
+    },
+    {
+      "path": "assets/style.css",
+      "status": 200,
+      "sha256": "b370ad020c207623893e25cfaa28c2a7f2bfebbdb741901c2a3db02575ee4ce7",
+      "bytes": 18031
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "756570d815ff094c600a6426512b50c2415facc2a6ac77f499ad24b4287664d1",
+      "bytes": 30105
+    },
+    {
+      "path": "lessons/adaptation.html",
+      "status": 200,
+      "sha256": "ad896d6f7f5cbf888f0793dc071dc2e5a3316a97c06420908f37196040979185",
+      "bytes": 11470
+    },
+    {
+      "path": "lessons/agent-memory.html",
+      "status": 200,
+      "sha256": "1c416b89ade73e40422c88ad3b99536df10210e62d7a02d0241757527b689c20",
+      "bytes": 11085
+    },
+    {
+      "path": "lessons/arc.html",
+      "status": 200,
+      "sha256": "548f4bb28ba45424e8f19e347c22bbb85ac8311dacfeaa0d7254f2a9d07cf211",
+      "bytes": 10516
+    },
+    {
+      "path": "lessons/automata.html",
+      "status": 200,
+      "sha256": "1d2b9a24ec670da8bf87e9bbcf4bb4b4bdbbc7bb6d5af6fe4d74d0a41ff8ea83",
+      "bytes": 10632
+    },
+    {
+      "path": "lessons/computation.html",
+      "status": 200,
+      "sha256": "d31b854c963e47087e0f76cd897fbfef5284f8bb0f7ee980512f0ab425f25aa8",
+      "bytes": 11541
+    },
+    {
+      "path": "lessons/constrained-decoding.html",
+      "status": 200,
+      "sha256": "749715f8e6bad064502c73ead2a8e2c15039aa34dc1baa2fd4aa7b12c6d6ce2e",
+      "bytes": 10962
+    },
+    {
+      "path": "lessons/cost-routing.html",
+      "status": 200,
+      "sha256": "242d94f6a4aa69652a1f74503a3089893965d5d338963a6c9710ea1c5b0d9867",
+      "bytes": 10942
+    },
+    {
+      "path": "lessons/equivalence.html",
+      "status": 200,
+      "sha256": "6e5482c489ec1cb7522fe484a991ee86b58dc217a357bf95ec649e45f84a13f6",
+      "bytes": 10781
+    },
+    {
+      "path": "lessons/evolution.html",
+      "status": 200,
+      "sha256": "d269aad07dc1b1b4c898fd15585e049fef30b22fd51197fc96bd95eb267f2609",
+      "bytes": 11529
+    },
+    {
+      "path": "lessons/gan.html",
+      "status": 200,
+      "sha256": "e5c930deae095468eaf46677bb9e357675d4ddfc3460ce84d302bb3b7552ea87",
+      "bytes": 10757
+    },
+    {
+      "path": "lessons/grounding.html",
+      "status": 200,
+      "sha256": "b429fac23d40e35f2121e8c6dc995de79d409032e1877a6df91eda46569e3317",
+      "bytes": 10565
+    },
+    {
+      "path": "lessons/interpretability.html",
+      "status": 200,
+      "sha256": "a0a3b02832327021c1d203d39858127bf51e9e1483d6f8572375fc4ad2e98b63",
+      "bytes": 11272
+    },
+    {
+      "path": "lessons/kan.html",
+      "status": 200,
+      "sha256": "5ef313627ea9b81b4fe7150a69049050a9cc265375d55797a64ed0f761340c46",
+      "bytes": 10855
+    },
+    {
+      "path": "lessons/library-learning.html",
+      "status": 200,
+      "sha256": "00f32f08b81907ba2e5e66f43cbc665a8b253f3c581a23145bda051541ff9c39",
+      "bytes": 11723
+    },
+    {
+      "path": "lessons/logic-belief.html",
+      "status": 200,
+      "sha256": "4b9e84fb4775c83f425b639c6067f98dabe800270f76a5a029bc49a155ee0419",
+      "bytes": 10530
+    },
+    {
+      "path": "lessons/meta-learning.html",
+      "status": 200,
+      "sha256": "2937d146f19cb10adf1b9d336d53d9509b66c9b1cd31703f3d59520faa69905d",
+      "bytes": 10635
+    },
+    {
+      "path": "lessons/neurosymbolic.html",
+      "status": 200,
+      "sha256": "0eb5060c20ec43b0a5fa6eeee768744599bb618427e2db51f42867278de7089b",
+      "bytes": 11277
+    },
+    {
+      "path": "lessons/program-search.html",
+      "status": 200,
+      "sha256": "abeb24409c11fa33d44f5921c7fa9c5e2d8af47f9cf548294569c5b5d70f227f",
+      "bytes": 11592
+    },
+    {
+      "path": "lessons/reasoning.html",
+      "status": 200,
+      "sha256": "293d6ee11379f5be938eb47be3e3104e855d53d042524c39b3e02477db695e05",
+      "bytes": 10580
+    },
+    {
+      "path": "lessons/self-correction.html",
+      "status": 200,
+      "sha256": "52f4de8bab79788be6ccea53b71aaf474b0e1fb298612e37257f3639c1266f85",
+      "bytes": 10950
+    },
+    {
+      "path": "lessons/skill-governance.html",
+      "status": 200,
+      "sha256": "52e7d38edb10fb9f6f93495b2db28b252d29c5b68bbd9ee32b20b8e275c9559f",
+      "bytes": 10843
+    },
+    {
+      "path": "lessons/skill-library.html",
+      "status": 200,
+      "sha256": "6fcbfc04fe829d4c152034c417a46bc8399f9a657d185900a5732181e729926c",
+      "bytes": 10831
+    },
+    {
+      "path": "lessons/symbolic-regression.html",
+      "status": 200,
+      "sha256": "3d07a01cd38848ef8d354b116f1f1b7f8d81d8886401801fc45fb9f4fa965377",
+      "bytes": 11191
+    },
+    {
+      "path": "lessons/symmetry.html",
+      "status": 200,
+      "sha256": "5ae622148cc3fff55e39930b02c0fa5663c2fed37cd7d8f7d71b9708abb27164",
+      "bytes": 10728
+    },
+    {
+      "path": "lessons/tool-use.html",
+      "status": 200,
+      "sha256": "c50e967a0b65425726e56422cd275e633ca0c3fd5399a194c95a40099f92c81d",
+      "bytes": 11046
+    },
+    {
+      "path": "lessons/uncertainty.html",
+      "status": 200,
+      "sha256": "9e48b11e072389be83be7270298c178ef732a5681bc52f1ab207737231c28aa7",
+      "bytes": 10912
+    },
+    {
+      "path": "lessons/workflow-optimization.html",
+      "status": 200,
+      "sha256": "69c34a6b29a1d3496fca371a1f0468864512093ed8fab74d8d1eb559d358d0a7",
+      "bytes": 10855
+    },
+    {
+      "path": "lessons/world-models.html",
+      "status": 200,
+      "sha256": "3d846f543eb32c49bd69bc9db0f829821c5719937d94ef47291d57382a7e47f1",
+      "bytes": 11112
+    },
+    {
+      "path": "map.html",
+      "status": 200,
+      "sha256": "f93ea0e7e13426875af4d7f469c05e0dfbdfe7a3c1249828c129a51a25368ba7",
+      "bytes": 8388
+    },
+    {
+      "path": "topics/a.html",
+      "status": 200,
+      "sha256": "9f96784e64d5e747e184c2bc7d99c667f09768dda04f8d6a11bc3569bb3392bb",
+      "bytes": 5131
+    },
+    {
+      "path": "topics/b.html",
+      "status": 200,
+      "sha256": "3e147330dab7e763022ad7133a38b749d167de760fc3a80166553fc91d9febb2",
+      "bytes": 5156
+    },
+    {
+      "path": "topics/c.html",
+      "status": 200,
+      "sha256": "f1fb845439ac19ff054b8cd070e191bb0c3c7c56979081590bf10f7d57b6d6fd",
+      "bytes": 5114
+    },
+    {
+      "path": "topics/d.html",
+      "status": 200,
+      "sha256": "b7d12f97fc2b2937645289a1da06cab27befe2efeaf90aedfb58bd9ecdbaacb0",
+      "bytes": 5721
+    },
+    {
+      "path": "topics/e.html",
+      "status": 200,
+      "sha256": "2cf458868b2ebd706a27759792130108811f327659d4b42ed4d81ceb274ffa2b",
+      "bytes": 6641
+    },
+    {
+      "path": "topics/f.html",
+      "status": 200,
+      "sha256": "4d8907e31c38fcbf7994cc3ef5b773096481039b733124991b08bc9a06c40f14",
+      "bytes": 6247
+    },
+    {
+      "path": "topics/g.html",
+      "status": 200,
+      "sha256": "380bbef9148e321c8e3a5da95aba7c0d41610fd34def8640d35c543a09ea2ab9",
+      "bytes": 5277
+    },
+    {
+      "path": "topics/h.html",
+      "status": 200,
+      "sha256": "f4cbb7d7cb5a17e58e2d180224372af8c1bef0e2434ca0572282343f393b0fc7",
+      "bytes": 4743
+    },
+    {
+      "path": "topics/i.html",
+      "status": 200,
+      "sha256": "e0b03d528bd61b18a6c5f664e135e78332e377db5c2d3cf1797b88d56c98c606",
+      "bytes": 8964
+    },
+    {
+      "path": "topics/j.html",
+      "status": 200,
+      "sha256": "9bce6881de9398abec58a0a27010b8e74e1aed74958258b540ff2d7cb0f175b6",
+      "bytes": 5111
+    }
+  ],
+  "excluded_paths": [
+    {
+      "path": "content/site.json",
+      "status": 404
+    },
+    {
+      "path": "docs/qa/browser-report.json",
+      "status": 404
+    },
+    {
+      "path": ".openai/hosting.json",
+      "status": 404
+    }
+  ]
+}

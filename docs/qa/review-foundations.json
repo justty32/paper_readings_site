@@ -1,0 +1,162 @@
+{
+  "reviewer": "core_topics（獨立回讀固定commit之已提交翻譯／摘要正文；未外取原文）",
+  "source_commit": "1f91be9b96e04d7f0b6b074a90173a4375eb2214",
+  "lessons": [
+    {
+      "id": "neurosymbolic",
+      "verdict": "needs_revision",
+      "evidence": [
+        {
+          "path": "translate/2507.11127_Defining_Neurosymbolic_AI.zh-TW.md",
+          "lines": "26-67",
+          "note": "邏輯函數、信念權重、測度與加權模型計數主軸有直接依據；框架能容納布林與模糊語意，未宣稱涵蓋一切系統。"
+        },
+        {
+          "path": "translate/2507.11127_Defining_Neurosymbolic_AI.zh-TW.md",
+          "lines": "42-53,73-80",
+          "note": "查詢公式的指示值乘上世界權重再求和，會計入使查詢成立的世界；不表示使查詢為假的世界因此成為不合法的輸入候選。這是開場 toy 的疑慮依據。"
+        },
+        {
+          "path": "translate/2507.08216_Grounding_Methods_NeSy.zh-TW/01_摘要.md",
+          "lines": "19-23,45-62",
+          "note": "grounding 是邏輯變數實例化；BC寬度／深度限制與可證事實集的變化支持 details。已循讀母檔所指的實際章。"
+        }
+      ],
+      "findings": [
+        {
+          "severity": "medium",
+          "field": "story[0]; example.after; example.explanation; steps[2-3]",
+          "issue": "開場任務是詢問「兩數相加是否等於5」，但之後以「只有2+3=5符合題目」及「規則能排除不相容組合」排除第二張為8的候選。若和等於5只是查詢而非已知證據，2+8=10完全符合加法規則，只使查詢為假；不能據此把8當不合法辨識。這混淆了評估事件與以已知關係作條件推斷。",
+          "suggested_fix": "最小修法：將開場與例子明確改成「已知兩張卡的和是5，要辨識第二張卡」，這時可以依觀測關係排除8；或保留是否題，將2+3分到查詢為真、2+8分到查詢為假，依候選權重聚合，避免說已排除8。"
+        }
+      ]
+    },
+    {
+      "id": "logic-belief",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2507.11127_Defining_Neurosymbolic_AI.zh-TW.md",
+          "lines": "42-67,82-104",
+          "note": "積分公式與離散WMC／連續WMI、模糊語意及MAP未涵蓋限制，均支持正文。toy限定互斥完備、正規化的兩候選；0.6是符合事件的總權重，沒有把觀測後驗與未正規化值混在一起。"
+        },
+        {
+          "path": "translate/2507.08216_Grounding_Methods_NeSy.zh-TW/01_摘要.md",
+          "lines": "19-23,45-60",
+          "note": "實際章明確把grounding定義為替換變數成常數，並控制未知atom寬度與證明深度。課程與感知／工具接地分層說明正確。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "symbolic-regression",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2512.01682_SR_Current_Challenges_Thesis.zh-TW/01_摘要.md",
+          "lines": "5-26,35-49",
+          "note": "結構／常數最佳化、GP只是求解方式、不精確簡化可改變函數，以及小而準未必恢復真方程均有依據。"
+        },
+        {
+          "path": "translate/2511.05849_EGG_SR.zh-TW/01_摘要.md",
+          "lines": "19-31,43-47",
+          "note": "來源卡對改寫規則下等價、e-graph與三類搜尋互動的描述有依據，沒有保證任意搜尋恢復真式。"
+        },
+        {
+          "path": "translate/2512.01682_SR_Current_Challenges_Thesis.zh-TW/01_摘要.md",
+          "lines": "43-49",
+          "note": "三點外推反例是明示自製教學例，已獨立代數核算：乘積項在1、2、3為零，在4為6，故兩式預測9與15正確；沒有冒充論文測試結果。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "equivalence",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2511.05849_EGG_SR.zh-TW/01_摘要.md",
+          "lines": "21-41,49-59",
+          "note": "規則相對的等價、e-class／e-node表示、MCTS共享統計、DRL獎勵聚合與條件性理論分析均支持本課。"
+        },
+        {
+          "path": "translate/2511.05849_EGG_SR.zh-TW/01_摘要.md",
+          "lines": "5-17,21-23",
+          "note": "來源以log(2x)改寫示範等價；課程另明列實數log須x>0，並區分實數恆等式與浮點逐位等價。x+x等例也明確限定實數與合法規則，沒有漏掉數域。"
+        },
+        {
+          "path": "translate/2512.01682_SR_Current_Challenges_Thesis.zh-TW/01_摘要.md",
+          "lines": "35-40",
+          "note": "不精確資料驅動簡化會改變函數，支持不能靠有限點吻合宣布全域等價的教學提醒。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "kan",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2501.17896_KAN_Airfoil_Lift.zh-TW/01_摘要.md",
+          "lines": "28-39,56-66",
+          "note": "邊上一維函數、節點求和、剪枝與函數庫符號化、低雷諾數限制均有依據；翼型實作確實有base_fun=silu。課程說明不同實作有基底分支，未把此實驗當純樣條定理例證。"
+        },
+        {
+          "path": "summarize/2610.21480_KANCurseStructuralBias.摘要.md",
+          "lines": "23-41,55-59",
+          "note": "下界限固定平滑度／樣條次數、純樣條係數槽位及整個函數類的一致誤差；排除SiLU／乘法／非樣條變體。課程保留上述範圍，沒有將最壞近似下界誤當訓練時間下界。"
+        },
+        {
+          "path": "translate/2501.17896_KAN_Airfoil_Lift.zh-TW/01_摘要.md",
+          "lines": "33-39,58-66",
+          "note": "符號化為擬合邊函數後組合封閉式，並非因果定律證明；舒適分數加法例明確是示意，也保留交互作用不足的限制。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "gan",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/1606.03657_InfoGAN.zh-TW.md",
+          "lines": "21-49",
+          "note": "c與z分開、Q近似後驗、E log Q+H(c)互資訊下界與GAN目標均與課程一致。沒有從高互資訊直接推出語意可識別或因果解耦。"
+        },
+        {
+          "path": "translate/1606.03657_InfoGAN.zh-TW.md",
+          "lines": "53-70",
+          "note": "MNIST旋轉／筆寬等是指定實驗觀察；課程將手寫互動與訓練模型分開，也限制潛在碼掃描只是質性檢視。"
+        },
+        {
+          "path": "translate/2302.00236_LieGAN_Symmetry_Discovery.zh-TW/01_摘要.md",
+          "lines": "24-42,78-83",
+          "note": "附帶來源卡對李代數生成元、矩陣指數、分布判別及假設／維度限制有依據，沒有與一般GAN生成影像混同。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "symmetry",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2302.00236_LieGAN_Symmetry_Discovery.zh-TW/01_摘要.md",
+          "lines": "24-42,70-83",
+          "note": "分布不變和函數等變的明確定義、矩陣生成元與指數、下游等變網路，以及線性李群表示限制，支持正文與pitfalls。"
+        },
+        {
+          "path": "translate/2302.00236_LieGAN_Symmetry_Discovery.zh-TW/01_摘要.md",
+          "lines": "13-13,30-42",
+          "note": "圓周均勻分布旋轉不變、非圓橢圓90度旋轉一般不變性不成立，是明示自製分布示意；課程未以有限點雲或有限判別器未辨出差異當精確證明。"
+        },
+        {
+          "path": "translate/1606.03657_InfoGAN.zh-TW.md",
+          "lines": "33-49,59-70",
+          "note": "附帶InfoGAN來源卡描述c的互資訊下界與指定實驗的可解釋變化，未宣稱所有維度必定得到人類語意。"
+        }
+      ],
+      "findings": []
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "reviewer": "core_topics（交叉審核；直接回讀固定 commit 的庫內摘要／翻譯實際正文，未外取原文）",
+  "source_commit": "1f91be9b96e04d7f0b6b074a90173a4375eb2214",
+  "lessons": [
+    {
+      "id": "skill-library",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2305.16291_Voyager.zh-TW/02_方法.md",
+          "lines": "19-45",
+          "note": "可執行程式技能、描述向量檢索、環境／執行／critic 三類回饋皆直接支持 story 與 steps；沒有將外部技能成長誤述為權重更新。"
+        },
+        {
+          "path": "translate/2305.16291_Voyager.zh-TW/03_實驗.md",
+          "lines": "32-46",
+          "note": "實驗章明載 critic 偶爾失誤及不調模型參數；支持 details 的驗證邊界。"
+        },
+        {
+          "path": "summarize/2401.12869_TroVE.摘要.md",
+          "lines": "19-33",
+          "note": "三模式、執行一致性、低使用率修剪與弱驗證限制，逐項支持 TroVE 敘述。點心例明確標為教學示意，沒有冒充節省成本的實測。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "skill-governance",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2605.13716_SkillOps.zh-TW/01_摘要.md",
+          "lines": "13-28",
+          "note": "持久庫缺陷、契約 P/O/A/V/F、型別關係與維護動作支持白話主軸；任務修復與庫層修復的分界準確。"
+        },
+        {
+          "path": "translate/2605.13716_SkillOps.zh-TW/03_實驗.md",
+          "lines": "60-86",
+          "note": "原章列出 gold 參數、半合成 ALFWorld 與規則難辨語意衝突，支持來源卡與 pitfalls 的限制；借書例沒有冒稱論文案例。"
+        },
+        {
+          "path": "translate/2605.22148_Ratchet.zh-TW/02_方法.md",
+          "lines": "14-30",
+          "note": "退役保留日誌、移出檢索，證據門檻退役及硬容量驅逐均見方法章。課程將證據退役與容量限制並列，未宣稱刪除歷史。"
+        },
+        {
+          "path": "translate/2605.22148_Ratchet.zh-TW/02_方法.md",
+          "lines": "40-52",
+          "note": "命題明列固定分布、路由及估計假設，且只稱非發散、非持續改進；課程保留此條件性。本審核核對轉述，不另行證明來源定理。"
+        },
+        {
+          "path": "translate/2605.22148_Ratchet.zh-TW/03_實驗.md",
+          "lines": "26-35",
+          "note": "A4 同時降低證據量並收緊門檻後有害，支持「過早、過嚴可能有害」，未擴大成每種退役都有害。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "cost-routing",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2406.18665_RouteLLM.zh-TW/01_摘要.md",
+          "lines": "21-37",
+          "note": "生成前單模型路由、強模型勝率與門檻方向明確；課程「門檻越高越用弱模型」正確。"
+        },
+        {
+          "path": "translate/2406.18665_RouteLLM.zh-TW/02_方法.md",
+          "lines": "7-21,41-51",
+          "note": "偏好訓練不使用回答內容、分布差異與路由開銷都有依據，沒有把路由器成本說成零。"
+        },
+        {
+          "path": "summarize/2305.05176_FrugalGPT.摘要.md",
+          "lines": "21-38",
+          "note": "平均預算、答案評分、級聯選擇及標註／分布／前置成本限制支持正文與來源卡。示意要求累計所有呼叫，沒有把最後一級費用當總費用。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "constrained-decoding",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2307.09702_Outlines_Guided_Generation.zh-TW/01_摘要.md",
+          "lines": "5-27",
+          "note": "正則／CFG 引導、FSM 與詞彙索引、遮罩機制支持主軸；正文只將正則寫成有限狀態機，未宣稱任意語意都能化成有限狀態。"
+        },
+        {
+          "path": "translate/2307.09702_Outlines_Guided_Generation.zh-TW/02_迭代式_FSM_處理與索引本文核心.md",
+          "lines": "14-25",
+          "note": "離線索引及雜湊查詢的平均常數開銷、記憶體成本，支持 details；沒有把整個模型生成說成常數時間。"
+        },
+        {
+          "path": "summarize/2109.05093_PICARD.摘要.md",
+          "lines": "18-33",
+          "note": "top-k 候選增量解析、schema 守衛、EOS 事後檢查消融與仍可能無解的限制，均與課程一致。點餐示意清楚區分格式可讀與意圖正確。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "self-correction",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "summarize/2310.01798_CannotSelfCorrect.摘要.md",
+          "lines": "18-35",
+          "note": "移除 oracle 停止、同回應數比較與僅限受測推理模型的範圍支持正文；沒有將負結果擴寫成所有模型永遠不能修正。"
+        },
+        {
+          "path": "translate/2305.11738_CRITIC.zh-TW/01_摘要.md",
+          "lines": "21-36",
+          "note": "初稿、工具互動、批判、修訂與停止條件直接支持流程。"
+        },
+        {
+          "path": "translate/2305.11738_CRITIC.zh-TW/02_實驗.md",
+          "lines": "5-10,22-25,36-43",
+          "note": "搜尋、直譯器、Perspective API 與無工具消融，支持回饋來源的說明；沒有混用 oracle 版本的分數。"
+        },
+        {
+          "path": "translate/2305.11738_CRITIC.zh-TW/03_附錄擇要.md",
+          "lines": "5-17",
+          "note": "延遲、工具適用性與改壞正確答案在附錄有明文，支持來源卡邊界。收據示意沒有把工具算對等同資料齊全。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "workflow-optimization",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2310.03714_DSPy.zh-TW/02_DSPy_程式設計模型.md",
+          "lines": "5-30",
+          "note": "signatures/modules/teleprompters、LM 呼叫與依指標 bootstrap 示範支持課程；沒有把編譯誤述為免模型執行。"
+        },
+        {
+          "path": "summarize/2402.16823_GPTSwarm.摘要.md",
+          "lines": "18-35",
+          "note": "節點＝操作、邊＝資訊流、提示與跨 agent 邊機率優化有直接依據；內部拓撲未優化及多次取樣成本也已保留。校刊例明示是流程設計練習。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "uncertainty",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/1705.08500_SelectiveClassification.zh-TW/01_摘要.md",
+          "lines": "17-39",
+          "note": "固定分類器、IID 標註資料、接受子集條件風險與覆蓋率的分母支持正文；並未把群體統計保證變成逐題必對。"
+        },
+        {
+          "path": "translate/1705.08500_SelectiveClassification.zh-TW/02_具保證風險控制的選擇SGR.md",
+          "lines": "5-24",
+          "note": "SGR 依信心排序選門檻、計算風險上界；信心只需排序，不需絕對機率。課程使用「校準資料」描述選門檻樣本，沒有宣稱模型口頭信心已經機率校準。"
+        },
+        {
+          "path": "translate/1711.06664_LearningToDefer.zh-TW/01_摘要.md",
+          "lines": "13-29,39-53",
+          "note": "下游固定未知黑箱、逐樣本損失與委派閘門直接支持接手者強弱的說明。失物與十題分母例均明示無統計保證。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "interpretability",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2502.01680_Travel_Demand_NeSy.zh-TW/01_摘要.md",
+          "lines": "23-40,55-63",
+          "note": "樹路徑規則、二元指示特徵、變異數篩選與 NN 整合都有依據；單一規則貢獻難追溯與地區／時段限制也保留。"
+        },
+        {
+          "path": "summarize/2509.07025_Binary_Normalized_NN.摘要.md",
+          "lines": "18-22,36-40",
+          "note": "前向二值、反向全精度、逐樣本正規化及活化仍全精度支持課程；沒有將一位元參數推成一位元訓練或人類可讀理由。校車特徵例標為示意。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "tool-use",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2302.04761_Toolformer.zh-TW/01_摘要.md",
+          "lines": "20-48",
+          "note": "生成、執行、依後續 token 損失篩呼叫再微調的三階段與推論 API 暫停／續跑機制，支持正文及來源卡。"
+        },
+        {
+          "path": "translate/2302.04761_Toolformer.zh-TW/02_實驗.md",
+          "lines": "10-17,37-43",
+          "note": "單次呼叫限制、獨立生成導致無一般工具鏈、不可互動搜尋與未計呼叫成本，均已被課程忠實保留。"
+        },
+        {
+          "path": "summarize/2210.03629_ReAct.摘要.md",
+          "lines": "18-23,28-37",
+          "note": "thought 不影響環境、action 取回 observation，以及無資訊搜尋和重複迴圈失敗都有明文。活動預約例是示意，沒有把思考文字當實際工具成功。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "agent-memory",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2606.19847_AtomMem_AtomicFacts_Memory.zh-TW/01_摘要.md",
+          "lines": "9-33",
+          "note": "外部記憶、SFT 抽取器、自包含事實、指代／時間錨定、事件／時間檔案與圖召回，均支持本課機制說明。"
+        },
+        {
+          "path": "translate/2606.19847_AtomMem_AtomicFacts_Memory.zh-TW/01_摘要.md",
+          "lines": "45-57",
+          "note": "評測明確圍繞 LoCoMo 長對話，不支持任意具身長任務；來源卡已保留這項限制，正文也未外推。"
+        },
+        {
+          "path": "summarize/2606.25115_CURATOR_BudgetCurated_Memory.摘要.md",
+          "lines": "18-23,32-36",
+          "note": "價值減加權危害除位元組、留／傳／信、凍結 planner 及只有效用頭線上學習有依據；來源偽造與自洽度近似效用限制已保留。午餐偏好示意未冒充實驗。"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "world-models",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "translate/2502.04728_SymbolicWMTestTimeScaling.zh-TW.md",
+          "lines": "19-27,39-43",
+          "note": "BoN 多候選初始化、對照描述的 iVML 批評、傳統規劃器，以及 VAL 不保證語意忠實與全觀測／準確動作條件，均支持課程。"
+        },
+        {
+          "path": "translate/2506.01622_GeneralAgentsWorldModels.zh-TW.md",
+          "lines": "19-37,49-55",
+          "note": "定理有平穩不可約受控馬可夫環境、全觀測及所有指定深度 composite goals 的能力界；策略可萃取轉移模型不等於任意聊天模型懂物理。課程已保留條件性與單步反例，未聲稱策略必須顯式使用模型。積木例清楚標教學示意。"
+        }
+      ],
+      "findings": []
+    }
+  ]
+}

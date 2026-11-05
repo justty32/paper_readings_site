@@ -1,0 +1,77 @@
+{
+  "reviewer": "agent_topics",
+  "scope": "唯讀巡檢28課 question、intuition、example、steps，及 assets/app.js 可見玩具標籤與輸出；不重新判讀論文事實。",
+  "reviewed_lessons": [
+    "neurosymbolic",
+    "logic-belief",
+    "symbolic-regression",
+    "equivalence",
+    "kan",
+    "gan",
+    "symmetry",
+    "reasoning",
+    "grounding",
+    "meta-learning",
+    "evolution",
+    "arc",
+    "adaptation",
+    "automata",
+    "computation",
+    "program-search",
+    "library-learning",
+    "skill-library",
+    "skill-governance",
+    "cost-routing",
+    "constrained-decoding",
+    "self-correction",
+    "workflow-optimization",
+    "uncertainty",
+    "interpretability",
+    "tool-use",
+    "agent-memory",
+    "world-models"
+  ],
+  "excluded_known_items": [
+    "信心滑桿百分比",
+    "KAN 曲線座標意義",
+    "校車規則特徵的 ≥5／≥20 門檻"
+  ],
+  "findings": [
+    {
+      "lesson_id": "constrained-decoding",
+      "severity": "medium",
+      "field": "assets/app.js:69 constrained() 可見 JSON 標籤",
+      "issue": "「格式合格，意思錯」與「格式與點單都符合」兩個狀態顯示「JSON：品項=茶，杯數=20／2」，但畫面上的這段不是 JSON 語法。本課正要區分格式與語意，新手可能把這種等號文字誤認為合法 JSON。",
+      "suggested_fix": "改顯示真實 JSON，例如 {\"品項\":\"茶\",\"杯數\":20} 與 {\"品項\":\"茶\",\"杯數\":2}；若只想畫欄位示意，就把 JSON 標籤改為「欄位示意，非 JSON 原文」。"
+    },
+    {
+      "lesson_id": "program-search",
+      "severity": "medium",
+      "field": "assets/app.js:57 program() 保留測試 x 滑桿",
+      "issue": "滑桿叫「保留測試 x」，範圍卻是1到8，其中1、2、3已在上方明列為已知示範。把滑桿拉回這三點後，仍稱保留測試，會混淆本課想建立的訓練／保留資料邊界。",
+      "suggested_fix": "保留測試滑桿從4開始；或維持1到8，但命名為「另選輸入 x」，並在1到3時明示「這是已知示範點，不是保留測試」。"
+    },
+    {
+      "lesson_id": "workflow-optimization",
+      "severity": "low",
+      "field": "assets/app.js:65 workflow() duplicate 模式圖形",
+      "issue": "「三人各做一次全部工作」模式把甲、乙、丙以 → 串成同一條線，看起來像前一人把結果交給下一人；但本模式要表達三人各自重做，與另一模式「拆成有交接的流程」的圖形差異因此不清楚。",
+      "suggested_fix": "duplicate 模式把甲、乙、丙畫成並列的獨立卡片，去掉彼此間箭頭；pipeline 模式才保留交接箭頭。仍可在下方保留「來源可能重複」說明。"
+    },
+    {
+      "lesson_id": "neurosymbolic",
+      "severity": "low",
+      "field": "content/foundations.json neurosymbolic.example.before；assets/app.js:28-31 beliefs() 共用玩具",
+      "issue": "靜態例子從「第二張也許是3或8」直接跳到2+3=5，第一張已確定是2沒有明說；互動又改成單張卡的小於／大於5。兩種示意各自能講概念，但第一次接觸的新手可能以為眼前正在驗證同一個兩卡加法條件。",
+      "suggested_fix": "靜態 before 補一句「第一張已知是2」。在本課互動上方補「以下改用單張卡與大小規則，簡化展示候選權重篩選」；不需要改動 logic-belief 課的同一玩具或增加新玩具。"
+    }
+  ],
+  "strengths": [
+    "28課的直覺與例子多使用日常情境，且靜態示意均明確區分於論文實驗。",
+    "TTT 玩具直說只展示資料分配、沒有訓練模型，避免把點按動畫當成真實適應。",
+    "工具查詢使用本地假資料，並分開空位、提出方案與真正預約三種狀態。",
+    "有限狀態機另外說明畫面計數只是觀察輔助，機器本身只記奇偶，避免圖形偷偷增加模型能力。",
+    "函式庫長度玩具公開列出每份6、定義8、呼叫2的自訂成本，不把計數包裝成量測結果。"
+  ],
+  "limitations": "本輪為內容與程式碼可見字串的靜態語義巡檢，未使用GUI，未驗證實際版面、互動可及性或各裝置顯示。未修改content或app。"
+}

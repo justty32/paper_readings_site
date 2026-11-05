@@ -1,3 +1,3 @@
 # 本輪狀態
 
-- [進行中] 41頁／28課內容、圖解與互動已完成並通過本地驗證；依使用者更正遷移到GitHub Pages，等待公開repo的Actions發布與正式URL驗收。
+- [外部能力限制] 舊owner-private預覽已停止更新；目前原生工具無下架／刪除能力，待有官方管理能力時再處理。正式GitHub Pages與來源庫不受影響 → [遷移註記](LEGACY-PREVIEW.md)。

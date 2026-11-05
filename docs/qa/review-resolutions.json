@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-05",
+  "scope": "41頁／28課既有內容的獨立來源覆核與新手可讀性改善，未增加頁數",
+  "reviews": ["review-agents.json", "review-core.json", "review-foundations.json", "review-readability.json"],
+  "resolutions": [
+    {"lesson":"neurosymbolic","issue":"將待答的和為5查詢，誤用成排除候選的已知條件。","resolution":"正文與可見例子明寫已知和為5；另說明若只是是否題，真假候選皆須保留。A1拆出已知和5/10與候選遺失玩具；A2維持加權事件查詢。","validation":"切到已知和5並漏掉3時不強選答案；切和10時保留8。"},
+    {"lesson":"constrained-decoding","issue":"原畫面把自然語言簡寫標成JSON，容易模糊格式課的主旨。","resolution":"直接顯示可JSON.parse的item/quantity物件，分別用20與2展示格式合格但語意錯、以及兩者皆對。","validation":"兩種輸出皆成功JSON.parse，quantity分別為20與2。"},
+    {"lesson":"program-search","issue":"保留測試旋鈕可回到已知訓練輸入1至3。","resolution":"旋鈕限未見的4至8，標籤說明保留範圍。","validation":"瀏覽器檢查下限大於3。"},
+    {"lesson":"workflow-optimization","issue":"重複工作的甲乙丙用箭頭串起，可能誤認已有交接。","resolution":"重複模式改並列加號並說明無先後交接；真正管線模式保留方向箭頭。","validation":"重複模式無箭頭、管線模式有箭頭。"},
+    {"lesson":"neurosymbolic","issue":"兩卡加法例與原共用單卡大小玩具缺橋接、第一張卡未明說。","resolution":"已被獨立兩卡已知約束玩具取代；第一張固定2明寫於可見例子與玩具。","validation":"與主課示意一致。"},
+    {"lesson":"logic-belief","issue":"信心滑桿的數字沒有百分比單位。","resolution":"標籤加上百分比，結果仍明寫兩候選玩具中的支持度。","validation":"靜態字串及瀏覽器範圍控制覆核。"},
+    {"lesson":"kan","issue":"曲線橫縱軸意義只由旋鈕及加總間接暗示。","resolution":"圖上方明寫橫軸輸入0至10、縱軸曲線貢獻0至1，並補座標線。","validation":"數值與手寫函數範圍一致，主線仍說未訓練樣條。"},
+    {"lesson":"interpretability","issue":"二元規則特徵的5與20門檻只藏在程式。","resolution":"輸出說明明寫距離至少5且人數至少20，距離標為示意值。","validation":"控制值與顯示條件相符。"}
+  ],
+  "limits": "覆核依固定快照的已讀摘要與實際譯文章，不宣稱重新完整閱讀所有原始PDF或重現論文實驗。"
+}
