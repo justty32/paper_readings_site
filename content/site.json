@@ -1,0 +1,157 @@
+{
+  "title": "研究遊樂場",
+  "description": "從一個小問題，看懂一整片 AI 研究。繁中、圖解、可動手的論文入門路徑。",
+  "source_repo": "https://github.com/justty32/paper_readings",
+  "source_commit": "1f91be9b96e04d7f0b6b074a90173a4375eb2214",
+  "snapshot_date": "2026-11-05",
+  "categories": [
+    {
+      "id": "a",
+      "name": "神經符號 AI",
+      "tag": "感覺 × 規則",
+      "question": "會認圖，也會守規矩的 AI？",
+      "intro": "先用模型從雜訊裡辨認，再用明確規則組合、篩選與推導。從兩種思考方式怎麼合作開始。",
+      "color": "#6c58b5",
+      "icon": "logic",
+      "index": "index/cat_a.md",
+      "route": [
+        "neurosymbolic",
+        "logic-belief"
+      ]
+    },
+    {
+      "id": "b",
+      "name": "邏輯與語言推理",
+      "tag": "說得通，算得對",
+      "question": "講得像推理，就真的推對了嗎？",
+      "intro": "把一句話翻成可檢查的形式，才知道哪一步成立；也得追問形式背後的事實是否正確。",
+      "color": "#4268ac",
+      "icon": "proof",
+      "index": "index/cat_b.md",
+      "route": [
+        "reasoning",
+        "grounding"
+      ]
+    },
+    {
+      "id": "c",
+      "name": "符號迴歸",
+      "tag": "讓資料說出公式",
+      "question": "散落的數字，能變成一條小公式嗎？",
+      "intro": "搜尋公式的形狀，也調整裡面的常數。準、短、找回真實機制，是三個需要分開看的目標。",
+      "color": "#007c78",
+      "icon": "formula",
+      "index": "index/cat_c.md",
+      "route": [
+        "symbolic-regression",
+        "equivalence"
+      ]
+    },
+    {
+      "id": "d",
+      "name": "元學習與演化",
+      "tag": "學習怎麼學",
+      "question": "能不能把學習方法本身也拿來改？",
+      "intro": "一層在完成任務，另一層在調整學習或搜尋的方法。看清楚誰被更新、誰負責評分。",
+      "color": "#a44f35",
+      "icon": "evolution",
+      "index": "index/cat_d.md",
+      "route": [
+        "meta-learning",
+        "evolution"
+      ]
+    },
+    {
+      "id": "e",
+      "name": "ARC 與抽象推理",
+      "tag": "從幾個例子找規則",
+      "question": "只給幾張小方格，怎麼猜出新規則？",
+      "intro": "從物件、關係與變換提出假設，再用題目中的示範檢查。重點是新題適應，而非背熟答案。",
+      "color": "#bb6a12",
+      "icon": "grid",
+      "index": "index/cat_e.md",
+      "route": [
+        "arc",
+        "adaptation"
+      ]
+    },
+    {
+      "id": "f",
+      "name": "自動機與計算",
+      "tag": "小規則，長行為",
+      "question": "幾條局部規則，怎麼長出複雜行為？",
+      "intro": "從記住一點狀態的機器，走到整片格子的局部更新。把『能表示』與『學得會』分清楚。",
+      "color": "#4e7d45",
+      "icon": "cells",
+      "index": "index/cat_f.md",
+      "route": [
+        "automata",
+        "computation"
+      ]
+    },
+    {
+      "id": "g",
+      "name": "程式搜尋與技能庫",
+      "tag": "程式也能演化",
+      "question": "答案是一段程式時，要往哪裡找？",
+      "intro": "把程式當候選解，用例子或規格檢查，再把反覆出現的片段變成可重用積木。",
+      "color": "#8b568d",
+      "icon": "tree",
+      "index": "index/cat_g.md",
+      "route": [
+        "program-search",
+        "library-learning"
+      ]
+    },
+    {
+      "id": "h",
+      "name": "KAN 網路",
+      "tag": "把曲線放在連線上",
+      "question": "如果每條神經連線都能學一條曲線？",
+      "intro": "沿著連線看函數、在節點相加。了解可視化與符號化的機會，也看普遍效率保證的邊界。",
+      "color": "#2c7b9b",
+      "icon": "curve",
+      "index": "index/cat_h.md",
+      "route": [
+        "kan"
+      ]
+    },
+    {
+      "id": "i",
+      "name": "智能體與 AI 系統",
+      "tag": "讓模型開始做事",
+      "question": "一個會回答的模型，怎麼變成可靠的工作夥伴？",
+      "intro": "工具、記憶、工作流、成本、驗證與世界模型，拆成 11 站。每站處理一個不同的系統問題。",
+      "color": "#496c52",
+      "icon": "agent",
+      "index": "index/cat_i/README.md",
+      "route": [
+        "tool-use",
+        "agent-memory",
+        "self-correction",
+        "workflow-optimization",
+        "skill-library",
+        "skill-governance",
+        "cost-routing",
+        "constrained-decoding",
+        "uncertainty",
+        "interpretability",
+        "world-models"
+      ]
+    },
+    {
+      "id": "j",
+      "name": "GAN 與表徵發現",
+      "tag": "兩個模型互相出題",
+      "question": "一個負責造，一個負責挑，能學到什麼？",
+      "intro": "從對抗訓練的回饋看起，再探索可控制的生成因子與資料裡的對稱結構。",
+      "color": "#ad4e69",
+      "icon": "gan",
+      "index": "index/cat_j.md",
+      "route": [
+        "gan",
+        "symmetry"
+      ]
+    }
+  ]
+}

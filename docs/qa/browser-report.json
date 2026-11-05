@@ -1,0 +1,570 @@
+{
+  "date": "2026-11-05T06:47:08.267Z",
+  "checks": 110,
+  "pages": 41,
+  "widths": [
+    1440,
+    390
+  ],
+  "extra": [
+    "all demo controls",
+    "search",
+    "empty state",
+    "reading state",
+    "clear state",
+    "quiz",
+    "no-JS fallback"
+  ],
+  "results": [
+    {
+      "page": "index.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "map.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "about.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/a.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/b.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/c.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/d.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/e.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/f.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/g.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/h.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/i.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/j.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/skill-library.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/skill-governance.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/cost-routing.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/constrained-decoding.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/self-correction.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/workflow-optimization.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/uncertainty.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/interpretability.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/tool-use.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/agent-memory.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/world-models.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/reasoning.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/grounding.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/meta-learning.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/evolution.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/arc.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/adaptation.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/automata.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/computation.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/program-search.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/library-learning.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/neurosymbolic.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/logic-belief.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/symbolic-regression.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/equivalence.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/kan.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/gan.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/symmetry.html",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "page": "index.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "map.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "about.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/a.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/b.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/c.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/d.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/e.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/f.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/g.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/h.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/i.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "topics/j.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/skill-library.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/skill-governance.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/cost-routing.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/constrained-decoding.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/self-correction.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/workflow-optimization.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/uncertainty.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/interpretability.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/tool-use.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/agent-memory.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/world-models.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/reasoning.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/grounding.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/meta-learning.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/evolution.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/arc.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/adaptation.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/automata.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/computation.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/program-search.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/library-learning.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/neurosymbolic.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/logic-belief.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/symbolic-regression.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/equivalence.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/kan.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/gan.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "page": "lessons/symmetry.html",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "demo": "skill-library",
+      "status": "PASS",
+      "output": "count_snacks(人數, 每人份數) 回傳總份數。這是手寫函式，不是 LLM 自行學出的技能。"
+    },
+    {
+      "demo": "skill-governance",
+      "status": "PASS",
+      "output": "新版也需測試、版本與適用範圍紀錄；把舊版移出預設選單不等於抹除歷史。"
+    },
+    {
+      "demo": "cost-routing",
+      "status": "PASS",
+      "output": "假設每題先付 1 單位，升級再付 4 單位：總成本 5 + 5×4 = 25。分數是合成訊號，未校準；不保證升級後正確。此示意為級聯，預先路由則是另一種成本結構。"
+    },
+    {
+      "demo": "constrained-decoding",
+      "status": "PASS",
+      "output": "符合本例的格式與點單內容；這是本地手寫示意，未使用實際受約束解碼套件。"
+    },
+    {
+      "demo": "self-correction",
+      "status": "PASS",
+      "output": "多一張 8 元後，合計 108。計算正確性與輸入資料完整性需要不同檢查。"
+    },
+    {
+      "demo": "workflow-optimization",
+      "status": "PASS",
+      "output": "流程圖讓每站的輸入輸出可檢查。是否真變好，還要用保留任務比較品質、成本與耗時。"
+    },
+    {
+      "demo": "uncertainty",
+      "status": "PASS",
+      "output": "留下 0/8 題（涵蓋率 0%），其中 0 題錯。轉交的 8 題仍需追蹤最終結果，不能直接算成功。合成信心不代表校準。"
+    },
+    {
+      "demo": "interpretability",
+      "status": "PASS",
+      "output": "規則欄位把條件變成可查看的訊號。這裡沒有訓練模型，也沒有證明任何模型實際依這欄決策。二值化、可讀規則與因果說明是不同問題。"
+    },
+    {
+      "demo": "tool-use",
+      "status": "PASS",
+      "output": "這是本地假資料查詢，不連接真實圖書館。查到空位、提出方案、真的送出預約，是三個不同狀態。"
+    },
+    {
+      "demo": "agent-memory",
+      "status": "PASS",
+      "output": "問「以前」時，舊記錄有用。不要把更新誤解成抹掉所有歷史。"
+    },
+    {
+      "demo": "world-models",
+      "status": "PASS",
+      "output": "手一開始是空的。 這是符號轉移模型；漏寫前提時，模型內合法的計畫也可能不符合現實。"
+    },
+    {
+      "demo": "reasoning",
+      "status": "PASS",
+      "output": "規則只允許從搭校車推出需要證，不能反過來從有證推出搭校車。"
+    },
+    {
+      "demo": "grounding",
+      "status": "PASS",
+      "output": "現在能選中車子盒；這個任務提供了區分名稱的證據。"
+    },
+    {
+      "demo": "meta-learning",
+      "status": "PASS",
+      "output": "看兩種任務時，乙可能更穩定。真正能否適應新任務，還要在沒參與選擇的保留任務測試。"
+    },
+    {
+      "demo": "evolution",
+      "status": "PASS",
+      "output": "保留乙使「分類盒→索引」這條後續路徑仍可探索。不是保證乙最終有用，也需付評估成本。"
+    },
+    {
+      "demo": "arc",
+      "status": "PASS",
+      "output": "示意採「超出畫面就裁掉」：一部分物件消失。題目若沒提供邊界例子，不能擅自認定這就是正確規則。"
+    },
+    {
+      "demo": "adaptation",
+      "status": "PASS",
+      "output": "真正 D 的隱藏答案不能用來更新或挑選結果。此玩具只展示資料分配，沒有訓練模型。"
+    },
+    {
+      "demo": "automata",
+      "status": "PASS",
+      "output": "你按了 0 次，狀態為「偶」。畫面顯示次數方便觀察；這台兩狀態機本身只保存奇偶。"
+    },
+    {
+      "demo": "computation",
+      "status": "PASS",
+      "output": "第 0 步；每格複製上一步左鄰的值。最左格讀最右格，訊息可以繞回。 更新採同步，沒有邊算邊覆蓋。"
+    },
+    {
+      "demo": "program-search",
+      "status": "PASS",
+      "output": "2x+1 通過三個示範。但有限例子仍不足以保證對所有輸入正確；此示例的預期式由教學者指定。"
+    },
+    {
+      "demo": "library-learning",
+      "status": "PASS",
+      "output": "假設每份原寫法 6 單位，新定義 8 單位、每次呼叫 2 單位。使用 12 次時，抽象總長度較短。這些是自訂計數，未量測任何實際工具。"
+    },
+    {
+      "demo": "neurosymbolic",
+      "status": "PASS",
+      "output": "規則「大於 5」留下卡片 8。支持度 0.00 是此兩候選玩具中的加總；不是現實辨識準確率。"
+    },
+    {
+      "demo": "logic-belief",
+      "status": "PASS",
+      "output": "規則「大於 5」留下卡片 8。支持度 0.00 是此兩候選玩具中的加總；不是現實辨識準確率。"
+    },
+    {
+      "demo": "symbolic-regression",
+      "status": "PASS",
+      "output": "三個橘色觀測點仍完全吻合，但 x=4 預測 15。相同訓練誤差，外推不同。"
+    },
+    {
+      "demo": "equivalence",
+      "status": "PASS",
+      "output": "x=3>0，兩式都定義且符合對數改寫。不是少數測試點證明了它，而是使用了帶條件的恆等式。"
+    },
+    {
+      "demo": "kan",
+      "status": "PASS",
+      "output": "兩條函數是手寫的，沒有學習樣條。溫度有舒適區間，亮度貢獻逐漸趨緩；加法結構假設兩者沒有額外交互作用。"
+    },
+    {
+      "demo": "gan",
+      "status": "PASS",
+      "output": "角度 45°、筆寬 18。這些控制由程式直接指定，用來示範「固定其他值，只掃一個因子」；不能據此宣稱模型學會解耦。"
+    },
+    {
+      "demo": "symmetry",
+      "status": "PASS",
+      "output": "橢圓旋轉 180°。除特殊角度外，方向性使分布改變。這裡只畫有限個等距點，沒有做統計檢定。"
+    }
+  ]
+}
