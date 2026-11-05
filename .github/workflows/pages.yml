@@ -3,6 +3,11 @@ name: Publish research playground
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "docs/**"
+      - "README.md"
+      - "AGENTS.md"
+      - "tools/browser_qa.mjs"
   workflow_dispatch:
 
 permissions:
