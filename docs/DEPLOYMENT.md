@@ -6,6 +6,8 @@
 
 ## 2026-11-09：四篇單篇圖解導讀
 
+第二批內容版本 `d73c24ef5b2b0d86294e310b6d9740b5391426a7` 已由 [Actions 42577062345](https://github.com/justty32/paper_readings_site/actions/runs/42577062345) 成功部署，累計 8 篇單篇導讀、50 頁。新增四篇母稿固定 `6c07331018539a4bf4a6170de8efaa2b40e9a0f3`；首批仍使用原本固定版本。從此提交的獨立 `git archive` 快照重建並通過全部站點檢查，79 個公開檔案 HTTP 與 SHA256 全等於該快照產物，沒有混入下一批並行草稿。見[第二批公開核對](qa/2026-11-09-second-publication.json)。
+
 內容版本 `0666fb8646e64b67f2181704ebc0c686daba5e0d` 已由 [Actions 42575104965](https://github.com/justty32/paper_readings_site/actions/runs/42575104965) 成功部署。新增入口 [重要論文導讀](https://justty32.github.io/paper_readings_site/papers.html)，共 46 頁；四篇母稿固定來源 `80b087d692d96581316ca7ee372a2530438d575a`，概念課保持原本的來源快照。
 
 HTTP 核對 63 個公開靜態檔案全部成功，內容 SHA256 與本地 `dist/` 完全相同，證據見 [逐檔紀錄](qa/2026-11-09-first-publication.json)。本輪完成原文與獨立內容覆核、DOM／SVG、來源版本、連結／錨點、JavaScript 語法及純函式 mock 檢查；未做瀏覽器版面或操作驗收。
