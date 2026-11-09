@@ -1,0 +1,117 @@
+{
+  "paths": [
+    {
+      "id": "reuse",
+      "question": "做過一次的麻煩事，下次能不能少做幾步？",
+      "intro": "從找出重複的小步驟，走到把經驗留下來給下一次用。",
+      "steps": [
+        {
+          "kind": "lesson",
+          "id": "library-learning",
+          "verb": "找共通",
+          "goal": "看出幾段做法裡反覆出現的同一小段。"
+        },
+        {
+          "kind": "paper",
+          "id": "dreamcoder",
+          "verb": "學工具",
+          "goal": "理解解題經驗怎麼變成之後能呼叫的小工具。"
+        },
+        {
+          "kind": "paper",
+          "id": "stitch",
+          "verb": "剪搜尋",
+          "goal": "分清楚省下尋找工具的功夫，和保證找到最佳工具的差別。"
+        },
+        {
+          "kind": "paper",
+          "id": "voyager",
+          "verb": "重用",
+          "goal": "看技能如何保存、取回，並在新任務裡重新使用。"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "question": "AI說它查過了，我怎麼知道它真的查過？",
+      "intro": "沿著提議、實際操作、回傳證據和改進流程，一步步核對。",
+      "steps": [
+        {
+          "kind": "lesson",
+          "id": "tool-use",
+          "verb": "分角色",
+          "goal": "分清楚模型說要做什麼，和工具實際做了什麼。"
+        },
+        {
+          "kind": "paper",
+          "id": "react",
+          "verb": "看證據",
+          "goal": "追查每次行動後收到的觀察，避免把自述當成查證。",
+          "branch": {
+            "kind": "paper",
+            "id": "toolformer",
+            "question": "想知道怎麼教它何時拿計算機？",
+            "goal": "看模型如何練習選擇工具與呼叫時機。"
+          }
+        },
+        {
+          "kind": "paper",
+          "id": "reflexion",
+          "verb": "記教訓",
+          "goal": "理解失敗後留下的文字建議為何仍需要下次驗證。"
+        },
+        {
+          "kind": "lesson",
+          "id": "workflow-optimization",
+          "verb": "拆流程",
+          "goal": "指出流程哪一步需要調整，以及怎麼比較調整前後。"
+        },
+        {
+          "kind": "paper",
+          "id": "dspy",
+          "verb": "驗改進",
+          "goal": "用明確評分檢查流程修改，並保留未見過的題目測試。"
+        }
+      ]
+    },
+    {
+      "id": "trust-rules",
+      "question": "電腦寫出一條規則，什麼時候值得相信？",
+      "intro": "先問公式是否吻合、是否等價，再決定要不要走向會動的世界。",
+      "steps": [
+        {
+          "kind": "lesson",
+          "id": "symbolic-regression",
+          "verb": "找規律",
+          "goal": "理解穿過幾個資料點的公式，還不能保證處處成立。"
+        },
+        {
+          "kind": "lesson",
+          "id": "equivalence",
+          "verb": "辨同義",
+          "goal": "分清楚寫法不同但相同的公式，和只在樣本上接近的公式。"
+        },
+        {
+          "kind": "paper",
+          "id": "egg-sr",
+          "verb": "省重複",
+          "goal": "看搜尋如何合併等價寫法；知道這仍不保證公式描述真實原因。",
+          "stop": "自然停靠：讀到這裡，已能回頭檢查資料裡的公式。",
+          "transition": "從資料中的數字關係，換到動作如何改變世界；兩段不是同一演算法。"
+        },
+        {
+          "kind": "lesson",
+          "id": "world-models",
+          "verb": "問後果",
+          "goal": "把問題換成：做了某個動作之後，環境會怎麼變？"
+        },
+        {
+          "kind": "paper",
+          "id": "symbolic-world-models",
+          "verb": "驗預測",
+          "goal": "理解可讀的狀態規則，也必須檢查預測錯誤與適用環境。"
+        }
+      ]
+    }
+  ]
+}

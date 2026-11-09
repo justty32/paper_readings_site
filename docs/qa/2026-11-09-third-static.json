@@ -1,0 +1,395 @@
+{
+  "date": "2026-11-09",
+  "scope": "third four guides and three reading paths; cumulative twelve guides",
+  "source_commit_new_guides": "766036350934d720a66979d398de3daa9680919b",
+  "checks": {
+    "build": "PASS",
+    "static_schema_links_anchors_sources": "PASS:54 pages/28 lessons/12 guides/3 paths",
+    "source_repository_validation": "PASS:728 papers",
+    "independent_content_svg_and_beginner_path": "PASS",
+    "navigation": "PASS:14 main steps and1 optional branch;28 unique progress lessons",
+    "browser_visual_or_interaction": "NOT RUN:workflow forbids Codex browser use"
+  },
+  "files": [
+    {
+      "path": "about.html",
+      "sha256": "4bba324c6b475b523d159673e8b0983a4e52e4577c5a9cc422042aeb0b222fed"
+    },
+    {
+      "path": "assets/app.js",
+      "sha256": "be3f046792b86bf4a2a6d6ba840ae730798d0552086326c0857f748e6de6b4ea"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "sha256": "008d5b9143081867da2223accf539203be2c0c55494be4eb13bca6960a46584f"
+    },
+    {
+      "path": "assets/lessons/arc-demonstrations.svg",
+      "sha256": "15d5d76811ac158fdf9670aecec9e9c2e236139305c0481b5b3e3a8a513ffbb1"
+    },
+    {
+      "path": "assets/lessons/meta-nested.svg",
+      "sha256": "aeb7cd7d6042973fdb2a4a7089972d79c458c5bd43ce338c034397b7fdd5e88e"
+    },
+    {
+      "path": "assets/papers/arc-conditions.svg",
+      "sha256": "fa751c1200cb25336b67649356fb88166dab0cc6b4de5d2864e8f668957b76af"
+    },
+    {
+      "path": "assets/papers/arc-hypotheses.svg",
+      "sha256": "b7b170fae272ea6fb0ca7f30a07f09ac39eaa302ef05096577adf000fac050f0"
+    },
+    {
+      "path": "assets/papers/arc-levels.svg",
+      "sha256": "7a23da0a33ad2369dd721b92b237b4f06f232c7bd8fa7d82e4570a8bdba715ad"
+    },
+    {
+      "path": "assets/papers/dreamcoder-cost.svg",
+      "sha256": "fdeae520410ea54031a41d9d07cd472b994aab1e15aa5984ddccab97ccb00296"
+    },
+    {
+      "path": "assets/papers/dreamcoder-cycle.svg",
+      "sha256": "8f2fda3c9dbba42dcaa5f31e6354e883b4a6fbb47074fc69ac5188ea7039f806"
+    },
+    {
+      "path": "assets/papers/dreamcoder-map.svg",
+      "sha256": "3b92879cc1c83c57b49d2caf608dc18ba5a9b9c465d9c1649af8968fb84e9047"
+    },
+    {
+      "path": "assets/papers/dspy-bootstrap.svg",
+      "sha256": "0556867f4f8d5ac8dfcc3d8dadbb029da73609650c33b65c367d4d8802ed60c2"
+    },
+    {
+      "path": "assets/papers/dspy-flow.svg",
+      "sha256": "29008e326152a3db549b79269290362772b88853559b6c0cea096b1102b86286"
+    },
+    {
+      "path": "assets/papers/dspy-splits.svg",
+      "sha256": "83ae75569a96a765bb5192dde83443e0d48e200c3b62ee4699597285d5ab8f84"
+    },
+    {
+      "path": "assets/papers/egg-sr-classes.svg",
+      "sha256": "4a1acb910b99ff339db0878380518c756790afe779038719d2f116325342b5eb"
+    },
+    {
+      "path": "assets/papers/egg-sr-feedback.svg",
+      "sha256": "701c9ac24b9b27b004eced791ce6c852351c6699f6c2d1de75d8816998089027"
+    },
+    {
+      "path": "assets/papers/egg-sr-interfaces.svg",
+      "sha256": "7fca1320865b439c0ea8a89f0e017d56917c5f477c6fda5f2fabdb1bc2b7b385"
+    },
+    {
+      "path": "assets/papers/infogan-entangled.svg",
+      "sha256": "08762ddae92961fde6d7f14d7958f98e171c61ea325a42358ffaa91725048a7b"
+    },
+    {
+      "path": "assets/papers/infogan-flow.svg",
+      "sha256": "9fda3f74fb4ca5d1501c32b75c01f5f258cd0ae54b069ff1dc173d46fb5f447c"
+    },
+    {
+      "path": "assets/papers/infogan-grid.svg",
+      "sha256": "5244f67cfdc63aa38d017bf25f116fd3cd9524d6795841e595dbc5c3f7d05a68"
+    },
+    {
+      "path": "assets/papers/kan-calculation.svg",
+      "sha256": "f044d792c548ce80ae7a112d387d2d4374742738012061dc9c4d978f451af279"
+    },
+    {
+      "path": "assets/papers/kan-checks.svg",
+      "sha256": "742eeb09073340cd01edf6d8b7979b9d613a10f0cd800ccae4ba86532fa57955"
+    },
+    {
+      "path": "assets/papers/kan-roles.svg",
+      "sha256": "fe3983c4841b165888e39e2a3ecbfc307a365f1e0531bf619a0d567530d25246"
+    },
+    {
+      "path": "assets/papers/react-evidence.svg",
+      "sha256": "5213798e1b401019970d9c3f545b1344079337f6fab30f2c1976c3feed88f8e6"
+    },
+    {
+      "path": "assets/papers/react-loop.svg",
+      "sha256": "b44759e0ea958454263290a8fe88198a96971424f931a7f1cb00ee67d8cd160f"
+    },
+    {
+      "path": "assets/papers/react-responsibility.svg",
+      "sha256": "02302939d800384e08282d668585e7024183c2ddbe4539b538dda5e596902641"
+    },
+    {
+      "path": "assets/papers/reflexion-evaluator.svg",
+      "sha256": "69eadffd95eb017231e333c1ddbbe264126669e007fef6994644cd30913e19ee"
+    },
+    {
+      "path": "assets/papers/reflexion-loop.svg",
+      "sha256": "e9721a35a2fe04189a8896f3303dd296e855be72d56efee2989916e6eaf5ee46"
+    },
+    {
+      "path": "assets/papers/reflexion-trials.svg",
+      "sha256": "4462b5f8e5d3a558cfead8d2fee74c483d55fe18f3cfe8065416be69d2c95488"
+    },
+    {
+      "path": "assets/papers/stitch-corner.svg",
+      "sha256": "9c89476f63ddfca8b9c759ee69f1625e42872ec7a06c5dce42c77c335e41b505"
+    },
+    {
+      "path": "assets/papers/stitch-cost.svg",
+      "sha256": "439a0b7637e06ab0721d5271016ece783aba0e9509a806db4cfb85e63f816389"
+    },
+    {
+      "path": "assets/papers/stitch-search.svg",
+      "sha256": "9910360d2b0892422f9e2c20d4c295d2ac5df26f9d8a4cedc5154fb1ef175a8e"
+    },
+    {
+      "path": "assets/papers/symbolic-wm-box.svg",
+      "sha256": "0996e24b136bd64ee60e18c41bf1d38f5c1a830c3bf8208c32a3270624899537"
+    },
+    {
+      "path": "assets/papers/symbolic-wm-checks.svg",
+      "sha256": "6806ab7f6d579de31fd70b8f202185b83546a8684a716f4325f574025ab63b4a"
+    },
+    {
+      "path": "assets/papers/symbolic-wm-refine.svg",
+      "sha256": "37b45f8fabf5783d85f55d2f13bd637dc720fed90172db69bac1be67eacbc3ed"
+    },
+    {
+      "path": "assets/papers/toolformer-loss.svg",
+      "sha256": "1ebb3686369b53f5abd7a4528322da314c6088fba9046380ec7dae0e70c949c8"
+    },
+    {
+      "path": "assets/papers/toolformer-positions.svg",
+      "sha256": "783cdec2ee524a69268c9611775a5f1e6f59aa7c4a6e6b515b8e8799efa3c83b"
+    },
+    {
+      "path": "assets/papers/toolformer-routes.svg",
+      "sha256": "1ec3f439a2ff7f3d7babbb268f9a82557686cdd9fe3d321539c34d2a48552031"
+    },
+    {
+      "path": "assets/papers/voyager-curriculum.svg",
+      "sha256": "c42a629c24d7f4237d4f1b07a0b96c6d5815fe1b9f9f82bb0f23516aec7fea20"
+    },
+    {
+      "path": "assets/papers/voyager-feedback.svg",
+      "sha256": "908663ff68c80d4ea8a7249d3e1c9bf1ada8c41e0cc25d94782e72ebb99bee93"
+    },
+    {
+      "path": "assets/papers/voyager-library.svg",
+      "sha256": "afb00be1e084c0230ee73c63eb82bbe02b3b214b616a2c458387761c4c21dcf4"
+    },
+    {
+      "path": "assets/style.css",
+      "sha256": "1ab78de57a0e741c50b86d648c8744b29b8e17d536878205444bd8dfad5f427e"
+    },
+    {
+      "path": "index.html",
+      "sha256": "f1685fa427d89c138918263fe6798ef86eae9ea95e30323a4c1d1abf5550007c"
+    },
+    {
+      "path": "lessons/adaptation.html",
+      "sha256": "606c13cc21bca993f10a98ae69f663ac64ff749d839a7d2d23f38ddc30bb5b66"
+    },
+    {
+      "path": "lessons/agent-memory.html",
+      "sha256": "d857132e1c7b126dc0e13e1cc425469e88c4daa010f74ef601f1a4dd7b4b9b45"
+    },
+    {
+      "path": "lessons/arc.html",
+      "sha256": "1f268ecea81d1a31e76d2fdcfaf36346ceebbff83241b4294c8bc3d62ecb27e1"
+    },
+    {
+      "path": "lessons/automata.html",
+      "sha256": "dd8c278b95b5e781c132df703c075bf219e54b521620a90650d08914c618b81e"
+    },
+    {
+      "path": "lessons/computation.html",
+      "sha256": "24d8c231bd36dfb16a4efd26013f2ad10e324ee0d31225f4cb7176eef9eb3c2a"
+    },
+    {
+      "path": "lessons/constrained-decoding.html",
+      "sha256": "b44fc1beccb4b6c3b3a81b9535ee76fb8e92f4d7502755650dd08f1b3b3fe935"
+    },
+    {
+      "path": "lessons/cost-routing.html",
+      "sha256": "4188bfb44ae541717d32892f71bf785a5bb98550fc895aca51d776eacf963585"
+    },
+    {
+      "path": "lessons/equivalence.html",
+      "sha256": "ca2ddf2d93f2247b774089c19ea968812ee19c4c17930a4a01bbe3eaa01ef459"
+    },
+    {
+      "path": "lessons/evolution.html",
+      "sha256": "dcf7937ebc8a634ccc9a4d34137afe6634e2894b953bf345deba3eeb4b24ae5a"
+    },
+    {
+      "path": "lessons/gan.html",
+      "sha256": "a490a0112a3861c3dd9632449ad793e7f271f1c918b820b0a81ea0586b2274d8"
+    },
+    {
+      "path": "lessons/grounding.html",
+      "sha256": "1e8febdaab4904457e54c583d5df61f395065c36ccc39fdce20b7e74e6d1af34"
+    },
+    {
+      "path": "lessons/interpretability.html",
+      "sha256": "ce460ca728a056b9f76c46c9d8034dda64809f25ac19bdaed1015b4422e91f77"
+    },
+    {
+      "path": "lessons/kan.html",
+      "sha256": "02e118a47965a46ef9be28c6824fa49f0249e5c1c74efc086b7ca63b760d6bfc"
+    },
+    {
+      "path": "lessons/library-learning.html",
+      "sha256": "b2ffa416930122cecae681685cef088d4ccc22251c3ef7acd783ce280081f78e"
+    },
+    {
+      "path": "lessons/logic-belief.html",
+      "sha256": "e7831c02b582f84db478bd108495904786a6d999386d553c69140355004ce076"
+    },
+    {
+      "path": "lessons/meta-learning.html",
+      "sha256": "9d99c5c8750a459af4599ef6a79a0bb04ac6abcb7a91fbf122f4d3c1d324291a"
+    },
+    {
+      "path": "lessons/neurosymbolic.html",
+      "sha256": "1c2b9cba4719e601748e6acee90882aba6c5c104e492f73fa624390d9e902a0e"
+    },
+    {
+      "path": "lessons/program-search.html",
+      "sha256": "ad6620471f08bae1bc7522dcfdf5c5e83fa039eb4fac48614d2000c93e35052c"
+    },
+    {
+      "path": "lessons/reasoning.html",
+      "sha256": "c52cacded8f16626d054dcfd75fe278c30a28c5d2a7e55053d71228d9c2560c3"
+    },
+    {
+      "path": "lessons/self-correction.html",
+      "sha256": "3d4927b9b508a2d3e7f8976f96df46f61b7e82a592531ecda5d1ac4a5ae451a0"
+    },
+    {
+      "path": "lessons/skill-governance.html",
+      "sha256": "c1fd3ded71701e1eef48371326e1b56d8b69d59f5934f50a6e095c65a7449122"
+    },
+    {
+      "path": "lessons/skill-library.html",
+      "sha256": "0e7be34de014b27cbe4541e101183d9bfe9ff2d229e14c4f773100e0f69d949a"
+    },
+    {
+      "path": "lessons/symbolic-regression.html",
+      "sha256": "7ec4e289cf454b30acd02d7e4d3372c3547cc785a72e4e823fbc90e17cbf0e1e"
+    },
+    {
+      "path": "lessons/symmetry.html",
+      "sha256": "a224175dfac51845d1c83ee4bb610990c8e8f7bebea3ef475ed88341b942e4f1"
+    },
+    {
+      "path": "lessons/tool-use.html",
+      "sha256": "fe09bc224825f07ce18c8fedf4690cda12a8b8141d0d4870a49615ceab0cefff"
+    },
+    {
+      "path": "lessons/uncertainty.html",
+      "sha256": "c0dd038c270bfecea60a1327e9077860e6a8903585326d0ff6957c4d9505ba82"
+    },
+    {
+      "path": "lessons/workflow-optimization.html",
+      "sha256": "81de6a07c0cbaeb5ea071c01ec3b31a4a9c7df1ee81562d1960fb9b5f90726a4"
+    },
+    {
+      "path": "lessons/world-models.html",
+      "sha256": "1c4a88ff82dc6d7d8879d74b0b9d1887c64d052e9d79de499876186a190393fe"
+    },
+    {
+      "path": "map.html",
+      "sha256": "1b7b0c33528b5dc1346b49cf7965d7ac6958c3644e570cabc89b3e5b00fb8425"
+    },
+    {
+      "path": "papers/arc-measure.html",
+      "sha256": "e5965c140fa0a307668bf3550dc30b8be913f47478cbb3033c894322aaa5992d"
+    },
+    {
+      "path": "papers/dreamcoder.html",
+      "sha256": "ef6c882d1fbd48477728af239feed1bc7a3994e760ab0dbcbe7fec4e24e2070d"
+    },
+    {
+      "path": "papers/dspy.html",
+      "sha256": "c72fe1c9b593c9d8197dc30a46ea8ff19d94a685890b1f35c225b252899ec045"
+    },
+    {
+      "path": "papers/egg-sr.html",
+      "sha256": "1c1df2c940451fbccaa471c8271b2884a0c815d04b1e369dcd1d0e1f4f7129a0"
+    },
+    {
+      "path": "papers/infogan.html",
+      "sha256": "694da48f3482f48f23db42e0145064cd10b4ef1eaf6c0b5be8cbc76498732045"
+    },
+    {
+      "path": "papers/kan-original.html",
+      "sha256": "f478c1bb86881aa5a12dfd265dfaf22c69478e152056bbedc0f9348125dbd959"
+    },
+    {
+      "path": "papers/react.html",
+      "sha256": "fe0bfb9c3a5851455d7b1b19dcfc6aad618d5dfdb1fc6b72f6876280c60b8410"
+    },
+    {
+      "path": "papers/reflexion.html",
+      "sha256": "8a342b61730776979dfd681b6b18570511dbc9a2a11683f7853a8a981df7b8ba"
+    },
+    {
+      "path": "papers/stitch.html",
+      "sha256": "b3e517553bf55c9d078aeb738d82edd7aa7db87739b81d052ee8f7c4bec3fdf2"
+    },
+    {
+      "path": "papers/symbolic-world-models.html",
+      "sha256": "e366df7f125ce59ffdbb61d79c686c9158f037d8a9c005d3e0e37e1455e87dbd"
+    },
+    {
+      "path": "papers/toolformer.html",
+      "sha256": "1cd4433f3eb4d2195d11d7b9bd7dd79f981ada4af3cbd06cd61ac45173625d59"
+    },
+    {
+      "path": "papers/voyager.html",
+      "sha256": "4cf8124a414ea50bddea881258a41ab1f25b24fa6b25c574dd8f24d6126a18e3"
+    },
+    {
+      "path": "papers.html",
+      "sha256": "bfb8a251c30d1ed99f95d6b6ca78e24527bcf0fa3d4d2f9deddeff4c56efc384"
+    },
+    {
+      "path": "topics/a.html",
+      "sha256": "678a31152e3a72223e471a042dea7a5772305dba0a491b69b5e5ccf0a76597b1"
+    },
+    {
+      "path": "topics/b.html",
+      "sha256": "e6f5f20dd2d77147ba282ae289d0ad1e1e9e4c4968421db251e9b71c7af6985d"
+    },
+    {
+      "path": "topics/c.html",
+      "sha256": "d2a97d209c22c46161d250ca4639309d242f8f12e8f0a52dff79b7a1004fa039"
+    },
+    {
+      "path": "topics/d.html",
+      "sha256": "38292e3ac166653f78a9c232ab7bba234dc5221c8a95ea4f9602f28aa2891683"
+    },
+    {
+      "path": "topics/e.html",
+      "sha256": "256e9a37992a8826222525eb2a62aa729bbeb06e2a5b2b506f1ac57bfbd849c6"
+    },
+    {
+      "path": "topics/f.html",
+      "sha256": "e7787a9a38ea44869ac38f319f1641cdf15f51fd8fb528c1cfe65a290c349efa"
+    },
+    {
+      "path": "topics/g.html",
+      "sha256": "31ab3134fb8c48b3a491093271c6faaa0af5bbd21db5939d17b0f501aff9632b"
+    },
+    {
+      "path": "topics/h.html",
+      "sha256": "e45ac717c5b6e18c1edb841f933623fd8688c7fbe09977eb5e01d27a8455755c"
+    },
+    {
+      "path": "topics/i.html",
+      "sha256": "7fe6c84b123b6086c6d2716978fc04f8d7d0c60802d943b68343b9f5d484d167"
+    },
+    {
+      "path": "topics/j.html",
+      "sha256": "60ea8e6f5e44cb979a57952a603545b1a83c255674bea8056dfc81615a58e4b5"
+    }
+  ]
+}

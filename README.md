@@ -2,12 +2,12 @@
 
 繁中 AI 論文入門站。用一個問題、一個具體例子和可操作圖解，走進研究；技術方法與限制收在原生摺疊區塊。
 
-目前有 **10 個主題、28 課、8 篇單篇導讀、50 個頁面、46 篇代表性論文來源**。分類沿用 [paper_readings](https://github.com/justty32/paper_readings) A–J；智能體與系統類拆成11課。本站不是全庫逐篇摘要，圖與互動均為合成資料／手寫規則的教學示意。
+目前有 **10 個主題、28 課、12 篇單篇導讀、54 個頁面、46 篇代表性論文來源**。分類沿用 [paper_readings](https://github.com/justty32/paper_readings) A–J；智能體與系統類拆成11課。本站不是全庫逐篇摘要，圖與互動均為合成資料／手寫規則的教學示意。
 
 ## 開始閱讀
 
 - [首頁](index.html)
-- [重要論文導讀](papers.html)：DreamCoder、Stitch、ReAct、Toolformer、Voyager、InfoGAN、ARC 智慧測量與原始 KAN。
+- [重要論文導讀](papers.html)：從可手算的小例，走進 12 篇研究的方法與限制。
 - [完整閱讀地圖](map.html)
 - [關於本站與來源政策](about.html)
 
@@ -32,6 +32,7 @@ python3 tools/package_static.py
 
 - `content/site.json`：分類、閱讀順序、固定來源 commit。
 - `content/{foundations,core,agents}.json`：概念課正文及逐篇來源卡。
+- `content/paths.json`：三條問題導向閱讀路徑，首頁與閱讀地圖共用；不影響原有閱讀進度。
 - `content/paper_*.json`：單篇論文導讀，逐篇記錄 `source_path`／`source_commit`；母稿位於來源論文庫 `primers/`，網站改編保存在本 repo 的 JSON。圖解按相關段落排列，技術與實驗細節收在原生摺疊區塊。
 - `tools/build.py`、`tools/illustrations.py`：靜態頁面與語意 SVG。
 - `assets/`：本地 CSS、JavaScript，無外部字型或程式依賴。

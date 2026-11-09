@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800" role="img" aria-labelledby="title desc"><title id="title">等價路徑分享同一次評估</title><desc id="desc">完成式教學示意。普通回報只更新x加x，另一條2乘x仍未訪問。Egg辨認兩路徑等價後，同一次獎勵1同步回報到兩路徑。平方是不同候選，仍獨立評估。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#54677c"/></marker></defs><style>text{font-family:system-ui,'Noto Sans TC',sans-serif;font-size:22px;fill:#19354b}.small{font-size:18px}.title{font-size:28px;font-weight:700}.label{font-size:24px;font-weight:650}.edge{stroke:#54677c;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.plain{stroke:#54677c;stroke-width:2.5;fill:none}.node{fill:#edf3f9;stroke:#527599;stroke-width:2}.green{fill:#e0f2e9;stroke:#2e805f;stroke-width:2}.class{fill:#f4f8fd;stroke:#53799f;stroke-dasharray:8 5;stroke-width:2}</style><rect width="1000" height="800" rx="20" fill="#fafcfd"/>
+<text x="30" y="43" class="title">同一次評估，另一條路也能知道</text><text x="30" y="76" class="small">教學示意，非作者執行軌跡；N＝訪問資訊，W＝獎勵累計</text>
+<text x="35" y="123" class="label">普通回報：路徑各記各的</text>
+<circle class="node" cx="500" cy="160" r="25"/><text x="500" y="168" text-anchor="middle">起</text>
+<path class="edge" d="M477 174L210 240"/><path class="edge" d="M500 185V240"/><path class="edge" d="M523 174L820 240"/>
+<rect class="green" x="110" y="250" width="200" height="55" rx="14"/><rect class="node" x="400" y="250" width="200" height="55" rx="14"/><rect class="node" x="720" y="250" width="200" height="55" rx="14"/>
+<g text-anchor="middle"><text x="210" y="286">x+x</text><text x="500" y="286">2*x</text><text x="820" y="286">x*x</text><text x="210" y="345">N=1，W=1</text><text x="500" y="345">N=0，W=0</text><text x="820" y="345">不同函數</text></g>
+<path d="M35 390H965" stroke="#c5d3df" stroke-width="2"/>
+<text x="35" y="433" class="label">Egg 回報：用等價關係架橋</text>
+<circle class="node" cx="500" cy="475" r="25"/><text x="500" y="483" text-anchor="middle">起</text>
+<path class="edge" d="M477 489L210 555"/><path class="edge" d="M500 500V555"/><path class="edge" d="M523 489L820 555"/>
+<rect x="85" y="542" width="545" height="158" rx="20" fill="none" stroke="#2e805f" stroke-dasharray="8 5" stroke-width="2"/>
+<rect class="green" x="110" y="565" width="200" height="55" rx="14"/><rect class="green" x="400" y="565" width="200" height="55" rx="14"/><rect class="node" x="720" y="565" width="200" height="55" rx="14"/>
+<g text-anchor="middle"><text x="210" y="602">x+x</text><text x="500" y="602">2*x</text><text x="820" y="602">x*x</text><text x="210" y="670">N=1，W=1</text><text x="500" y="670">N=1，W=1</text><text x="820" y="670">仍需獨立評估</text></g>
+<path class="edge" d="M315 590H392"/><text x="355" y="565" text-anchor="middle" class="small">等價橋接</text>
+<text x="35" y="742">一次實際評估、兩處共享資訊，不是兩次獨立實驗。</text><text x="35" y="778" class="small">只同步取樣且匹配到的既有路徑；實際方法也處理未完成公式。</text>
+</svg>

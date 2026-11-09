@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="740" viewBox="0 0 1000 740" role="img" aria-labelledby="title desc"><title id="title">不同語法樹，共享結果與子式</title><desc id="desc">教學示意。上排三棵語法樹分別是x加x、2乘x與x乘2；下方同一結果等價類收納三個運算節點，各自的邊指向同一x子等價類或常數2子等價類。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#54677c"/></marker></defs><style>text{font-family:system-ui,'Noto Sans TC',sans-serif;font-size:22px;fill:#19354b}.small{font-size:18px}.title{font-size:28px;font-weight:700}.label{font-size:24px;font-weight:650}.edge{stroke:#54677c;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.plain{stroke:#54677c;stroke-width:2.5;fill:none}.node{fill:#edf3f9;stroke:#527599;stroke-width:2}.green{fill:#e0f2e9;stroke:#2e805f;stroke-width:2}.class{fill:#f4f8fd;stroke:#53799f;stroke-dasharray:8 5;stroke-width:2}</style><rect width="1000" height="740" rx="20" fill="#fafcfd"/>
+<text x="30" y="43" class="title">外形不同，結果可以相同</text><text x="30" y="76" class="small">實數加倍與交換規則的教學示意，非作者實驗；線是運算與子式的關係</text>
+<g class="plain"><path d="M170 150L105 215M170 150L235 215"/><path d="M500 150L435 215M500 150L565 215"/><path d="M830 150L765 215M830 150L895 215"/></g>
+<g class="node"><circle cx="170" cy="140" r="28"/><circle cx="105" cy="230" r="28"/><circle cx="235" cy="230" r="28"/><circle cx="500" cy="140" r="28"/><circle cx="435" cy="230" r="28"/><circle cx="565" cy="230" r="28"/><circle cx="830" cy="140" r="28"/><circle cx="765" cy="230" r="28"/><circle cx="895" cy="230" r="28"/></g>
+<g text-anchor="middle"><text x="170" y="148">+</text><text x="105" y="238">x</text><text x="235" y="238">x</text><text x="500" y="148">×</text><text x="435" y="238">2</text><text x="565" y="238">x</text><text x="830" y="148">×</text><text x="765" y="238">x</text><text x="895" y="238">2</text></g>
+<path class="edge" d="M170 275L380 335"/><path class="edge" d="M500 275V335"/><path class="edge" d="M830 275L620 335"/>
+<rect class="class" x="90" y="350" width="820" height="125" rx="20"/><text x="115" y="384" class="label">同結果等價類 R：保留三種寫法</text>
+<rect class="green" x="180" y="410" width="100" height="45" rx="12"/><rect class="green" x="450" y="410" width="100" height="45" rx="12"/><rect class="green" x="720" y="410" width="100" height="45" rx="12"/>
+<g text-anchor="middle"><text x="230" y="441">+</text><text x="500" y="441">×</text><text x="770" y="441">×</text></g>
+<path class="edge" d="M210 455C190 520 270 530 290 595"/><path class="edge" d="M250 455C255 510 335 530 340 595"/>
+<path class="edge" d="M480 455C480 535 650 540 680 595"/><path class="edge" d="M520 455C520 535 370 540 355 595"/>
+<path class="edge" d="M750 455C750 555 410 560 370 595"/><path class="edge" d="M790 455C820 535 740 550 730 595"/>
+<rect class="class" x="230" y="610" width="160" height="65" rx="14"/><rect class="class" x="630" y="610" width="160" height="65" rx="14"/>
+<text x="310" y="651" text-anchor="middle">子等價類 x</text><text x="710" y="651" text-anchor="middle">子等價類 2</text>
+<text x="30" y="715">x 只存一次、2 只存一次；x 與 2 本身沒有被合併。</text>
+</svg>

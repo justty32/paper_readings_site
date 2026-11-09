@@ -21,10 +21,10 @@ class Doc(HTMLParser):
    if v:self.links.append(v)
   if tag=='img' and 'alt'not in a:self.has_alt=False
   if tag=='svg' and a.get('role')=='img' and not a.get('aria-label'):self.has_alt=False
-site=json.loads((ROOT/'content/site.json').read_text());lessons=[];guides=[];errors=[]
+site=json.loads((ROOT/'content/site.json').read_text());lessons=[];guides=[];paths=[];errors=[]
 for p in sorted((ROOT/'content').glob('*.json')):
  if p.name!='site.json':
-  data=json.loads(p.read_text());lessons+=data.get('lessons',[]);guides+=data.get('papers',[])
+  data=json.loads(p.read_text());lessons+=data.get('lessons',[]);guides+=data.get('papers',[]);paths+=data.get('paths',[])
 by={l['id']:l for l in lessons};ids=list(by)
 if len(by)!=len(lessons):errors.append('duplicate lesson id')
 required='id category title subtitle question intuition story steps example pitfalls details sources next'.split()
@@ -118,6 +118,32 @@ for g in guides:
    if not isinstance(source,dict) or not isinstance(source.get('label'),str) or not source['label'].strip() or not isinstance(source.get('url'),str):errors.append(prefix+'invalid public source');continue
    url=urlparse(source['url'])
    if url.scheme!='https' or not url.netloc:errors.append(prefix+'source URL must be absolute HTTPS')
+path_ids=set()
+if len(paths)>3:errors.append('expected at most three reading paths')
+for path in paths:
+ pid=path.get('id');prefix='reading path '+str(pid)+': '
+ if not isinstance(pid,str) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',pid):errors.append(prefix+'invalid id');continue
+ if pid in path_ids:errors.append(prefix+'duplicate id')
+ path_ids.add(pid)
+ for field in ('question','intro'):
+  if not isinstance(path.get(field),str) or not path[field].strip():errors.append(prefix+'missing '+field)
+ steps=path.get('steps')
+ if not isinstance(steps,list) or not 3<=len(steps)<=5:errors.append(prefix+'expected three to five steps');continue
+ seen=set()
+ for step in steps:
+  if not isinstance(step,dict):errors.append(prefix+'invalid step');continue
+  key=(step.get('kind'),step.get('id'))
+  if key in seen:errors.append(prefix+'duplicate step')
+  seen.add(key)
+  for target in [step]+([step['branch']] if 'branch' in step else []):
+   if not isinstance(target,dict):errors.append(prefix+'invalid branch');continue
+   kind=target.get('kind');tid=target.get('id')
+   if kind not in ('lesson','paper') or tid not in (by if kind=='lesson' else guide_ids):errors.append(prefix+'unknown step or branch target '+str(tid))
+   if not isinstance(target.get('goal'),str) or not target['goal'].strip():errors.append(prefix+'missing goal')
+  if not isinstance(step.get('verb'),str) or not step['verb'].strip():errors.append(prefix+'missing step verb')
+  if 'branch' in step and (not isinstance(step['branch'],dict) or not isinstance(step['branch'].get('question'),str) or not step['branch']['question'].strip()):errors.append(prefix+'missing branch question')
+  for field in ('stop','transition'):
+   if field in step and (not isinstance(step[field],str) or not step[field].strip()):errors.append(prefix+'invalid '+field)
 htmls=list(ROOT.glob('*.html'))+list((ROOT/'topics').glob('*.html'))+list((ROOT/'lessons').glob('*.html'))+list((ROOT/'papers').glob('*.html'))
 docs={}
 for p in htmls:
