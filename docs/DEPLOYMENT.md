@@ -4,7 +4,9 @@
 
 唯一正式流程為 `.github/workflows/pages.yml`：push main → 產生HTML → 靜態與JavaScript檢查 → 封裝純靜態dist → upload-pages-artifact → deploy-pages。只發布站點所需HTML、CSS、JavaScript與SVG，不把docs/qa、內容JSON或託管設定當網站資產。
 
-## 2026-11-09：四篇單篇圖解導讀
+## 2026-11-09：單篇圖解導讀與閱讀路徑
+
+第三批內容版本 `35738f9d8a9abea48877e070f9c96e9c28e95fa4` 已由 [Actions 42578304966](https://github.com/justty32/paper_readings_site/actions/runs/42578304966) 成功部署，累計 12 篇導讀、54 頁、三條問題導向閱讀路徑。新四篇母稿固定 `766036350934d720a66979d398de3daa9680919b`。提交隔離快照重新建置通過，95 個公開靜態檔 HTTP200 且 SHA256 與該快照產物完全一致，見[第三批公開核對](qa/2026-11-09-third-publication.json)。本輪仍僅做靜態／HTTP 驗證，未做瀏覽器版面或操作驗收。
 
 第二批內容版本 `d73c24ef5b2b0d86294e310b6d9740b5391426a7` 已由 [Actions 42577062345](https://github.com/justty32/paper_readings_site/actions/runs/42577062345) 成功部署，累計 8 篇單篇導讀、50 頁。新增四篇母稿固定 `6c07331018539a4bf4a6170de8efaa2b40e9a0f3`；首批仍使用原本固定版本。從此提交的獨立 `git archive` 快照重建並通過全部站點檢查，79 個公開檔案 HTTP 與 SHA256 全等於該快照產物，沒有混入下一批並行草稿。見[第二批公開核對](qa/2026-11-09-second-publication.json)。
 
