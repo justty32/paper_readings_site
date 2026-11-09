@@ -3,7 +3,7 @@
 import json,re,sys
 from html import escape as e
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote,unquote,urlparse
 sys.path.insert(0,str(Path(__file__).parent))
 from illustrations import svg,home_svg
 ROOT=Path(__file__).resolve().parent.parent
@@ -14,6 +14,23 @@ for p in sorted((ROOT/'content').glob('*.json')):
   data=json.loads(p.read_text()); LESSONS+=data.get('lessons',[]); PAPERS+=data.get('papers',[]); PATHS+=data.get('paths',[])
 BY={x['id']:x for x in LESSONS}; CATS={x['id']:x for x in SITE['categories']}
 BASE=SITE['source_repo']+'/blob/'+SITE['source_commit']+'/'
+READING=json.loads((ROOT/'content/reading_links.json').read_text()) if (ROOT/'content/reading_links.json').exists() else {'entries':[]}
+READING_BY={entry['paper_id']:entry for entry in READING['entries']}
+READING_PATHS=set()
+for entry in READING['entries']:
+ READING_PATHS.update(path for path in (entry.get('summary'),entry.get('translation')) if path)
+ READING_PATHS.update(item['path'] for field in ('deep','related') for item in entry.get(field,[]))
+def reading_source_url(url):
+ parsed=urlparse(url);repo=urlparse(SITE['source_repo'])
+ prefix=repo.path.rstrip('/')+'/blob/'
+ if parsed.scheme=='https' and parsed.netloc==repo.netloc and parsed.path.startswith(prefix):
+  parts=parsed.path[len(prefix):].split('/',1)
+  if len(parts)==2:
+   path=unquote(parts[1])
+   if path in READING_PATHS and not parsed.query and not parsed.fragment:
+    return READING['base_url'].rstrip('/')+'/'+quote(path[:-3]+'.html',safe='/._-')
+ return url
+
 
 def rich(text):
  return re.sub(r'\[arxiv:([\d.]+)\]',lambda m:f'<a class="citation" href="#source-{m[1]}">〔{m[1]}〕</a>',e(text))
@@ -45,6 +62,21 @@ def render_diagram(d,depth=1):
  items='<ol class="diagram-items diagram-'+e(d['kind'])+'">'+''.join('<li><strong>'+e(item['label'])+'</strong><p>'+rich(item['text'])+'</p></li>' for item in d['items'])+'</ol>'
  visual=('<div class="diagram-scroll" tabindex="0" role="region" aria-label="'+e(d['title'])+'，可左右捲動"><img class="paper-diagram-image" src="'+'../'*depth+e(d['image'])+'" alt="'+e(d['title'])+'"></div><p class="small"><a href="'+'../'*depth+e(d['image'])+'">放大閱讀圖解 ↗</a> · 窄螢幕可在圖內左右滑動。</p><details'+(' open' if d.get('text_open',False) else '')+'><summary>圖解文字說明</summary>'+items+'</details>') if d.get('image') else items
  return '<figure class="paper-diagram"><h2>'+e(d['title'])+'</h2>'+visual+'<figcaption>'+rich(d['caption'])+'</figcaption></figure>'
+
+def next_reading(p,at_end=False):
+ entry=READING_BY.get(p['id'])
+ if entry is None:return ''
+ def public_url(path):return READING['base_url'].rstrip('/')+'/'+quote(path[:-3]+'.html',safe='/._-')
+ def reading_link(path,label):return '<a href="'+e(public_url(path))+'">'+e(label)+' ↗</a>'
+ rows='<li><strong>本頁入門</strong><p>先用例子掌握問題、方法與限制。</p></li>'
+ rows+='<li><strong>同篇重點摘要</strong><p>'+(reading_link(entry['summary'],'讀同篇重點摘要') if entry.get('summary') else '目前尚無原始同篇摘要。')+'</p></li>'
+ rows+='<li><strong>同篇精要逐節譯文</strong><p>'+(reading_link(entry['translation'],'讀同篇精要逐節譯文') if entry.get('translation') else '目前尚無原始同篇精要逐節譯文。')+'</p></li>'
+ if entry.get('deep'):rows+='<li><strong>主題延伸／跨篇綜述</strong><ul>'+''.join('<li>'+reading_link(item['path'],item['label'])+'</li>' for item in entry['deep'])+'</ul></li>'
+ if entry.get('related'):rows+='<li><strong>後續／相關研究（非原始同篇）</strong><ul>'+''.join('<li>'+reading_link(item['path'],item['label'])+'</li>' for item in entry['related'])+'</ul></li>'
+ rows+='<li><strong>原始論文</strong><p><a href="https://arxiv.org/abs/'+e(p['arxiv_id'])+'">讀 arXiv 原文 '+e(p['arxiv_id'])+' ↗</a></p></li>'
+ heading='<h2>接著讀：選你想看的深度</h2>' if at_end else '<p class="reading-heading"><strong>接著讀：選你想看的深度</strong></p>'
+ note='<p class="small">摘要與精要逐節譯文是公開閱讀筆記，可能以導航頁組織內容；不是官方全文翻譯。'+e(entry.get('note',''))+'</p>'
+ return '<section class="next-reading"'+(' id="next-reading"' if at_end else ' aria-label="接著讀：選你想看的深度"')+'>'+heading+'<ol class="reading-depths">'+rows+'</ol>'+note+'</section>'
 
 def paper_card(p,depth=0):
  pre='../'*depth
@@ -131,7 +163,7 @@ for l in LESSONS:
 maprows=''.join(f'''<section class="map-row"><div><span class="eyebrow">領域 {c['id'].upper()}</span><h2><a href="topics/{c['id']}.html">{e(c['name'])}</a></h2><p class="small muted">{e(c['tag'])}</p></div><div class="map-links">{''.join(f'<a href="lessons/{id}.html" data-lesson="{id}">{e(BY[id]["title"])} <span class="read-badge">✓</span></a>' for id in c['route'] if id in BY)}</div></section>''' for c in SITE['categories'])
 mapbody=f'''<main id="main" class="shell"><section class="lesson-header"><span class="eyebrow">YOUR READING MAP</span><h1>一次走一小段。</h1><p class="lede">不用從頭讀到底。依你想解的問題，選一條路，或回來找下一個接點。</p><p class="small muted" id="progress-text">在課程頁勾選「走過了」，這裡會顯示你的進度。</p><div class="progress-bar" aria-hidden="true"><span id="progress-fill"></span></div></section>{reading_paths()}<section class="section" style="padding-top:10px">{maprows}</section><section class="category-note"><strong>還想接著聽研究者怎麼想？</strong><p>原庫另有 Ndea 訪談的繁中摘要。這是訪談材料，與 A–J 論文分類分開；本站本輪先以研究方法的入門路徑為主。</p><a href="{link('index/video.md')}">前往訪談索引 ↗</a></section></main>'''
 write('map.html',page('完整閱讀地圖',mapbody,current='map'))
-about=f'''<main id="main" class="shell source-policy"><section class="lesson-header"><span class="eyebrow">ABOUT THIS FIELD GUIDE</span><h1>先懂問題，<br>再把論文讀深。</h1><p class="lede">這是一份論文閱讀庫的入門導覽，給想先看懂研究在忙什麼的人。</p></section><section class="section" style="padding-top:0"><h2>每課只帶走一個核心</h2><p>直覺與日常類比放在主線，流程圖拆解角色，互動讓你改一個條件。公式、方法差異與限制放在原生可摺疊區塊，鍵盤也能開啟。課程不是全庫逐篇摘要，也不取代閱讀論文。</p><h2>來源怎麼看？</h2><p>分類沿用 <a href="{link('index/README.md')}">paper_readings 的 A–J 索引</a>。既有概念課依已提交的摘要與精要逐節譯文編寫，未宣稱重新完整閱讀所有原始 PDF。新增的單篇論文導讀另外核對公開原文，逐篇列出自己的母稿版本、章節定位與來源；兩種閱讀入口的版本分開記錄。每課列出實際依據的筆記路徑與 arXiv 原文入口；正文的論文編號可跳到來源卡。</p><p>概念課快照固定於 <a href="{SITE['source_repo']}/tree/{SITE['source_commit']}">{SITE['source_commit'][:7]}</a>，日期 {SITE['snapshot_date']}。來源庫日後新增論文，不會自動改變這版課程。單篇導讀使用各頁來源卡標示的獨立快照。來源中的逐節譯文仍是閱讀筆記，關鍵定義、數字與引用請回查原文。原筆記連結需要該私有論文庫的 GitHub 存取權；arXiv 原論文入口可公開閱讀。</p><h2>圖和數字代表什麼？</h2><p>所有 SVG、流程圖與互動是本站手製教學示意，使用合成資料或手寫規則；不是論文實驗圖，也沒有在瀏覽器訓練大型模型。旋鈕改變圖形，不代表模型已學會那些因子。未列出實驗數字時，刻意不以玩具結果推斷真實效能。</p><h2>怎麼讀比較輕鬆？</h2><ol><li>讀標題底下的問題，再讀「先抓住這個直覺」。</li><li>對照圖中每一步的角色，改一次互動條件。</li><li>能說出方法做了什麼，再展開限制，挑一篇來源讀。</li></ol><h2>使用與隱私</h2><p>網站無追蹤、無登入、無後端。閱讀勾選只存在瀏覽器的 localStorage；若停用儲存，文章與互動仍可閱讀。可以在閱讀地圖使用下方按鈕清除本站的勾選，其他網站資料不受影響。</p><button class="secondary" id="clear-progress">清除本站閱讀勾選</button><p id="clear-result" class="small" aria-live="polite"></p><h2>維護方式</h2><p>這是免依賴的靜態網站。內容保存在 JSON，Python 產生 HTML；手機、鍵盤、無 JavaScript 時仍能閱讀主線與來源。<a href="map.html">回閱讀地圖，挑一個現在最有趣的問題。</a></p></section></main>'''
+about=f'''<main id="main" class="shell source-policy"><section class="lesson-header"><span class="eyebrow">ABOUT THIS FIELD GUIDE</span><h1>先懂問題，<br>再把論文讀深。</h1><p class="lede">這是一份論文閱讀庫的入門導覽，給想先看懂研究在忙什麼的人。</p></section><section class="section" style="padding-top:0"><h2>每課只帶走一個核心</h2><p>直覺與日常類比放在主線，流程圖拆解角色，互動讓你改一個條件。公式、方法差異與限制放在原生可摺疊區塊，鍵盤也能開啟。課程不是全庫逐篇摘要，也不取代閱讀論文。</p><h2>來源怎麼看？</h2><p>分類沿用 <a href="{link('index/README.md')}">paper_readings 的 A–J 索引</a>。既有概念課依已提交的摘要與精要逐節譯文編寫，未宣稱重新完整閱讀所有原始 PDF。新增的單篇論文導讀另外核對公開原文，逐篇列出自己的母稿版本、章節定位與來源；兩種閱讀入口的版本分開記錄。每課列出實際依據的筆記路徑與 arXiv 原文入口；正文的論文編號可跳到來源卡。</p><p>概念課快照固定於 <a href="{SITE['source_repo']}/tree/{SITE['source_commit']}">{SITE['source_commit'][:7]}</a>，日期 {SITE['snapshot_date']}。來源庫日後新增論文，不會自動改變這版課程。單篇導讀使用各頁來源卡標示的獨立快照。來源中的逐節譯文仍是閱讀筆記，關鍵定義、數字與引用請回查原文。私人來源快照的 GitHub 追溯連結需要論文庫存取權；已公開的<a href="https://justty32.github.io/paper_readings-site/">摘要／精要逐節譯文閱讀站</a>可以直接閱讀。各論文導讀的「接著讀」列出對應公開入口；這些是閱讀筆記，並非官方全文翻譯。arXiv 原論文入口亦可公開閱讀。</p><h2>圖和數字代表什麼？</h2><p>所有 SVG、流程圖與互動是本站手製教學示意，使用合成資料或手寫規則；不是論文實驗圖，也沒有在瀏覽器訓練大型模型。旋鈕改變圖形，不代表模型已學會那些因子。未列出實驗數字時，刻意不以玩具結果推斷真實效能。</p><h2>怎麼讀比較輕鬆？</h2><ol><li>讀標題底下的問題，再讀「先抓住這個直覺」。</li><li>對照圖中每一步的角色，改一次互動條件。</li><li>能說出方法做了什麼，再展開限制，挑一篇來源讀。</li></ol><h2>使用與隱私</h2><p>網站無追蹤、無登入、無後端。閱讀勾選只存在瀏覽器的 localStorage；若停用儲存，文章與互動仍可閱讀。可以在閱讀地圖使用下方按鈕清除本站的勾選，其他網站資料不受影響。</p><button class="secondary" id="clear-progress">清除本站閱讀勾選</button><p id="clear-result" class="small" aria-live="polite"></p><h2>維護方式</h2><p>這是免依賴的靜態網站。內容保存在 JSON，Python 產生 HTML；手機、鍵盤、無 JavaScript 時仍能閱讀主線與來源。<a href="map.html">回閱讀地圖，挑一個現在最有趣的問題。</a></p></section></main>'''
 write('about.html',page('關於本站與來源',about,current='about'))
 write('assets/favicon.svg','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="#172d38"/><path d="M10 35C17 8 24 9 32 35S47 60 55 28" fill="none" stroke="#d5f27c" stroke-width="6"/></svg>')
 # No application fetches: this index is used solely by tooling and traceability.
@@ -158,7 +190,7 @@ for p in PAPERS:
  related=''.join('<a class="next-card" href="../lessons/'+e(id)+'.html"><span>相關概念課</span><strong>'+e(BY[id]['title'])+' ↗</strong></a>' for id in p['related_lessons'])
  note_url=SITE['source_repo']+'/blob/'+p['source_commit']+'/'+quote(p['source_path'],safe='/')
  sources='<li><a href="https://arxiv.org/abs/'+e(p['arxiv_id'])+'">arXiv 原始論文 '+e(p['arxiv_id'])+' ↗</a>（公開）</li><li><a href="'+e(note_url)+'">原庫專屬導讀／閱讀筆記 ↗</a>（私有庫，需要 GitHub 存取權；快照 '+e(p['source_commit'][:7])+ '）</li>'
- sources+=''.join('<li><a href="'+e(source['url'])+'">'+e(source['label'])+' ↗</a></li>' for source in p['sources'])
- body=f'<main id="main" class="shell" style="--topic:{c["color"]}"><div class="breadcrumb"><a href="../index.html">首頁</a><span aria-hidden="true">/</span><a href="../papers.html">論文導讀</a></div><header class="lesson-header"><span class="eyebrow">{e(c["name"])} / 論文專屬導讀</span><h1>{e(p["title"])}</h1><p class="lede">{e(p["subtitle"])}</p><span class="pill">arXiv {e(p["arxiv_id"])}</span></header><div class="lesson-layout"><article class="lesson-content"><p class="intuition">{e(p["intro"])}</p>{sections}<section id="paper-sources"><h2>原文與來源</h2><p class="muted small">此頁依下列固定快照編寫；教學例子與程式片段用來解釋方法，請回到原文確認研究設定與結果。</p><ul class="sources">{sources}</ul></section><section id="related-lessons"><h2>回到相關概念課</h2><div class="next-grid">{related}</div><p><a href="../papers.html">← 全部論文導讀</a></p></section></article><aside class="margin-nav" aria-label="本篇目錄"><strong>這篇怎麼讀</strong>{toc}<a href="#paper-sources">原文與來源</a><a href="#related-lessons">相關概念課</a></aside></div></main>'
+ sources+=''.join('<li><a href="'+e(reading_source_url(source['url']))+'">'+e(source['label'])+' ↗</a></li>' for source in p['sources'])
+ body=f'<main id="main" class="shell" style="--topic:{c["color"]}"><div class="breadcrumb"><a href="../index.html">首頁</a><span aria-hidden="true">/</span><a href="../papers.html">論文導讀</a></div><header class="lesson-header"><span class="eyebrow">{e(c["name"])} / 論文專屬導讀</span><h1>{e(p["title"])}</h1><p class="lede">{e(p["subtitle"])}</p><span class="pill">arXiv {e(p["arxiv_id"])}</span></header><div class="lesson-layout"><article class="lesson-content"><p class="intuition">{e(p["intro"])}</p>{next_reading(p)}{sections}<section id="paper-sources"><h2>原文與來源</h2><p class="muted small">此頁依下列固定快照編寫；教學例子與程式片段用來解釋方法，請回到原文確認研究設定與結果。</p><ul class="sources">{sources}</ul></section>{next_reading(p,True)}<section id="related-lessons"><h2>回到相關概念課</h2><div class="next-grid">{related}</div><p><a href="../papers.html">← 全部論文導讀</a></p></section></article><aside class="margin-nav" aria-label="本篇目錄"><strong>這篇怎麼讀</strong>{toc}<a href="#next-reading">接著讀：摘要、譯文與延伸</a><a href="#paper-sources">原文與來源</a><a href="#related-lessons">相關概念課</a></aside></div></main>'
  write('papers/'+p['id']+'.html',page(p['title'],body,1,'papers',p['subtitle']))
 print(f'Built {len(PAPERS)} dedicated paper guides + paper index.')

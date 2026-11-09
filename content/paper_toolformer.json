@@ -7,7 +7,7 @@
       "category": "i",
       "arxiv_id": "2302.04761",
       "source_path": "primers/toolformer.md",
-      "source_commit": "6c07331018539a4bf4a6170de8efaa2b40e9a0f3",
+      "source_commit": "f60363c0a9fa16a700e178e07f26e6e026d030fd",
       "intro": "老師不用在每一題旁邊提醒「拿計算機」。可以先整理一批例子，找出計算機真的幫得上忙的時刻，再拿這些例子教模型。Toolformer 研究的就是這間資料工廠。",
       "sections": [
         {
@@ -44,6 +44,20 @@
             "損失下降只證明這次資料有助模型預測後續文字，不能證明工具回傳符合世界真相，也不能保證原文字的答案正確。原文第 5 節表 10 甚至列出看來不相關、卻仍降低損失的搜尋呼叫。"
           ],
           "collapsible": false
+        },
+        {
+          "title": "30秒自測（自編教學例）",
+          "paragraphs": [
+            "自編教學例：篩選門檻為 1.0，三種後文預測損失是「不呼叫 3.0」「只有呼叫 1.5」「呼叫加結果 1.2」。能因為 3.0 − 1.2 = 1.8，就保留這次呼叫嗎？"
+          ],
+          "collapsible": false
+        },
+        {
+          "title": "看答案與理由",
+          "paragraphs": [
+            "不能。必須先取 min(3.0, 1.5) = 1.5，再算 1.5 − 1.2 = 0.3，小於門檻 1.0。呼叫文字本身已帶來的幫助，不能算成工具結果的功勞。即使通過，也只表示有助預測後文，不是真實正確的證明。"
+          ],
+          "collapsible": true
         },
         {
           "title": "第四站：把留下的範例拿去微調",
@@ -153,7 +167,7 @@
             }
           ],
           "image": "assets/papers/toolformer-routes.svg",
-          "after_section": 4
+          "after_section": 6
         }
       ],
       "related_lessons": [

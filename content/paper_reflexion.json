@@ -7,7 +7,7 @@
       "category": "i",
       "arxiv_id": "2303.11366",
       "source_path": "primers/reflexion.md",
-      "source_commit": "766036350934d720a66979d398de3daa9680919b",
+      "source_commit": "f60363c0a9fa16a700e178e07f26e6e026d030fd",
       "intro": "忘記把洗好的杯子放回櫃子，下次你可能貼張便條提醒自己。Reflexion 也讓語言模型把失敗教訓寫下來，再帶進下一次嘗試；改的是讀到的記憶，不是模型權重。",
       "sections": [
         {
@@ -45,6 +45,20 @@
           ],
           "code": "保留記憶：洗好後放入櫃內，確認乾淨與位置。\n重置環境：髒／水槽旁\n讀記憶 → 拿杯子 → 清洗 → 放入櫃子 → 檢查\n評估：乾淨=true，在櫃內=true → 成功並停止",
           "collapsible": false
+        },
+        {
+          "title": "30秒自測（自編教學例）",
+          "paragraphs": [
+            "自編教學例：洗杯任務重置後，第二次嘗試保留哪些東西？A：洗好後放入櫃子的反思便條；B：上次已洗好杯子的環境狀態；C：更新後的模型權重。"
+          ],
+          "collapsible": false
+        },
+        {
+          "title": "看答案與理由",
+          "paragraphs": [
+            "本例只保留 A。環境重置後，杯子回到髒的、在水槽旁的起始狀態，所以不保留 B；Reflexion 不更新模型權重，所以沒有 C。保留便條仍要真的執行並接受評估，不能只讀了教訓就宣告成功。"
+          ],
+          "collapsible": true
         },
         {
           "title": "如果檢查的人也看錯呢？",
@@ -159,7 +173,7 @@
             }
           ],
           "image": "assets/papers/reflexion-evaluator.svg",
-          "after_section": 4
+          "after_section": 6
         }
       ],
       "related_lessons": [

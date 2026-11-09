@@ -1,0 +1,166 @@
+{
+  "base_url": "https://justty32.github.io/paper_readings-site/",
+  "mirror_source_revision": "c9d29302217534828571f025b99a3e9c289079c8",
+  "entries": [
+    {
+      "paper_id": "arc-measure",
+      "summary": "summarize/1911.01547_Measure_of_Intelligence.摘要.md",
+      "translation": "translate/1911.01547_Measure_of_Intelligence.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/ARC_AGI_landscape.md",
+          "label": "主題延伸：ARC 方法與測試時適應"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "dreamcoder",
+      "summary": "summarize/2006.08381_DreamCoder.摘要.md",
+      "translation": "translate/2006.08381_DreamCoder.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/program_synthesis_library_learning.md",
+          "label": "主題延伸：程式合成與工具庫學習"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "dspy",
+      "summary": "summarize/2310.03714_DSPy.摘要.md",
+      "translation": "translate/2310.03714_DSPy.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/aicore_reliable_function_landscape.md",
+          "label": "主題延伸：宣告流程與可靠系統"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "egg-sr",
+      "summary": "summarize/2511.05849_EGG_SR.摘要.md",
+      "translation": "translate/2511.05849_EGG_SR.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/SR_landscape.md",
+          "label": "主題延伸：符號迴歸方法全景"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "infogan",
+      "summary": "summarize/1606.03657_InfoGAN.摘要.md",
+      "translation": "translate/1606.03657_InfoGAN.zh-TW.md",
+      "deep": [],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "kan-original",
+      "summary": null,
+      "translation": null,
+      "deep": [
+        {
+          "path": "deep/SR_landscape.md",
+          "label": "主題延伸：KAN 後續研究與符號迴歸"
+        }
+      ],
+      "related": [
+        {
+          "path": "summarize/2506.07549_MetaKAN.摘要.md",
+          "label": "後續研究：MetaKAN 重點摘要"
+        },
+        {
+          "path": "translate/2506.07549_MetaKAN.zh-TW.md",
+          "label": "後續研究：MetaKAN 精要逐節譯文"
+        }
+      ],
+      "note": "原始 KAN（2404.19756）目前沒有同篇摘要與精要譯文；下方 MetaKAN 是後續研究，不是原論文筆記。"
+    },
+    {
+      "paper_id": "react",
+      "summary": "summarize/2210.03629_ReAct.摘要.md",
+      "translation": "translate/2210.03629_ReAct.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/aicore_reliable_function_landscape.md",
+          "label": "主題延伸：工具、驗證與可靠工作流"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "reflexion",
+      "summary": "summarize/2303.11366_Reflexion.摘要.md",
+      "translation": "translate/2303.11366_Reflexion.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/aicore_reliable_function_landscape.md",
+          "label": "主題延伸：反思記憶與可重用技能"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "stitch",
+      "summary": "summarize/2211.16605_Stitch.摘要.md",
+      "translation": "translate/2211.16605_Stitch.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/program_synthesis_library_learning.md",
+          "label": "主題延伸：程式合成與工具庫學習"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "symbolic-world-models",
+      "summary": "summarize/2502.04728_SymbolicWMTestTimeScaling.摘要.md",
+      "translation": "translate/2502.04728_SymbolicWMTestTimeScaling.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/embodied_vla_reliability.md",
+          "label": "主題延伸：世界模型、驗證與 sim-to-real"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "toolformer",
+      "summary": "summarize/2302.04761_Toolformer.摘要.md",
+      "translation": "translate/2302.04761_Toolformer.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/aicore_reliable_function_landscape.md",
+          "label": "主題延伸：工具、驗證與可靠工作流"
+        }
+      ],
+      "related": [],
+      "note": ""
+    },
+    {
+      "paper_id": "voyager",
+      "summary": "summarize/2305.16291_Voyager.摘要.md",
+      "translation": "translate/2305.16291_Voyager.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/program_synthesis_library_learning.md",
+          "label": "主題延伸：程式合成與工具庫學習"
+        }
+      ],
+      "related": [],
+      "note": ""
+    }
+  ]
+}

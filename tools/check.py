@@ -146,6 +146,42 @@ for path in paths:
   if 'branch' in step and (not isinstance(step['branch'],dict) or not isinstance(step['branch'].get('question'),str) or not step['branch']['question'].strip()):errors.append(prefix+'missing branch question')
   for field in ('stop','transition'):
    if field in step and (not isinstance(step[field],str) or not step[field].strip()):errors.append(prefix+'invalid '+field)
+reading_file=ROOT/'content/reading_links.json'
+reading_source_paths=[];reading_revision=None
+if not reading_file.is_file():errors.append('missing content/reading_links.json')
+else:
+ reading=json.loads(reading_file.read_text());reading_revision=reading.get('mirror_source_revision')
+ if reading.get('base_url')!='https://justty32.github.io/paper_readings-site/':errors.append('reading mirror base_url must use the public hyphenated mirror')
+ if not isinstance(reading_revision,str) or not re.fullmatch(r'[0-9a-f]{40}',reading_revision):errors.append('invalid reading mirror source revision')
+ entries=reading.get('entries')
+ if not isinstance(entries,list):errors.append('reading mirror entries must be a list');entries=[]
+ seen=set();guide_by={g['id']:g for g in guides}
+ def validate_reading_path(path,prefix):
+  if not isinstance(path,str) or not re.fullmatch(r'(?:summarize|translate|deep)/[^?#%\\:\x00-\x20]+\.md',path) or '..' in Path(path).parts or '//' in path:errors.append(prefix+'unsafe reading path '+str(path));return False
+  reading_source_paths.append(path);return True
+ for entry in entries:
+  if not isinstance(entry,dict):errors.append('invalid reading mirror entry');continue
+  pid=entry.get('paper_id');prefix='reading mirror '+str(pid)+': '
+  if not isinstance(pid,str) or pid not in guide_by:errors.append(prefix+'unknown paper');continue
+  if pid in seen:errors.append(prefix+'duplicate paper')
+  seen.add(pid)
+  for field in ('summary','translation'):
+   if field not in entry:errors.append(prefix+'missing '+field);continue
+   path=entry[field]
+   if path is not None and validate_reading_path(path,prefix) and guide_by[pid]['arxiv_id'] not in path:errors.append(prefix+field+' must identify the same paper arxiv_id')
+  labels={}
+  for field in ('deep','related'):
+   items=entry.get(field)
+   if not isinstance(items,list):errors.append(prefix+field+' must be a list');continue
+   for item in items:
+    if not isinstance(item,dict):errors.append(prefix+'invalid '+field+' item');continue
+    validate_reading_path(item.get('path'),prefix)
+    label=item.get('label')
+    if not isinstance(label,str) or not label.strip():errors.append(prefix+'missing '+field+' label')
+    elif label in labels and labels[label]!=field:errors.append(prefix+'deep and related labels must distinguish their roles')
+    else:labels[label]=field
+  if not isinstance(entry.get('note'),str):errors.append(prefix+'note must be text')
+ if seen!=set(guide_by):errors.append('reading mirror entries must cover every paper')
 htmls=list(ROOT.glob('*.html'))+list((ROOT/'topics').glob('*.html'))+list((ROOT/'lessons').glob('*.html'))+list((ROOT/'papers').glob('*.html'))
 docs={}
 for p in htmls:
@@ -162,6 +198,15 @@ for p,d in docs.items():
   if not dest.exists():errors.append(f'{p.relative_to(ROOT)}: missing {href}')
   elif u.fragment and dest in docs and unquote(u.fragment)not in docs[dest].ids:errors.append(f'{p.relative_to(ROOT)}: missing fragment {href}')
 source=ROOT.parent/'paper_readings'
+if source.exists() and reading_source_paths:
+ frozen=False
+ if isinstance(reading_revision,str) and re.fullmatch(r'[0-9a-f]{40}',reading_revision):
+  frozen=subprocess.run(['git','-C',str(source),'cat-file','-e',reading_revision+'^{commit}'],capture_output=True).returncode==0
+ if not frozen:print('NOTE: mirror source revision absent locally; checking working files only, version check skipped.')
+ for path in reading_source_paths:
+  exists=subprocess.run(['git','-C',str(source),'cat-file','-e',reading_revision+':'+path],capture_output=True).returncode==0 if frozen else (source/path).is_file()
+  if not exists:errors.append('public reading mirror source missing: '+path)
+
 if source.exists():
  for path in sorted(source_paths|{c['index'] for c in site['categories']}):
   r=subprocess.run(['git','-C',str(source),'cat-file','-e',site['source_commit']+':'+path],capture_output=True)

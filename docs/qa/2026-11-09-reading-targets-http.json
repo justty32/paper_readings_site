@@ -1,0 +1,322 @@
+{
+  "base_url": "https://justty32.github.io/paper_readings-site/",
+  "expected_revision": "c9d29302217534828571f025b99a3e9c289079c8",
+  "navigation_unique_count": 29,
+  "child_checks": [
+    "summarize/2310.03714_DSPy.摘要/01_一句話概括.md",
+    "translate/2006.08381_DreamCoder.zh-TW/01_摘要.md"
+  ],
+  "results": [
+    {
+      "path": "deep/ARC_AGI_landscape.md",
+      "url": "https://justty32.github.io/paper_readings-site/deep/ARC_AGI_landscape.html",
+      "status": 200,
+      "title": "ARC-AGI 解法全景與測試時適應——深度綜述 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": null,
+      "id_in_html": null,
+      "attempts": 1
+    },
+    {
+      "path": "deep/SR_landscape.md",
+      "url": "https://justty32.github.io/paper_readings-site/deep/SR_landscape.html",
+      "status": 200,
+      "title": "符號迴歸（Symbolic Regression）研究全景深度綜述 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": null,
+      "id_in_html": null,
+      "attempts": 1
+    },
+    {
+      "path": "deep/aicore_reliable_function_landscape.md",
+      "url": "https://justty32.github.io/paper_readings-site/deep/aicore_reliable_function_landscape.html",
+      "status": 200,
+      "title": "把 LLM 包成可靠函數——ai_core 相關文獻接點地圖（深度綜述） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": null,
+      "id_in_html": null,
+      "attempts": 1
+    },
+    {
+      "path": "deep/embodied_vla_reliability.md",
+      "url": "https://justty32.github.io/paper_readings-site/deep/embodied_vla_reliability.html",
+      "status": 200,
+      "title": "具身 Agent／VLA 可靠性：記憶、失敗恢復、sim-to-real 與空間接地 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": null,
+      "id_in_html": null,
+      "attempts": 1
+    },
+    {
+      "path": "deep/program_synthesis_library_learning.md",
+      "url": "https://justty32.github.io/paper_readings-site/deep/program_synthesis_library_learning.html",
+      "status": 200,
+      "title": "程式合成與庫學習——從 DreamCoder 譜系到 LLM 演化的深度綜述 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": null,
+      "id_in_html": null,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/1606.03657_InfoGAN.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/1606.03657_InfoGAN.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《InfoGAN：資訊最大化生成對抗網路的可解釋表徵學習》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "1606.03657",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/1911.01547_Measure_of_Intelligence.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/1911.01547_Measure_of_Intelligence.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《論智力測量（On the Measure of Intelligence）》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "1911.01547",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2006.08381_DreamCoder.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2006.08381_DreamCoder.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《DreamCoder：以 wake-sleep 貝氏程式學習成長出可泛化、可解釋的知識》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2006.08381",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2210.03629_ReAct.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2210.03629_ReAct.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《ReAct：在語言模型中協同推理與行動（Synergizing Reasoning and Acting in Language Models）》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2210.03629",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2211.16605_Stitch.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2211.16605_Stitch.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《Top-Down Synthesis for Library Learning（Stitch）》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2211.16605",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2302.04761_Toolformer.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2302.04761_Toolformer.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《Toolformer：語言模型能自己教會自己使用工具（Toolformer: Language Models Can Teach Themselves to Use Tools）》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2302.04761",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2303.11366_Reflexion.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2303.11366_Reflexion.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《Reflexion：具語言強化學習的語言智能體（Reflexion: Language Agents with Verbal Reinforcement Learning）》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2303.11366",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2305.16291_Voyager.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2305.16291_Voyager.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《VOYAGER：以大型語言模型驅動的開放式具身智能體》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2305.16291",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2310.03714_DSPy.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2310.03714_DSPy.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《DSPy：把宣告式語言模型呼叫編譯成自我改進的 pipeline（DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines）》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2310.03714",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2502.04728_SymbolicWMTestTimeScaling.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2502.04728_SymbolicWMTestTimeScaling.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "Generating Symbolic World Models via Test-time Scaling of Large Language Models 重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2502.04728",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2506.07549_MetaKAN.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2506.07549_MetaKAN.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《透過元學習提高訓練 KAN 的記憶體效率（MetaKAN）》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2506.07549",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2511.05849_EGG_SR.摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2511.05849_EGG_SR.%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "《EGG-SR：透過等式圖將符號等價性嵌入符號迴歸》重點摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2511.05849",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/1606.03657_InfoGAN.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/1606.03657_InfoGAN.zh-TW.html",
+      "status": 200,
+      "title": "InfoGAN：資訊最大化生成對抗網路的可解釋表徵學習（InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "1606.03657",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/1911.01547_Measure_of_Intelligence.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/1911.01547_Measure_of_Intelligence.zh-TW.html",
+      "status": 200,
+      "title": "論智力測量（On the Measure of Intelligence） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "1911.01547",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2006.08381_DreamCoder.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2006.08381_DreamCoder.zh-TW.html",
+      "status": 200,
+      "title": "DreamCoder：以 wake-sleep 貝氏程式學習成長出可泛化、可解釋的知識（DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2006.08381",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2210.03629_ReAct.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2210.03629_ReAct.zh-TW.html",
+      "status": 200,
+      "title": "ReAct：在語言模型中協同推理與行動（ReAct: Synergizing Reasoning and Acting in Language Models） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2210.03629",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2211.16605_Stitch.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2211.16605_Stitch.zh-TW.html",
+      "status": 200,
+      "title": "Top-Down Synthesis for Library Learning（程式庫學習的自頂向下合成，工具名 Stitch） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2211.16605",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2302.04761_Toolformer.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2302.04761_Toolformer.zh-TW.html",
+      "status": 200,
+      "title": "Toolformer：語言模型能自己教會自己使用工具（Toolformer: Language Models Can Teach Themselves to Use Tools） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2302.04761",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2303.11366_Reflexion.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2303.11366_Reflexion.zh-TW.html",
+      "status": 200,
+      "title": "Reflexion：具語言強化學習的語言智能體（Reflexion: Language Agents with Verbal Reinforcement Learning） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2303.11366",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2305.16291_Voyager.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2305.16291_Voyager.zh-TW.html",
+      "status": 200,
+      "title": "VOYAGER：以大型語言模型驅動的開放式具身智能體（An Open-Ended Embodied Agent with Large Language Models） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2305.16291",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2310.03714_DSPy.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2310.03714_DSPy.zh-TW.html",
+      "status": 200,
+      "title": "DSPy：把宣告式語言模型呼叫編譯成自我改進的 pipeline（DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2310.03714",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2502.04728_SymbolicWMTestTimeScaling.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2502.04728_SymbolicWMTestTimeScaling.zh-TW.html",
+      "status": 200,
+      "title": "Generating Symbolic World Models via Test-time Scaling of Large Language Models 精要逐節翻譯 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2502.04728",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2506.07549_MetaKAN.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2506.07549_MetaKAN.zh-TW.html",
+      "status": 200,
+      "title": "透過元學習提高訓練 KAN 的記憶體效率（Improving Memory Efficiency for Training KANs via Meta Learning） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2506.07549",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2511.05849_EGG_SR.zh-TW.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2511.05849_EGG_SR.zh-TW.html",
+      "status": 200,
+      "title": "EGG-SR：透過等式圖將符號等價性嵌入符號迴歸（EGG-SR: Embedding Symbolic Equivalence into Symbolic Regression via Equality Graph） · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2511.05849",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "summarize/2310.03714_DSPy.摘要/01_一句話概括.md",
+      "url": "https://justty32.github.io/paper_readings-site/summarize/2310.03714_DSPy.%E6%91%98%E8%A6%81/01_%E4%B8%80%E5%8F%A5%E8%A9%B1%E6%A6%82%E6%8B%AC.html",
+      "status": 200,
+      "title": "01_一句話概括 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2310.03714",
+      "id_in_html": true,
+      "attempts": 1
+    },
+    {
+      "path": "translate/2006.08381_DreamCoder.zh-TW/01_摘要.md",
+      "url": "https://justty32.github.io/paper_readings-site/translate/2006.08381_DreamCoder.zh-TW/01_%E6%91%98%E8%A6%81.html",
+      "status": 200,
+      "title": "01_摘要 · 論文閱讀",
+      "revision": "c9d29302217534828571f025b99a3e9c289079c8",
+      "id": "2006.08381",
+      "id_in_html": true,
+      "attempts": 1
+    }
+  ],
+  "manual_title_review": "Owner read all31 titles and verified same-paper vs topic labels"
+}

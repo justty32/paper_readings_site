@@ -11,7 +11,9 @@
 - [完整閱讀地圖](map.html)
 - [關於本站與來源政策](about.html)
 
-正式網站：**https://justty32.github.io/paper_readings_site/**
+正式入門網站：**https://justty32.github.io/paper_readings_site/**
+
+[摘要、精要逐節譯文與跨篇綜述閱讀站](https://justty32.github.io/paper_readings-site/)是另一個並存的公開鏡像。每篇導讀前方與文末的「接著讀」依實際資料連向摘要、譯文、主題延伸及原文；原始 KAN 缺少同篇筆記時會明說。私人來源快照仍需原庫權限，不影響公開筆記閱讀。
 
 直接開啟 HTML 即可閱讀。要在本機使用一致的瀏覽器儲存與網址：
 
@@ -32,6 +34,7 @@ python3 tools/package_static.py
 
 - `content/site.json`：分類、閱讀順序、固定來源 commit。
 - `content/{foundations,core,agents}.json`：概念課正文及逐篇來源卡。
+- `content/reading_links.json`：導讀到公開摘要／譯文／跨篇綜述的精確路徑與角色；不把後續研究冒充同篇，也不把精譯標成官方全文。
 - `content/paths.json`：三條問題導向閱讀路徑，首頁與閱讀地圖共用；不影響原有閱讀進度。
 - `content/paper_*.json`：單篇論文導讀，逐篇記錄 `source_path`／`source_commit`；母稿位於來源論文庫 `primers/`，網站改編保存在本 repo 的 JSON。圖解按相關段落排列，技術與實驗細節收在原生摺疊區塊。
 - `tools/build.py`、`tools/illustrations.py`：靜態頁面與語意 SVG。
