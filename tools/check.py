@@ -21,9 +21,10 @@ class Doc(HTMLParser):
    if v:self.links.append(v)
   if tag=='img' and 'alt'not in a:self.has_alt=False
   if tag=='svg' and a.get('role')=='img' and not a.get('aria-label'):self.has_alt=False
-site=json.loads((ROOT/'content/site.json').read_text());lessons=[];errors=[]
+site=json.loads((ROOT/'content/site.json').read_text());lessons=[];guides=[];errors=[]
 for p in sorted((ROOT/'content').glob('*.json')):
- if p.name!='site.json':lessons+=json.loads(p.read_text())['lessons']
+ if p.name!='site.json':
+  data=json.loads(p.read_text());lessons+=data.get('lessons',[]);guides+=data.get('papers',[])
 by={l['id']:l for l in lessons};ids=list(by)
 if len(by)!=len(lessons):errors.append('duplicate lesson id')
 required='id category title subtitle question intuition story steps example pitfalls details sources next'.split()
@@ -44,12 +45,80 @@ for l in lessons:
   if nxt not in by:errors.append(l['id']+': unknown next '+nxt)
  if not re.search(r'示意',l['example']['title']+l['example']['explanation']):errors.append(l['id']+': example not labelled')
  if len(''.join(l['story']))<180:errors.append(l['id']+': main text too thin')
+for lesson in lessons:
+ if 'diagrams' not in lesson:continue
+ prefix=lesson['id']+': '
+ if not isinstance(lesson['diagrams'],list):errors.append(prefix+'diagrams must be a list');continue
+ for d in lesson['diagrams']:
+  if not isinstance(d,dict):errors.append(prefix+'invalid diagram');continue
+  if d.get('kind') not in ('flow','compare'):errors.append(prefix+'diagram kind must be flow or compare')
+  if not isinstance(d.get('title'),str) or not d['title'].strip():errors.append(prefix+'diagram missing title')
+  if not isinstance(d.get('caption'),str) or '示意' not in d['caption']:errors.append(prefix+'diagram caption must identify teaching illustration')
+  if not isinstance(d.get('items'),list) or len(d['items'])<2:errors.append(prefix+'diagram needs at least two items')
+  elif any(not isinstance(item,dict) or any(not isinstance(item.get(k),str) or not item[k].strip() for k in ('label','text')) for item in d['items']):errors.append(prefix+'diagram items need label and text')
+  if 'image' in d:
+   image=d['image']
+   if not isinstance(image,str) or not re.fullmatch(r'assets/lessons/[A-Za-z0-9_-]+\.svg',image):errors.append(prefix+'diagram image must be a safe assets/lessons/*.svg path')
+   elif not (ROOT/image).is_file():errors.append(prefix+'missing diagram image '+image)
 for c in site['categories']:
  if not c['route']:errors.append(c['id']+': no learning route')
  for id in c['route']:
   if id not in by:errors.append(c['id']+': unknown lesson '+id)
   elif by[id]['category']!=c['id']:errors.append(id+': category mismatch')
-htmls=list(ROOT.glob('*.html'))+list((ROOT/'topics').glob('*.html'))+list((ROOT/'lessons').glob('*.html'))
+guide_ids=set(); guide_sources=[]
+categories={c['id'] for c in site['categories']}
+for g in guides:
+ gid=g.get('id','<missing>'); prefix='paper '+str(gid)+': '
+ required='id title subtitle category arxiv_id source_path source_commit intro sections diagrams related_lessons sources'.split()
+ if any(field not in g for field in required):
+  errors.append(prefix+'missing required fields');continue
+ if not isinstance(gid,str) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',gid):errors.append(prefix+'invalid id')
+ if gid in guide_ids:errors.append(prefix+'duplicate id')
+ guide_ids.add(gid)
+ for field in ['title','subtitle','intro']:
+  if not isinstance(g[field],str) or not g[field].strip():errors.append(prefix+'invalid '+field)
+ if g['category'] not in categories:errors.append(prefix+'unknown category')
+ if not isinstance(g['arxiv_id'],str) or not re.fullmatch(r'\d{4}\.\d{4,5}(?:v\d+)?',g['arxiv_id']):errors.append(prefix+'invalid arxiv_id')
+ valid_commit=isinstance(g['source_commit'],str) and re.fullmatch(r'[0-9a-f]{40}',g['source_commit'])
+ valid_path=isinstance(g['source_path'],str) and re.fullmatch(r'primers/[A-Za-z0-9_./-]+\.md',g['source_path']) and '..' not in Path(g['source_path']).parts
+ if not valid_commit:errors.append(prefix+'source_commit must be a full 40-character SHA')
+ if not valid_path:errors.append(prefix+'source_path must be a safe primers Markdown path')
+ if valid_commit and valid_path:guide_sources.append((g['source_commit'],g['source_path']))
+ if not isinstance(g['sections'],list) or len(g['sections'])<4:errors.append(prefix+'expected at least four sections')
+ else:
+  visible=0
+  for section in g['sections']:
+   if not isinstance(section,dict):errors.append(prefix+'invalid section');continue
+   if not isinstance(section.get('title'),str) or not section['title'].strip():errors.append(prefix+'section missing title')
+   paragraphs=section.get('paragraphs')
+   if not isinstance(paragraphs,list) or not paragraphs or any(not isinstance(t,str) or not t.strip() for t in paragraphs):errors.append(prefix+'section needs nonempty text paragraphs')
+   if 'code' in section and not isinstance(section['code'],str):errors.append(prefix+'code must be plain text')
+   if 'collapsible' in section and not isinstance(section['collapsible'],bool):errors.append(prefix+'collapsible must be boolean')
+   if not section.get('collapsible',False):visible+=1
+  if visible<2:errors.append(prefix+'keep at least two sections in the visible main narrative')
+ if not isinstance(g['diagrams'],list) or len(g['diagrams'])<2:errors.append(prefix+'expected at least two diagrams')
+ else:
+  for d in g['diagrams']:
+   if not isinstance(d,dict):errors.append(prefix+'invalid diagram');continue
+   if d.get('kind') not in ('flow','compare'):errors.append(prefix+'diagram kind must be flow or compare')
+   if 'after_section' in d and (type(d['after_section']) is not int or not 1<=d['after_section']<=len(g['sections'])):errors.append(prefix+'diagram after_section must be a 1-based section number')
+   if 'image' in d:
+    image=d['image']
+    if not isinstance(image,str) or not re.fullmatch(r'assets/papers/[A-Za-z0-9_-]+\.svg',image):errors.append(prefix+'diagram image must be a safe assets/papers/*.svg path')
+    elif not (ROOT/image).is_file():errors.append(prefix+'missing diagram image '+image)
+
+   if not isinstance(d.get('title'),str) or not d['title'].strip():errors.append(prefix+'diagram missing title')
+   if not isinstance(d.get('caption'),str) or '示意' not in d['caption']:errors.append(prefix+'diagram caption must identify teaching illustration')
+   if not isinstance(d.get('items'),list) or len(d['items'])<2:errors.append(prefix+'diagram needs at least two items')
+   elif any(not isinstance(item,dict) or any(not isinstance(item.get(k),str) or not item[k].strip() for k in ('label','text')) for item in d['items']):errors.append(prefix+'diagram items need label and text')
+ if not isinstance(g['related_lessons'],list) or not g['related_lessons'] or any(id not in by for id in g['related_lessons']):errors.append(prefix+'unknown or missing related lessons')
+ if not isinstance(g['sources'],list) or not g['sources']:errors.append(prefix+'expected public source links')
+ else:
+  for source in g['sources']:
+   if not isinstance(source,dict) or not isinstance(source.get('label'),str) or not source['label'].strip() or not isinstance(source.get('url'),str):errors.append(prefix+'invalid public source');continue
+   url=urlparse(source['url'])
+   if url.scheme!='https' or not url.netloc:errors.append(prefix+'source URL must be absolute HTTPS')
+htmls=list(ROOT.glob('*.html'))+list((ROOT/'topics').glob('*.html'))+list((ROOT/'lessons').glob('*.html'))+list((ROOT/'papers').glob('*.html'))
 docs={}
 for p in htmls:
  d=Doc();d.feed(p.read_text());docs[p.resolve()]=d
@@ -69,7 +138,15 @@ if source.exists():
  for path in sorted(source_paths|{c['index'] for c in site['categories']}):
   r=subprocess.run(['git','-C',str(source),'cat-file','-e',site['source_commit']+':'+path],capture_output=True)
   if r.returncode:errors.append('frozen source missing: '+path)
+ for commit,path in guide_sources:
+  commit_check=subprocess.run(['git','-C',str(source),'cat-file','-e',commit+'^{commit}'],capture_output=True)
+  if commit_check.returncode:errors.append('paper source is not a commit: '+commit)
+  r=subprocess.run(['git','-C',str(source),'cat-file','-e',commit+':'+path],capture_output=True)
+  if r.returncode:errors.append('frozen paper source missing: '+commit+':'+path)
 else:print('NOTE: sibling source repo absent; frozen source path check skipped.')
+for gid in guide_ids:
+ if not (ROOT/'papers'/f'{gid}.html').is_file():errors.append('missing dedicated paper page: '+gid)
+if not (ROOT/'papers.html').is_file():errors.append('missing paper index')
 app=(ROOT/'assets/app.js').read_text()
 for id in ids:
  # Every lesson has an explicit entry in the demo registry (including identifier shorthand).
@@ -77,4 +154,4 @@ for id in ids:
  if not re.search(r"(?:^|[,])(?:'"+re.escape(id)+r"'|"+re.escape(id)+r")(?:[:,]|$)",registry):errors.append('missing demo registry: '+id)
 if errors:
  print('\n'.join(errors));sys.exit(1)
-print(f'PASS: {len(htmls)} HTML pages, {len(lessons)} lessons, 10 categories, {len(papers)} unique papers, {len(source_paths)} frozen note paths; all local links/anchors/citations valid.')
+print(f'PASS: {len(htmls)} HTML pages, {len(lessons)} lessons, 10 categories, {len(papers)} unique lesson papers, {len(guides)} dedicated paper guides, {len(source_paths)} frozen note paths; all local links/anchors/citations valid.')

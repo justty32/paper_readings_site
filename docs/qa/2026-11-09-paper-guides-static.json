@@ -1,0 +1,260 @@
+{
+  "date": "2026-11-09",
+  "scope": "four dedicated paper guides and five lesson clarity fixes",
+  "source_commit": "80b087d692d96581316ca7ee372a2530438d575a",
+  "checks": {
+    "build": "PASS",
+    "static_schema_links_anchors_sources": "PASS:46 HTML pages;28 lessons;4 paper guides",
+    "javascript_syntax": "PASS",
+    "package_static": "PASS",
+    "git_diff_check": "PASS",
+    "browser_visual_or_interaction": "NOT RUN: workflow forbids Codex browser use"
+  },
+  "paper_diagrams": {
+    "svg": 12,
+    "text_comparison_or_flow_groups": 4
+  },
+  "lesson_static_svg_added": 2,
+  "files": [
+    {
+      "path": "about.html",
+      "sha256": "4bba324c6b475b523d159673e8b0983a4e52e4577c5a9cc422042aeb0b222fed"
+    },
+    {
+      "path": "assets/lessons/arc-demonstrations.svg",
+      "sha256": "15d5d76811ac158fdf9670aecec9e9c2e236139305c0481b5b3e3a8a513ffbb1"
+    },
+    {
+      "path": "assets/lessons/meta-nested.svg",
+      "sha256": "aeb7cd7d6042973fdb2a4a7089972d79c458c5bd43ce338c034397b7fdd5e88e"
+    },
+    {
+      "path": "assets/papers/arc-conditions.svg",
+      "sha256": "fa751c1200cb25336b67649356fb88166dab0cc6b4de5d2864e8f668957b76af"
+    },
+    {
+      "path": "assets/papers/arc-hypotheses.svg",
+      "sha256": "b7b170fae272ea6fb0ca7f30a07f09ac39eaa302ef05096577adf000fac050f0"
+    },
+    {
+      "path": "assets/papers/arc-levels.svg",
+      "sha256": "7a23da0a33ad2369dd721b92b237b4f06f232c7bd8fa7d82e4570a8bdba715ad"
+    },
+    {
+      "path": "assets/papers/dreamcoder-cost.svg",
+      "sha256": "fdeae520410ea54031a41d9d07cd472b994aab1e15aa5984ddccab97ccb00296"
+    },
+    {
+      "path": "assets/papers/dreamcoder-cycle.svg",
+      "sha256": "8f2fda3c9dbba42dcaa5f31e6354e883b4a6fbb47074fc69ac5188ea7039f806"
+    },
+    {
+      "path": "assets/papers/dreamcoder-map.svg",
+      "sha256": "3b92879cc1c83c57b49d2caf608dc18ba5a9b9c465d9c1649af8968fb84e9047"
+    },
+    {
+      "path": "assets/papers/kan-calculation.svg",
+      "sha256": "f044d792c548ce80ae7a112d387d2d4374742738012061dc9c4d978f451af279"
+    },
+    {
+      "path": "assets/papers/kan-checks.svg",
+      "sha256": "742eeb09073340cd01edf6d8b7979b9d613a10f0cd800ccae4ba86532fa57955"
+    },
+    {
+      "path": "assets/papers/kan-roles.svg",
+      "sha256": "fe3983c4841b165888e39e2a3ecbfc307a365f1e0531bf619a0d567530d25246"
+    },
+    {
+      "path": "assets/papers/react-evidence.svg",
+      "sha256": "5213798e1b401019970d9c3f545b1344079337f6fab30f2c1976c3feed88f8e6"
+    },
+    {
+      "path": "assets/papers/react-loop.svg",
+      "sha256": "b44759e0ea958454263290a8fe88198a96971424f931a7f1cb00ee67d8cd160f"
+    },
+    {
+      "path": "assets/papers/react-responsibility.svg",
+      "sha256": "02302939d800384e08282d668585e7024183c2ddbe4539b538dda5e596902641"
+    },
+    {
+      "path": "index.html",
+      "sha256": "9d76a8432a89f6bcd2ffd5aa688056efeb20b1a91cb7ff393e3f29a51644b9f9"
+    },
+    {
+      "path": "lessons/adaptation.html",
+      "sha256": "606c13cc21bca993f10a98ae69f663ac64ff749d839a7d2d23f38ddc30bb5b66"
+    },
+    {
+      "path": "lessons/agent-memory.html",
+      "sha256": "d857132e1c7b126dc0e13e1cc425469e88c4daa010f74ef601f1a4dd7b4b9b45"
+    },
+    {
+      "path": "lessons/arc.html",
+      "sha256": "1f268ecea81d1a31e76d2fdcfaf36346ceebbff83241b4294c8bc3d62ecb27e1"
+    },
+    {
+      "path": "lessons/automata.html",
+      "sha256": "dd8c278b95b5e781c132df703c075bf219e54b521620a90650d08914c618b81e"
+    },
+    {
+      "path": "lessons/computation.html",
+      "sha256": "24d8c231bd36dfb16a4efd26013f2ad10e324ee0d31225f4cb7176eef9eb3c2a"
+    },
+    {
+      "path": "lessons/constrained-decoding.html",
+      "sha256": "b44fc1beccb4b6c3b3a81b9535ee76fb8e92f4d7502755650dd08f1b3b3fe935"
+    },
+    {
+      "path": "lessons/cost-routing.html",
+      "sha256": "4188bfb44ae541717d32892f71bf785a5bb98550fc895aca51d776eacf963585"
+    },
+    {
+      "path": "lessons/equivalence.html",
+      "sha256": "cd47381667ea5ea8e3ed947f611abbfd0d5ba4617f5e801f9b107ede2813c3dc"
+    },
+    {
+      "path": "lessons/evolution.html",
+      "sha256": "dcf7937ebc8a634ccc9a4d34137afe6634e2894b953bf345deba3eeb4b24ae5a"
+    },
+    {
+      "path": "lessons/gan.html",
+      "sha256": "9e1f9acd9c607579888c4e59c7219748191c956e5a26de33be3a9a7ef96c3386"
+    },
+    {
+      "path": "lessons/grounding.html",
+      "sha256": "1e8febdaab4904457e54c583d5df61f395065c36ccc39fdce20b7e74e6d1af34"
+    },
+    {
+      "path": "lessons/interpretability.html",
+      "sha256": "ce460ca728a056b9f76c46c9d8034dda64809f25ac19bdaed1015b4422e91f77"
+    },
+    {
+      "path": "lessons/kan.html",
+      "sha256": "02e118a47965a46ef9be28c6824fa49f0249e5c1c74efc086b7ca63b760d6bfc"
+    },
+    {
+      "path": "lessons/library-learning.html",
+      "sha256": "8baef5a800f5d261333fe95396dbb5e76322cf369dd631af8de891acb388230e"
+    },
+    {
+      "path": "lessons/logic-belief.html",
+      "sha256": "e7831c02b582f84db478bd108495904786a6d999386d553c69140355004ce076"
+    },
+    {
+      "path": "lessons/meta-learning.html",
+      "sha256": "9d99c5c8750a459af4599ef6a79a0bb04ac6abcb7a91fbf122f4d3c1d324291a"
+    },
+    {
+      "path": "lessons/neurosymbolic.html",
+      "sha256": "1c2b9cba4719e601748e6acee90882aba6c5c104e492f73fa624390d9e902a0e"
+    },
+    {
+      "path": "lessons/program-search.html",
+      "sha256": "df62d5ad207daadf006af935e096abe6a7edb99b5a73b71576d8b1a3c60a8caa"
+    },
+    {
+      "path": "lessons/reasoning.html",
+      "sha256": "f01980bde48918aae3dc886b47af312f3ebd6b3f4c95be4bb73f7632136d27c2"
+    },
+    {
+      "path": "lessons/self-correction.html",
+      "sha256": "c5a3f6d04b2ecbf766bcc280fd8be417f6553a0b134bce9021c18af91305307f"
+    },
+    {
+      "path": "lessons/skill-governance.html",
+      "sha256": "c1fd3ded71701e1eef48371326e1b56d8b69d59f5934f50a6e095c65a7449122"
+    },
+    {
+      "path": "lessons/skill-library.html",
+      "sha256": "8fd0263039b1fc9b88436629ab5a31eea2626563cce4d7f9c00821f6874abd3d"
+    },
+    {
+      "path": "lessons/symbolic-regression.html",
+      "sha256": "05d0ee6d33e572a5645ab6e52396697fd4ae964b409c9dbe6b6c919ae41fbd10"
+    },
+    {
+      "path": "lessons/symmetry.html",
+      "sha256": "340dbba0eca6096e88a617063aec0f4735cab1f47de1346f26442f9e1a7861bb"
+    },
+    {
+      "path": "lessons/tool-use.html",
+      "sha256": "3dcf6b095a8208cb091c5d51e16521cbf34210d0b1006be3373d6da14121859f"
+    },
+    {
+      "path": "lessons/uncertainty.html",
+      "sha256": "c0dd038c270bfecea60a1327e9077860e6a8903585326d0ff6957c4d9505ba82"
+    },
+    {
+      "path": "lessons/workflow-optimization.html",
+      "sha256": "0b8a60bfc6fe3be7bf637796723716c44a80f04aa9e068de6a97dd1528375091"
+    },
+    {
+      "path": "lessons/world-models.html",
+      "sha256": "79d597d75fcb47466033e01c2817a44cce52bb9ef55c9d62197ee597828797ec"
+    },
+    {
+      "path": "map.html",
+      "sha256": "e68c871dd6b728cf1ea6f3f3a301d49e1746058c511ee9473a543bdfc0c3ee73"
+    },
+    {
+      "path": "papers/arc-measure.html",
+      "sha256": "e5965c140fa0a307668bf3550dc30b8be913f47478cbb3033c894322aaa5992d"
+    },
+    {
+      "path": "papers/dreamcoder.html",
+      "sha256": "ef6c882d1fbd48477728af239feed1bc7a3994e760ab0dbcbe7fec4e24e2070d"
+    },
+    {
+      "path": "papers/kan-original.html",
+      "sha256": "f478c1bb86881aa5a12dfd265dfaf22c69478e152056bbedc0f9348125dbd959"
+    },
+    {
+      "path": "papers/react.html",
+      "sha256": "fe0bfb9c3a5851455d7b1b19dcfc6aad618d5dfdb1fc6b72f6876280c60b8410"
+    },
+    {
+      "path": "papers.html",
+      "sha256": "65a7304b284dd551011085c5034ba53c8d3e07cbab9f2beedb061923c49b501e"
+    },
+    {
+      "path": "topics/a.html",
+      "sha256": "678a31152e3a72223e471a042dea7a5772305dba0a491b69b5e5ccf0a76597b1"
+    },
+    {
+      "path": "topics/b.html",
+      "sha256": "e6f5f20dd2d77147ba282ae289d0ad1e1e9e4c4968421db251e9b71c7af6985d"
+    },
+    {
+      "path": "topics/c.html",
+      "sha256": "d2a97d209c22c46161d250ca4639309d242f8f12e8f0a52dff79b7a1004fa039"
+    },
+    {
+      "path": "topics/d.html",
+      "sha256": "38292e3ac166653f78a9c232ab7bba234dc5221c8a95ea4f9602f28aa2891683"
+    },
+    {
+      "path": "topics/e.html",
+      "sha256": "256e9a37992a8826222525eb2a62aa729bbeb06e2a5b2b506f1ac57bfbd849c6"
+    },
+    {
+      "path": "topics/f.html",
+      "sha256": "e7787a9a38ea44869ac38f319f1641cdf15f51fd8fb528c1cfe65a290c349efa"
+    },
+    {
+      "path": "topics/g.html",
+      "sha256": "31ab3134fb8c48b3a491093271c6faaa0af5bbd21db5939d17b0f501aff9632b"
+    },
+    {
+      "path": "topics/h.html",
+      "sha256": "e45ac717c5b6e18c1edb841f933623fd8688c7fbe09977eb5e01d27a8455755c"
+    },
+    {
+      "path": "topics/i.html",
+      "sha256": "7fe6c84b123b6086c6d2716978fc04f8d7d0c60802d943b68343b9f5d484d167"
+    },
+    {
+      "path": "topics/j.html",
+      "sha256": "60ea8e6f5e44cb979a57952a603545b1a83c255674bea8056dfc81615a58e4b5"
+    }
+  ]
+}
