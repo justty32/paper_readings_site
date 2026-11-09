@@ -43,7 +43,7 @@ def topic_card(c):
 
 def render_diagram(d,depth=1):
  items='<ol class="diagram-items diagram-'+e(d['kind'])+'">'+''.join('<li><strong>'+e(item['label'])+'</strong><p>'+rich(item['text'])+'</p></li>' for item in d['items'])+'</ol>'
- visual=('<div class="diagram-scroll" tabindex="0" role="region" aria-label="'+e(d['title'])+'，可左右捲動"><img class="paper-diagram-image" src="'+'../'*depth+e(d['image'])+'" alt="'+e(d['title'])+'"></div><p class="small"><a href="'+'../'*depth+e(d['image'])+'">放大閱讀圖解 ↗</a> · 窄螢幕可在圖內左右滑動。</p><details><summary>圖解文字說明</summary>'+items+'</details>') if d.get('image') else items
+ visual=('<div class="diagram-scroll" tabindex="0" role="region" aria-label="'+e(d['title'])+'，可左右捲動"><img class="paper-diagram-image" src="'+'../'*depth+e(d['image'])+'" alt="'+e(d['title'])+'"></div><p class="small"><a href="'+'../'*depth+e(d['image'])+'">放大閱讀圖解 ↗</a> · 窄螢幕可在圖內左右滑動。</p><details'+(' open' if d.get('text_open',False) else '')+'><summary>圖解文字說明</summary>'+items+'</details>') if d.get('image') else items
  return '<figure class="paper-diagram"><h2>'+e(d['title'])+'</h2>'+visual+'<figcaption>'+rich(d['caption'])+'</figcaption></figure>'
 
 def paper_card(p,depth=0):

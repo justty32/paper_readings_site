@@ -52,6 +52,7 @@ for lesson in lessons:
  for d in lesson['diagrams']:
   if not isinstance(d,dict):errors.append(prefix+'invalid diagram');continue
   if d.get('kind') not in ('flow','compare'):errors.append(prefix+'diagram kind must be flow or compare')
+  if 'text_open' in d and not isinstance(d['text_open'],bool):errors.append(prefix+'diagram text_open must be boolean')
   if not isinstance(d.get('title'),str) or not d['title'].strip():errors.append(prefix+'diagram missing title')
   if not isinstance(d.get('caption'),str) or '示意' not in d['caption']:errors.append(prefix+'diagram caption must identify teaching illustration')
   if not isinstance(d.get('items'),list) or len(d['items'])<2:errors.append(prefix+'diagram needs at least two items')
@@ -101,6 +102,7 @@ for g in guides:
   for d in g['diagrams']:
    if not isinstance(d,dict):errors.append(prefix+'invalid diagram');continue
    if d.get('kind') not in ('flow','compare'):errors.append(prefix+'diagram kind must be flow or compare')
+   if 'text_open' in d and not isinstance(d['text_open'],bool):errors.append(prefix+'diagram text_open must be boolean')
    if 'after_section' in d and (type(d['after_section']) is not int or not 1<=d['after_section']<=len(g['sections'])):errors.append(prefix+'diagram after_section must be a 1-based section number')
    if 'image' in d:
     image=d['image']
