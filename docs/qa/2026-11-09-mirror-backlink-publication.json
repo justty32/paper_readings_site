@@ -1,0 +1,72 @@
+{
+  "mirror_repository": "justty32/paper_readings-site",
+  "mirror_checkout": "/tmp/paper-reading-mirror",
+  "mirror_commit": "b6636084b8e7f8567f72166a21c67ca598999817",
+  "actions_run": "https://github.com/justty32/paper_readings-site/actions/runs/42583007309",
+  "pages_status": "built",
+  "content_source_revision": "c9d29302217534828571f025b99a3e9c289079c8",
+  "template_source_commit": "2d581928a1aa07ea33cb9d54f879a617babd4f47",
+  "frozen_content_comparison": {
+    "snapshot": "c9d29302217534828571f025b99a3e9c289079c8",
+    "manifest_records": 2632,
+    "all_source_hashes_identical": true,
+    "html_pages": 2628,
+    "all_non_nav_footer_text_identical": true,
+    "all_pages_nav_footer_backlink": true,
+    "differences": [],
+    "target": "https://justty32.github.io/paper_readings_site/papers.html",
+    "method": "static DOM text excluding navigation/footer;no browser"
+  },
+  "regression_tests": 13,
+  "full_build_local_link_failures": 0,
+  "public_samples": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "match": true,
+      "intro_backlink": true,
+      "sha256": "e5ccbe5ba3fbd4e6206046f08faec0d7d35aea10ef9ba1bcf996ecfea2e24e11"
+    },
+    {
+      "path": "html/index.html",
+      "http_status": 200,
+      "match": true,
+      "intro_backlink": true,
+      "sha256": "40233bf8904117f72eef0dcf55f5f5c56666f898e9bada87cdbe280f88f9084a"
+    },
+    {
+      "path": "summarize/2006.08381_DreamCoder.摘要.html",
+      "http_status": 200,
+      "match": true,
+      "intro_backlink": true,
+      "sha256": "b5035815888fd96e290f9bec5afaf88b39da41ad31847f53de2d8a5b3c715fba"
+    },
+    {
+      "path": "translate/2006.08381_DreamCoder.zh-TW/01_摘要.html",
+      "http_status": 200,
+      "match": true,
+      "intro_backlink": true,
+      "sha256": "bbce63530c8e5452117fc3699d249f5df9d8f29d65d1dcaf6699ecc04115c0d8"
+    },
+    {
+      "path": "deep/ARC_AGI_landscape.html",
+      "http_status": 200,
+      "match": true,
+      "intro_backlink": true,
+      "sha256": "b2f0eb33fb59e15aa426c07325406497de344814ee32aa2ac48c528e6820899c"
+    },
+    {
+      "path": "build-manifest.json",
+      "http_status": 200,
+      "match": true,
+      "intro_backlink": null,
+      "sha256": "10b5af85989e66a3145782d9958846d7fe212841deb2100395e805d0908b6258"
+    }
+  ],
+  "visibility": {
+    "source_private": true,
+    "intro_public": true,
+    "mirror_public": true
+  },
+  "verification": "static+HTTP;no browser"
+}

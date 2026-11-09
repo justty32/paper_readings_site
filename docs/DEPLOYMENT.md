@@ -6,6 +6,10 @@
 
 ## 2026-11-09：單篇圖解導讀與閱讀路徑
 
+閱讀層級導航與六題自測版本 `780719ef258787c7d588b439ce232fe93563f447` 已由 [Actions 42582262160](https://github.com/justty32/paper_readings_site/actions/runs/42582262160) 成功部署，99 個公開檔案 HTTP200 且 SHA256 等於隔離提交快照，見[公開核對](qa/2026-11-09-reading-and-self-checks-publication.json)。29 個公開筆記目的地及兩個子章另經 HTTP、題名、論文 ID 與版本核實，見[閱讀目標核對](qa/2026-11-09-reading-targets-http.json)。12 篇頁首與文末都提供同篇摘要、精要譯文、主題延伸及原文；KAN 缺少原始同篇筆記的狀態明示，MetaKAN 單獨標為後續研究。
+
+連字號[公開筆記閱讀站](https://justty32.github.io/paper_readings-site/)亦已完成反向入口：鏡像版本 `b6636084b8e7f8567f72166a21c67ca598999817` 的 [Actions 42583007309](https://github.com/justty32/paper_readings-site/actions/runs/42583007309) 成功，Pages 為 built。內容快照保持 `c9d29302217534828571f025b99a3e9c289079c8`，只用來源模板 `2d581928a1aa07ea33cb9d54f879a617babd4f47` 加上全域回入門站鏈；2632 筆 manifest 來源雜湊一致，2628 頁排除導航／頁尾後正文文字逐字相同。13 回歸測試、完整本地連結驗證及六個公開代表檔的 HTTP／SHA 均通過，見[鏡像回鏈核對](qa/2026-11-09-mirror-backlink-publication.json)。私人來源、公開入門站與公開筆記鏡像的存取分工未變。
+
 第三批內容版本 `35738f9d8a9abea48877e070f9c96e9c28e95fa4` 已由 [Actions 42578304966](https://github.com/justty32/paper_readings_site/actions/runs/42578304966) 成功部署，累計 12 篇導讀、54 頁、三條問題導向閱讀路徑。新四篇母稿固定 `766036350934d720a66979d398de3daa9680919b`。提交隔離快照重新建置通過，95 個公開靜態檔 HTTP200 且 SHA256 與該快照產物完全一致，見[第三批公開核對](qa/2026-11-09-third-publication.json)。本輪仍僅做靜態／HTTP 驗證，未做瀏覽器版面或操作驗收。
 
 第二批內容版本 `d73c24ef5b2b0d86294e310b6d9740b5391426a7` 已由 [Actions 42577062345](https://github.com/justty32/paper_readings_site/actions/runs/42577062345) 成功部署，累計 8 篇單篇導讀、50 頁。新增四篇母稿固定 `6c07331018539a4bf4a6170de8efaa2b40e9a0f3`；首批仍使用原本固定版本。從此提交的獨立 `git archive` 快照重建並通過全部站點檢查，79 個公開檔案 HTTP 與 SHA256 全等於該快照產物，沒有混入下一批並行草稿。見[第二批公開核對](qa/2026-11-09-second-publication.json)。
