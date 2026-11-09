@@ -6,6 +6,8 @@
 
 ## 2026-11-09：單篇圖解導讀與閱讀路徑
 
+最後 DGM 窄篇版本 `2f2d216310efb2bec3b8d9d930579db1c3fd3804` 已由 [Actions 42585830895](https://github.com/justty32/paper_readings_site/actions/runs/42585830895) 成功部署，累計 13 篇導讀、55 頁、39 張論文 SVG；新母稿固定 `1759b9add4eb078c4983b959b201df6142a2e5c9`。103 個公開靜態檔 HTTP200 且 SHA256 全等於提交隔離快照，見[最後發布核對](qa/2026-11-09-dgm-publication.json)。DGM 同篇摘要、精要譯文及演化主題綜述三個目的地亦已核對，見[閱讀目標](qa/2026-11-09-dgm-reading-targets-http.json)。未開第二篇趕稿；本輪全程僅靜態／HTTP 驗證，未做瀏覽器版面或操作驗收。
+
 閱讀層級導航與六題自測版本 `780719ef258787c7d588b439ce232fe93563f447` 已由 [Actions 42582262160](https://github.com/justty32/paper_readings_site/actions/runs/42582262160) 成功部署，99 個公開檔案 HTTP200 且 SHA256 等於隔離提交快照，見[公開核對](qa/2026-11-09-reading-and-self-checks-publication.json)。29 個公開筆記目的地及兩個子章另經 HTTP、題名、論文 ID 與版本核實，見[閱讀目標核對](qa/2026-11-09-reading-targets-http.json)。12 篇頁首與文末都提供同篇摘要、精要譯文、主題延伸及原文；KAN 缺少原始同篇筆記的狀態明示，MetaKAN 單獨標為後續研究。
 
 連字號[公開筆記閱讀站](https://justty32.github.io/paper_readings-site/)亦已完成反向入口：鏡像版本 `b6636084b8e7f8567f72166a21c67ca598999817` 的 [Actions 42583007309](https://github.com/justty32/paper_readings-site/actions/runs/42583007309) 成功，Pages 為 built。內容快照保持 `c9d29302217534828571f025b99a3e9c289079c8`，只用來源模板 `2d581928a1aa07ea33cb9d54f879a617babd4f47` 加上全域回入門站鏈；2632 筆 manifest 來源雜湊一致，2628 頁排除導航／頁尾後正文文字逐字相同。13 回歸測試、完整本地連結驗證及六個公開代表檔的 HTTP／SHA 均通過，見[鏡像回鏈核對](qa/2026-11-09-mirror-backlink-publication.json)。私人來源、公開入門站與公開筆記鏡像的存取分工未變。
