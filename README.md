@@ -2,12 +2,12 @@
 
 繁中 AI 論文入門站。用一個問題、一個具體例子和可操作圖解，走進研究；技術方法與限制收在原生摺疊區塊。
 
-目前有 **10 個主題、28 課、4 篇單篇導讀、46 個頁面、46 篇代表性論文來源**。分類沿用 [paper_readings](https://github.com/justty32/paper_readings) A–J；智能體與系統類拆成11課。本站不是全庫逐篇摘要，圖與互動均為合成資料／手寫規則的教學示意。
+目前有 **10 個主題、28 課、8 篇單篇導讀、50 個頁面、46 篇代表性論文來源**。分類沿用 [paper_readings](https://github.com/justty32/paper_readings) A–J；智能體與系統類拆成11課。本站不是全庫逐篇摘要，圖與互動均為合成資料／手寫規則的教學示意。
 
 ## 開始閱讀
 
 - [首頁](index.html)
-- [重要論文導讀](papers.html)：DreamCoder、ReAct、ARC 智慧測量與原始 KAN。
+- [重要論文導讀](papers.html)：DreamCoder、Stitch、ReAct、Toolformer、Voyager、InfoGAN、ARC 智慧測量與原始 KAN。
 - [完整閱讀地圖](map.html)
 - [關於本站與來源政策](about.html)
 

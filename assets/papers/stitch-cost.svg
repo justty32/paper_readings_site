@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc"><title id="title">定義成本加上每次呼叫成本</title><desc id="desc">自訂格數教學示意。三份原程式各十二格共三十六格；新定義十格加三次呼叫各四格共二十二格，省十四格。只用一次則十四大於十二，不划算。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#526478"/></marker><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#e5a99f" stroke-width="3"/></pattern></defs><style>text{font-family:system-ui,'Noto Sans TC',sans-serif;font-size:22px;fill:#19354b}.small{font-size:18px}.title{font-size:28px;font-weight:700}.label{font-size:24px;font-weight:650}.edge{stroke:#526478;stroke-width:3;fill:none;marker-end:url(#arrow)}.node{fill:#eef4f8;stroke:#59778f;stroke-width:2}.green{fill:#e0f1e8;stroke:#2c815e;stroke-width:2}.blue{fill:#dceafa;stroke:#346caa;stroke-width:2}</style><rect width="1000" height="650" rx="20" fill="#fafcfd"/>
+
+<text x="32" y="43" class="title">省多少，要把所有帳都算進去</text><text x="32" y="76" class="small">自訂格數教學示意；長度共用同一比例，非作者 token、執行時間或實驗數據</text>
+<text x="55" y="132" class="label">三份原程式：12＋12＋12＝36</text>
+<rect x="55" y="155" width="288" height="70" fill="#7298bf"/><rect x="343" y="155" width="288" height="70" fill="#597da3"/><rect x="631" y="155" width="288" height="70" fill="#7298bf"/>
+<g fill="#fff"><text x="199" y="199" text-anchor="middle" style="fill:#fff">P1：12</text><text x="487" y="199" text-anchor="middle" style="fill:#fff">P2：12</text><text x="775" y="199" text-anchor="middle" style="fill:#fff">P3：12</text></g>
+<text x="55" y="286" class="label">抽出工具：10＋4＋4＋4＝22</text>
+<rect x="55" y="310" width="240" height="70" fill="#285c81"/><rect x="295" y="310" width="96" height="70" fill="#6db391"/><rect x="391" y="310" width="96" height="70" fill="#459473"/><rect x="487" y="310" width="96" height="70" fill="#6db391"/><rect x="583" y="310" width="336" height="70" fill="#eef5ef" stroke="#2c815e" stroke-dasharray="8 5" stroke-width="2"/>
+<text x="175" y="354" text-anchor="middle" style="fill:#fff">定義：10</text><text x="343" y="354" text-anchor="middle">4</text><text x="439" y="354" text-anchor="middle" style="fill:#fff">4</text><text x="535" y="354" text-anchor="middle">4</text><text x="751" y="354" text-anchor="middle" class="label">淨省 14</text>
+<text x="55" y="420">10 格：工具本體＋參數宣告</text><text x="55" y="456">每次 4 格：呼叫＋實際長度引數</text>
+<text x="55" y="517" class="label">只用一次？原先 12，改後 10＋4＝14</text>
+<rect x="55" y="545" width="288" height="28" fill="#7298bf"/><rect x="55" y="588" width="240" height="28" fill="#285c81"/><rect x="295" y="588" width="96" height="28" fill="#6db391"/>
+<text x="420" y="573">定義費尚未攤平</text><text x="420" y="610">多 2 格，這次不划算</text>
+</svg>

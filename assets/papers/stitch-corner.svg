@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc"><title id="title">共同走法，留下可變長度</title><desc id="desc">教學示意。三個不同尺寸的直角都由走a步、轉九十度、再走a步構成；下方用樹狀結構顯示seq連到三個操作，兩個move共享參數a。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#526478"/></marker><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#e5a99f" stroke-width="3"/></pattern></defs><style>text{font-family:system-ui,'Noto Sans TC',sans-serif;font-size:22px;fill:#19354b}.small{font-size:18px}.title{font-size:28px;font-weight:700}.label{font-size:24px;font-weight:650}.edge{stroke:#526478;stroke-width:3;fill:none;marker-end:url(#arrow)}.node{fill:#eef4f8;stroke:#59778f;stroke-width:2}.green{fill:#e0f1e8;stroke:#2c815e;stroke-width:2}.blue{fill:#dceafa;stroke:#346caa;stroke-width:2}</style><rect width="1000" height="650" rx="20" fill="#fafcfd"/>
+
+<text x="32" y="43" class="title">同一個角落，長度可以換</text><text x="32" y="74" class="small">教學示意；線段按邊長 2、5、8 的同一比例繪製，非作者數據</text>
+<g fill="none" stroke="#28765b" stroke-width="7" stroke-linecap="round">
+<path d="M90 260H120V230"/><path d="M340 260H415V185"/><path d="M620 260H740V140"/>
+</g>
+<g fill="#28765b"><circle cx="90" cy="260" r="6"/><circle cx="340" cy="260" r="6"/><circle cx="620" cy="260" r="6"/></g>
+<text x="70" y="115" class="label">P1：邊長 2</text><text x="330" y="115" class="label">P2：邊長 5</text><text x="610" y="115" class="label">P3：邊長 8</text>
+<text x="65" y="300">corner(2)</text><text x="330" y="300">corner(5)</text><text x="610" y="300">corner(8)</text>
+<path class="edge" d="M130 320L480 375"/><path class="edge" d="M405 320L495 375"/><path class="edge" d="M720 320L520 375"/>
+<rect class="green" x="365" y="385" width="270" height="58" rx="16"/><text x="500" y="423" text-anchor="middle" class="label">corner(a) 的骨架</text>
+<path class="edge" d="M500 443L210 505"/><path class="edge" d="M500 443V505"/><path class="edge" d="M500 443L790 505"/>
+<rect class="blue" x="110" y="515" width="200" height="60" rx="12"/><rect class="node" x="400" y="515" width="200" height="60" rx="12"/><rect class="blue" x="690" y="515" width="200" height="60" rx="12"/>
+<text x="210" y="553" text-anchor="middle">move(a)</text><text x="500" y="553" text-anchor="middle">turn(90)</text><text x="790" y="553" text-anchor="middle">move(a)</text>
+<path d="M210 580V596H790V580" stroke="#346caa" fill="none" stroke-width="3"/><text x="500" y="628" text-anchor="middle">兩處 a 用同一數值；seq 依左到右執行</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="670" viewBox="0 0 1000 670" role="img" aria-labelledby="title desc"><title id="title">補洞與剪枝的搜尋樹</title><desc id="desc">教學示意。寬模板匹配四段程式，固定九十度和相同邊長後只剩三段；四十五度分支只剩P4，其成本上界十二低於已知淨收益十四，因此刪除。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#526478"/></marker><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#e5a99f" stroke-width="3"/></pattern></defs><style>text{font-family:system-ui,'Noto Sans TC',sans-serif;font-size:22px;fill:#19354b}.small{font-size:18px}.title{font-size:28px;font-weight:700}.label{font-size:24px;font-weight:650}.edge{stroke:#526478;stroke-width:3;fill:none;marker-end:url(#arrow)}.node{fill:#eef4f8;stroke:#59778f;stroke-width:2}.green{fill:#e0f1e8;stroke:#2c815e;stroke-width:2}.blue{fill:#dceafa;stroke:#346caa;stroke-width:2}</style><rect width="1000" height="670" rx="20" fill="#fafcfd"/>
+
+<text x="32" y="43" class="title">補上條件，匹配集合只會縮小</text><text x="32" y="76" class="small">教學示意，略去中間展開；圓點代表匹配位置，不是候選程式數量</text>
+<rect class="node" x="100" y="110" width="800" height="65" rx="14"/><text x="500" y="151" text-anchor="middle">seq(move(??), turn(??), move(??))</text>
+<g fill="#346caa"><circle cx="380" cy="210" r="10"/><circle cx="460" cy="210" r="10"/><circle cx="540" cy="210" r="10"/><circle cx="620" cy="210" r="10"/></g><text x="380" y="250" text-anchor="middle">P1</text><text x="460" y="250" text-anchor="middle">P2</text><text x="540" y="250" text-anchor="middle">P3</text><text x="620" y="250" text-anchor="middle">P4</text>
+<path class="edge" d="M390 270L260 330"/><path class="edge" d="M610 270L750 330"/>
+<rect class="green" x="65" y="345" width="390" height="65" rx="14"/><text x="260" y="386" text-anchor="middle">轉 90°，兩邊同長 a</text>
+<rect x="555" y="345" width="390" height="65" rx="14" fill="#fbebe7" stroke="#ba5946" stroke-width="2"/><text x="750" y="386" text-anchor="middle">轉 45°，兩邊同長 a</text>
+<g fill="#2c815e"><circle cx="180" cy="450" r="10"/><circle cx="260" cy="450" r="10"/><circle cx="340" cy="450" r="10"/></g><text x="180" y="490" text-anchor="middle">P1</text><text x="260" y="490" text-anchor="middle">P2</text><text x="340" y="490" text-anchor="middle">P3</text>
+<circle cx="750" cy="450" r="10" fill="#ba5946"/><text x="750" y="490" text-anchor="middle">P4</text>
+<text x="260" y="545" text-anchor="middle" class="label">已找到淨省 14 格</text><text x="260" y="580" text-anchor="middle">完整候選 corner(a)</text>
+<rect x="570" y="515" width="360" height="100" rx="12" fill="url(#hatch)" stroke="#ba5946" stroke-width="2"/><text x="750" y="550" text-anchor="middle" class="label">樂觀上界只有 12 格</text><text x="750" y="590" text-anchor="middle">12 &lt; 14 → 整枝剪掉</text>
+<text x="32" y="650" class="small">上界先假裝定義與呼叫免費、匹配片段壓到零；即使如此，仍不夠好。</text>
+</svg>
