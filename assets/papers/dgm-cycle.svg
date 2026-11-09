@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="730" viewBox="0 0 1000 730" role="img" aria-labelledby="title desc"><title id="title">從親代、額外診斷到子代入庫的迴圈</title><desc id="desc">教學示意。固定選擇器選親代，額外診斷模型讀評測失敗日誌並提功能，親代改自己程式，子代經benchmark評測與編譯及改碼能力檢查，合格才入archive供回選。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#53687a"/></marker></defs><style>text{font-family:system-ui,'Noto Sans TC',sans-serif;font-size:22px;fill:#19354b}.small{font-size:18px}.title{font-size:28px;font-weight:700}.label{font-size:24px;font-weight:650}.edge{stroke:#53687a;stroke-width:3;fill:none;marker-end:url(#arrow)}.node{fill:#edf3fa;stroke:#567798;stroke-width:2}.green{fill:#e1f1e8;stroke:#368260;stroke-width:2}.fixed{fill:#edf0f3;stroke:#657887;stroke-width:2}.warm{fill:#faf0da;stroke:#a48a4e;stroke-width:2}</style><rect width="1000" height="730" rx="20" fill="#fafcfd"/>
+<text x="30" y="43" class="title">提案、改碼、評估，合格才留作下一輪</text><text x="30" y="77" class="small">依方法簡化的教學示意；額外診斷 FM 提案，不是親代獨自完成所有推理</text>
+<rect class="fixed" x="35" y="105" width="930" height="70" rx="14"/><text x="500" y="148" text-anchor="middle">固定探索流程：維護 archive、選親代；題目／判分是研究者設定的比較邊界</text>
+<path class="edge" d="M300 270H365"/><path class="edge" d="M630 270H695"/><path class="edge" d="M820 325V405"/><path class="edge" d="M695 465H630"/><path class="edge" d="M365 465H300"/>
+<rect class="node" x="40" y="210" width="260" height="120" rx="16"/><text x="170" y="253" text-anchor="middle" class="label">1 選親代</text><text x="170" y="292" text-anchor="middle">取出它的評測日誌</text>
+<rect class="warm" x="370" y="210" width="260" height="120" rx="16"/><text x="500" y="251" text-anchor="middle" class="label">2 額外 FM 診斷</text><text x="500" y="290" text-anchor="middle">讀失敗 log、提功能</text>
+<rect class="green" x="700" y="210" width="260" height="120" rx="16"/><text x="830" y="251" text-anchor="middle" class="label">3 親代實作</text><text x="830" y="290" text-anchor="middle">改自己的 code</text>
+<rect class="node" x="700" y="410" width="260" height="120" rx="16"/><text x="830" y="452" text-anchor="middle" class="label">4 子代評測</text><text x="830" y="492" text-anchor="middle">執行 benchmark</text>
+<rect class="warm" x="370" y="410" width="260" height="120" rx="16"/><text x="500" y="452" text-anchor="middle" class="label">5 資格門檻</text><text x="500" y="487" text-anchor="middle" class="small">可編譯＋保有改碼能力</text>
+<rect class="green" x="40" y="410" width="260" height="120" rx="16"/><text x="170" y="452" text-anchor="middle" class="label">6 合格入 archive</text><text x="170" y="492" text-anchor="middle">不必立刻是冠軍</text>
+<path class="edge" d="M60 410C5 375 5 300 40 280"/><text x="170" y="578" text-anchor="middle">保留，之後可回選</text>
+<path class="edge" d="M500 535V595"/><text x="500" y="633" text-anchor="middle">不合格：丟棄</text>
+<text x="30" y="698" class="small">入庫檢查不是安全證明；功能可能無用，有限算力也不保證找到有用後代。</text>
+</svg>

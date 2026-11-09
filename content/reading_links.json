@@ -161,6 +161,19 @@
       ],
       "related": [],
       "note": ""
+    },
+    {
+      "paper_id": "dgm",
+      "summary": "summarize/2505.22954_DarwinGodelMachine.摘要.md",
+      "translation": "translate/2505.22954_DarwinGodelMachine.zh-TW.md",
+      "deep": [
+        {
+          "path": "deep/evolutionary_computation_LLM.md",
+          "label": "主題延伸：LLM 與演化搜尋"
+        }
+      ],
+      "related": [],
+      "note": "本篇導讀依原論文 v3 核對；摘要與譯文保留既有精要閱讀範圍。"
     }
   ]
 }

@@ -1,0 +1,29 @@
+[
+  {
+    "path": "summarize/2505.22954_DarwinGodelMachine.摘要.md",
+    "url": "https://justty32.github.io/paper_readings-site/summarize/2505.22954_DarwinGodelMachine.%E6%91%98%E8%A6%81.html",
+    "status": 200,
+    "title": "《達爾文·哥德爾機（DGM）：自我改進代理的開放式進化》重點摘要 · 論文閱讀",
+    "has_dgm_id": true,
+    "has_intro_backlink": true,
+    "sha256": "580d6574b5db8a96c5323ae1b9432d1083a08cf45c8e5ef1d502e5fc54b692af"
+  },
+  {
+    "path": "translate/2505.22954_DarwinGodelMachine.zh-TW.md",
+    "url": "https://justty32.github.io/paper_readings-site/translate/2505.22954_DarwinGodelMachine.zh-TW.html",
+    "status": 200,
+    "title": "達爾文·哥德爾機：自我改進代理的開放式進化（Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents） · 論文閱讀",
+    "has_dgm_id": true,
+    "has_intro_backlink": true,
+    "sha256": "b0bc5574c54a9294b0da4131bd624317f728bb2e6ac2526fba5cdc524690d22b"
+  },
+  {
+    "path": "deep/evolutionary_computation_LLM.md",
+    "url": "https://justty32.github.io/paper_readings-site/deep/evolutionary_computation_LLM.html",
+    "status": 200,
+    "title": "演化計算 × LLM × 自動發現演算法——深度綜述 · 論文閱讀",
+    "has_dgm_id": false,
+    "has_intro_backlink": true,
+    "sha256": "59536643f550138a389a7d33febbc9f65316f77944ba6cfc29e6d70ad99f77ca"
+  }
+]
